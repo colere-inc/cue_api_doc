@@ -37,7 +37,7 @@ paths:
                 email:
                   type: string
                   description: メールアドレス
-                  example: example:@colere.inc
+                  example: example@colere.inc
                 password:
                   type: string
                   description: パスワード
