@@ -8,7 +8,7 @@ paths:
     post:
       tags:
         - アクセストークン新規発行
-      description: アクセストークンを発行する
+      description: アクセストークンを発行する。
       parameters:
         - in: header
           name: Content-Type

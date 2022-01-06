@@ -8,7 +8,7 @@ paths:
     post:
       tags:
         - ログイン
-      description: メールアドレスとパスワードでログインする
+      description: メールアドレスとパスワードでログインする。
       parameters:
         - in: header
           name: Content-Type
