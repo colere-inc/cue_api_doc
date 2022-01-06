@@ -42,30 +42,7 @@ paths:
               schema:
                 type: object
                 properties:
-                  id:
-                    type: string
-                    description: ID
-                    example: 0a1b2c3d4e5f6g7
-                  last_name:
-                    type: string
-                    description: 名
-                    example: 太郎
-                  first_name:
-                    type: string
-                    description: 姓
-                    example: 山田
-                  email:
-                    type: string
-                    description: メールアドレス
-                    example: example@colere.inc
-                  icon:
-                    type: string
-                    description: アイコンのURL
-                    example: icon@pmf.com
-                  gender:
-                    type: string
-                    description: 性
-                    example: 男
+                $ref: '#/components/schemas/Account'
         "400":
           description: リクエストに問題あり
         "401":
@@ -135,30 +112,7 @@ paths:
               schema:
                 type: object
                 properties:
-                  id:
-                    type: string
-                    description: ID
-                    example: 0a1b2c3d4e5f6g7
-                  last_name:
-                    type: string
-                    description: 名
-                    example: 太郎
-                  first_name:
-                    type: string
-                    description: 姓
-                    example: 山田
-                  email:
-                    type: string
-                    description: メールアドレス
-                    example: example@colere.inc
-                  icon:
-                    type: string
-                    description: アイコンのURL
-                    example: icon@pmf.com
-                  gender:
-                    type: string
-                    description: 性
-                    example: 男
+                $ref: '#/components/schemas/Account'
         "400":
           description: リクエストに問題あり
         "401":
@@ -195,34 +149,7 @@ paths:
         content:
           application/json:
             schema:
-              type: object
-              properties:
-                id:
-                  type: string
-                  description: ID
-                  example: 0a1b2c3d4e5f6g7
-                last_name:
-                  type: string
-                  description: 名
-                  example: 太郎
-                first_name:
-                  type: string
-                  description: 姓
-                  example: 山田
-                email:
-                  type: string
-                  description: メールアドレス
-                  example: example@colere.inc
-                icon:
-                  type: string
-                  description: アイコンのURL
-                  example: icon@pmf.com
-                gender:
-                  type: string
-                  description: 性
-                  example: 男
-              required:
-                - id
+              $ref: '#/components/schemas/Account'
 
       responses:
         "200":
@@ -230,32 +157,7 @@ paths:
           content:
             application/json:
               schema:
-                type: object
-                properties:
-                  id:
-                    type: string
-                    description: ID
-                    example: 0a1b2c3d4e5f6g7
-                  last_name:
-                    type: string
-                    description: 名
-                    example: 太郎
-                  first_name:
-                    type: string
-                    description: 姓
-                    example: 山田
-                  email:
-                    type: string
-                    description: メールアドレス
-                    example: example@colere.inc
-                  icon:
-                    type: string
-                    description: アイコンのURL
-                    example: icon@pmf.com
-                  gender:
-                    type: string
-                    description: 性
-                    example: 男
+                $ref: '#/components/schemas/Account'
         "400":
           description: リクエストに問題あり
         "401":
@@ -264,3 +166,39 @@ paths:
           description: アクセス権がない
         "500":
           description: サーバーの一時的なエラー
+
+components:
+  schemas:
+    Account:
+      type: object
+      description: アカウント
+      properties:
+        id:
+          type: string
+          description: ID
+          example: 0a1b2c3d4e5f6g7
+          minLength: 15
+          maxLength: 15
+          pattern: '^[0-9a-z]$'
+        last_name:
+          type: string
+          description: 名
+          example: 太郎
+        first_name:
+          type: string
+          description: 姓
+          example: 山田
+        email:
+          type: string
+          description: メールアドレス
+          example: example@colere.inc
+        icon:
+          type: string
+          description: アイコンのURL
+          example: icon@pmf.com
+        gender:
+          type: string
+          description: 性
+          example: 男
+      required:
+        - id
