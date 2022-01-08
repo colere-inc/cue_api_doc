@@ -145,7 +145,7 @@ components:
   schemas:
     Action:
       type: object
-      description: アクション履歴
+      description: アクション
       properties:
         id:
           type: string
