@@ -44,7 +44,7 @@ paths:
                 items:
                   type: object
                   properties:
-                  $ref: '../schemas/relationsip_point.yml'
+                  $ref: '../schemas/relationship_point.yml'
         "400":
           description: リクエストに問題あり
         "401":
