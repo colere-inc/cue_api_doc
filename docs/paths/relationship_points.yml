@@ -1,11 +1,4 @@
-openapi: 3.0.0
-info:
-  title: 関係性レベルポイント
-  description: 関係性レベルポイント
-  version: "0.0.1"
-paths:
-  /relationship_points:
-    get:
+get:
       tags:
         - 関係性レベルポイント取得
       description: 現在ログインしているアカウントに関連する関係性レベルのポイントをすべて取得する。<br>account_relationごとに最新の日付のもののみ取得する。

@@ -1,7 +1,7 @@
-get:
+put:
       tags:
-        - アカウント情報取得
-      description: アカウントをすべて取得する。
+        - アクション履歴更新
+      description: 指定のアカウントに対する指定のアクション情報を更新する。
       parameters:
         - in: header
           name: Content-Type
@@ -21,23 +21,38 @@ get:
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiJ9
+        - in: path
+          name: accounts_id
+          schema:
+            type: string
+          required: true
+          description: accountのID
+        - in: path
+          name: actions_id
+          schema:
+            type: string
+          required: true
+          description: actionのID
       requestBody:
         content:
           application/json:
             schema:
               type: object
+              properties:
+                action_date:
+                  type: string
+                  description: 実行した日付
+                  example: 2022/01/02
 
       responses:
         "200":
-          description: 取得成功
+          description: 更新成功
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  type: object
-                  properties:
-                  $ref: '../schemas/account.yml'
+                type: object
+                properties:
+                $ref: '../../schemas/action.yml'
         "400":
           description: リクエストに問題あり
         "401":

@@ -1,7 +1,7 @@
-get:
+put:
       tags:
-        - アカウント情報取得
-      description: アカウントをすべて取得する。
+        - ポイント変化通知更新
+      description: ログインしているアカウントのポイント変化通知一覧を更新する。
       parameters:
         - in: header
           name: Content-Type
@@ -21,23 +21,32 @@ get:
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiJ9
+        - in: path
+          name: id
+          schema:
+            type: string
+          required: true
+          description: changable_notificationのID
       requestBody:
         content:
           application/json:
             schema:
               type: object
+              properties:
+                is_read:
+                  type: boolean
+                  description: 既読したかどうか
+                  example: true
 
       responses:
         "200":
-          description: 取得成功
+          description: 更新成功
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  type: object
-                  properties:
-                  $ref: '../schemas/account.yml'
+                type: object
+                properties:
+                $ref: '../schemas/changable_notification.yml'
         "400":
           description: リクエストに問題あり
         "401":

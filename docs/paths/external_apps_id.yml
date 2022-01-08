@@ -1,7 +1,7 @@
-get:
+put:
       tags:
-        - アカウント情報取得
-      description: アカウントをすべて取得する。
+        - 外部連携アプリ取得
+      description: 連携した外部アプリ情報を更新する。
       parameters:
         - in: header
           name: Content-Type
@@ -21,23 +21,32 @@ get:
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiJ9
+        - in: path
+          name: id
+          schema:
+            type: string
+          required: true
+          description: external_appのID
       requestBody:
         content:
           application/json:
             schema:
               type: object
+              properties:
+                url:
+                  type: string
+                  description: 外部アプリへの遷移先URL(Custom URL Scheme含む)
+                  example: instagram://app
 
       responses:
         "200":
-          description: 取得成功
+          description: 更新成功
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  type: object
-                  properties:
-                  $ref: '../schemas/account.yml'
+                type: object
+                properties:
+                $ref: '../schemas/external_app.yml'
         "400":
           description: リクエストに問題あり
         "401":

@@ -1,11 +1,4 @@
-openapi: 3.0.0
-info:
-  title: 指定した関連性に関する全ての関係性レベルポイント
-  description: 指定した関連性に関する全ての関係性レベルポイント
-  version: "0.0.1"
-paths:
-  /account_relations/{id}/relationship_points?offset=10&limit=10&order=asc:
-    get:
+get:
       tags:
         - 関係性レベルポイント取得
       description: 指定のaccount_relationの関係性レベルのポイントをすべてを取得する。

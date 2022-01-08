@@ -1,3 +1,35 @@
+/account_relations/{id}/relationship_points?offset=10&limit=10&order=asc:
+  $ref: "./account_relations/relationship_points.yml"
+/accounts/{accounts_id}/actions?offset=10&limit=10&order=asc:
+  $ref: "./accounts/actions.yml"
+/accounts/{accounts_id}/actions/{actions_id}:
+  $ref: "./accounts/actions_id.yml"
+/actions/{actions_id}/feedbacks:
+  $ref: "./action_histories/feedbacks.yml"
+/actions/{actions_id}/feedbacks/{feedbacks_id}:
+  $ref: "./action_histories/feedbacks_id.yml"
+/account_relations:
+  $ref: "./account_relations.yml"
+/account_relations/{account_relations_id}:
+  $ref: "./account_relations_id.yml"
+/account:
+  $ref: "./account.yml"
+/accounts:
+  $ref: "./accounts.yml"
+/changable_notifications:
+  $ref: "./changable_notifications.yml"
+/changable_notifications/{changable_notifications_id}:
+  $ref: "./changable_notifications_id.yml"
+/external_apps:
+  $ref: "./external_apps.yml"
+/external_apps/{external_apps_id}:
+  $ref: "./external_apps_id.yml"
+/recommend_actions:
+  $ref: "./recommend_actions.yml"
+/recommend_actions/{recommend_actions_id}:
+  $ref: "./recommend_actions_id.yml"
+/relationship_points:
+  $ref: "./relationship_points.yml"
 /action_tags:
   $ref: "./action_tags.yml"
 /action_tags/{action_tags_id}:

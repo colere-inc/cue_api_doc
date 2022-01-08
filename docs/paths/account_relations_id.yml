@@ -1,7 +1,7 @@
 get:
   tags:
     - アカウントの関連性取得
-  description: 現在ログインしているアカウントに関連するつながりをすべて取得する。
+  description: 指定のアカウントの関連性情報を取得する。
   parameters:
     - in: header
       name: Content-Type
@@ -21,6 +21,12 @@ get:
       schema:
         type: string
         example: eyJhbGciOiJIUzI1NiJ9
+    - in: path
+      name: id
+      schema:
+        type: string
+      required: true
+      description: account_relationのID
   requestBody:
     content:
       application/json:
@@ -33,11 +39,9 @@ get:
       content:
         application/json:
           schema:
-            type: array
-            items:
-              type: object
-              properties:
-              $ref: '../schemas/account_relation.yml'
+            type: object
+            properties:
+            $ref: '../schemas/account_relation.yml'
     "400":
       description: リクエストに問題あり
     "401":
@@ -47,10 +51,10 @@ get:
     "500":
       description: サーバーの一時的なエラー
 
-post:
+put:
   tags:
-    - アカウントの関連性作成
-  description: アカウントの関連性情報を作成する。
+    - アカウントの関連性更新
+  description: 指定のアカウントの関連性情報を更新する。
   parameters:
     - in: header
       name: Content-Type
@@ -70,37 +74,79 @@ post:
       schema:
         type: string
         example: eyJhbGciOiJIUzI1NiJ9
+    - in: path
+      name: id
+      schema:
+        type: string
+      required: true
+      description: account_relationのID
   requestBody:
     content:
       application/json:
         schema:
           type: object
           properties:
-            manager_account_id:
-              type: string
-              description: 上司のアカウントID
-              example: 0a1b2c3d4e5f6g7
-            member_account_id:
-              type: string
-              description: 部下のアカウントID
-              example: 0a1b2c3d4e5f6g7
             activated:
               type: boolean
               description: つながりを許可したか
               example: true
-          required:
-            - manager_account_id
-            - member_account_id
 
   responses:
     "200":
-      description: 作成成功
+      description: 更新成功
       content:
         application/json:
           schema:
             type: object
             properties:
             $ref: '../schemas/account_relation.yml'
+    "400":
+      description: リクエストに問題あり
+    "401":
+      description: Authorizationヘッダーに問題あり
+    "403":
+      description: アクセス権がない
+    "500":
+      description: サーバーの一時的なエラー
+
+delete:
+  tags:
+    - アカウントの関連性削除
+  description: 指定のアカウントの関連性情報を削除する。
+  parameters:
+    - in: header
+      name: Content-Type
+      required: true
+      schema:
+        type: string
+        example: application/json
+    - in: header
+      name: X-Request-ID
+      required: false
+      schema:
+        type: string
+    - in: header
+      name: "Authorization: Bearer"
+      required: true
+      description: アクセストークン
+      schema:
+        type: string
+        example: eyJhbGciOiJIUzI1NiJ9
+    - in: path
+      name: id
+      schema:
+        type: string
+      required: true
+      description: account_relationのID
+  requestBody:
+    content:
+      application/json:
+        schema:
+          type: object
+
+  responses:
+    "204":
+      description: 削除成功
     "400":
       description: リクエストに問題あり
     "401":
