@@ -2,12 +2,10 @@ openapi: "3.0.0"
 info:
   version: 0.0.1
   title: PMF API Docment
-  license:
-    name: MIT
 servers:
   - url: http://api.pmf.com
 paths:
-  $ref: "./action_tags.yml"
+  $ref: "./paths/index.yml"
 
 components:
   schemas:

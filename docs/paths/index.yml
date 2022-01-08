@@ -1,1 +1,4 @@
-$ref: "./action_tags.yml"
+/action_tags:
+  $ref: "./action_tags.yml"
+/action_tags/{action_tags_id}:
+  $ref: "./action_tags_id.yml"

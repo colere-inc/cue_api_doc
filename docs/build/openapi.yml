@@ -2,8 +2,6 @@ openapi: 3.0.0
 info:
   version: 0.0.1
   title: PMF API Docment
-  license:
-    name: MIT
 servers:
   - url: 'http://api.pmf.com'
 paths:
@@ -46,7 +44,7 @@ paths:
                 items:
                   type: object
                   properties: null
-                  $ref: '#/paths/components/schemas/ActionTag'
+                  $ref: '#/components/schemas/ActionTag'
         '400':
           description: リクエストに問題あり
         '401':
@@ -98,7 +96,7 @@ paths:
               schema:
                 type: object
                 properties: null
-                $ref: '#/paths/components/schemas/ActionTag'
+                $ref: '#/components/schemas/ActionTag'
         '400':
           description: リクエストに問題あり
         '401':
@@ -150,7 +148,7 @@ paths:
               schema:
                 type: object
                 properties: null
-                $ref: '#/paths/components/schemas/ActionTag'
+                $ref: '#/components/schemas/ActionTag'
         '400':
           description: リクエストに問題あり
         '401':
@@ -206,7 +204,7 @@ paths:
               schema:
                 type: object
                 properties: null
-                $ref: '#/paths/components/schemas/ActionTag'
+                $ref: '#/components/schemas/ActionTag'
         '400':
           description: リクエストに問題あり
         '401':
@@ -260,20 +258,6 @@ paths:
           description: アクセス権がない
         '500':
           description: サーバーの一時的なエラー
-  components:
-    schemas:
-      ActionTag:
-        type: object
-        description: アクションタグ
-        properties:
-          id:
-            type: string
-            description: ID
-            example: 0a1b2c3d4e5f6g7
-          name:
-            type: string
-            description: 名前
-            example: 私生活
 components:
   schemas:
     AccountRelation:
@@ -296,11 +280,162 @@ components:
           type: boolean
           description: つながりを許可したか
           example: true
-    Account: !<tag:yaml.org,2002:js/undefined> ''
-    ActionTag: !<tag:yaml.org,2002:js/undefined> ''
-    Action: !<tag:yaml.org,2002:js/undefined> ''
-    ChangableNotification: !<tag:yaml.org,2002:js/undefined> ''
-    ExternalApp: !<tag:yaml.org,2002:js/undefined> ''
+    Account:
+      type: object
+      description: アカウント
+      properties:
+        id:
+          type: string
+          description: ID
+          example: 0a1b2c3d4e5f6g7
+          minLength: 15
+          maxLength: 15
+          pattern: '^[0-9a-z]$'
+        last_name:
+          type: string
+          description: 名
+          example: 太郎
+        first_name:
+          type: string
+          description: 姓
+          example: 山田
+        email:
+          type: string
+          description: メールアドレス
+          example: example@colere.inc
+        icon:
+          type: string
+          description: アイコンのURL
+          example: icon@pmf.com
+        gender:
+          type: string
+          description: 性
+          example: 男
+      required:
+        - id
+    ActionTag:
+      type: object
+      description: アクションタグ
+      properties:
+        id:
+          type: string
+          description: ID
+          example: 0a1b2c3d4e5f6g7
+        name:
+          type: string
+          description: 名前
+          example: 私生活
+    Action:
+      type: object
+      description: アクション
+      properties:
+        id:
+          type: string
+          description: ID
+          example: 0a1b2c3d4e5f6g7
+        account_relation_id:
+          type: string
+          description: アカウント同士の関連性ID
+          example: 0a1b2c3d4e5f6g7
+        action_candidate_id:
+          type: string
+          description: アクション候補ID
+          example: 0a1b2c3d4e5f6g7
+        view_date:
+          type: string
+          description: 表示した日付
+          example: 2022/01/01
+        action_date:
+          type: string
+          description: 実行した日付
+          example: 2022/01/02
+    ChangableNotification:
+      type: object
+      description: ポイント変更通知
+      properties:
+        id:
+          type: string
+          description: ID
+          example: 0a1b2c3d4e5f6g7
+        account_id:
+          type: string
+          description: 対象のアカウントID
+          example: 0a1b2c3d4e5f6g7
+        account_relation_id:
+          type: string
+          description: 対象のaccount_relationID
+          example: 0a1b2c3d4e5f6g7
+        point:
+          type: integer
+          description: ポイント
+          example: 100
+        date:
+          type: string
+          description: 日付
+          example: 2022/01/01
+        is_read:
+          type: boolean
+          description: 既読したかどうか
+          example: true
+    ExternalApp:
+      type: object
+      description: ポイント変更通知
+      properties:
+        id:
+          type: string
+          description: ID
+          example: 0a1b2c3d4e5f6g7
+        account_id:
+          type: string
+          description: 対象のアカウントID
+          example: 0a1b2c3d4e5f6g7
+        name:
+          type: string
+          description: アプリの名前
+          example: Microsoft Teams
+        url:
+          type: string
+          description: 外部アプリへの遷移先URL(Custom URL Scheme含む)
+          example: 'instagram://app'
     Feedback: !<tag:yaml.org,2002:js/undefined> ''
-    RecomendAction: !<tag:yaml.org,2002:js/undefined> ''
-    RelationPoint: !<tag:yaml.org,2002:js/undefined> ''
+    RecomendAction:
+      type: object
+      description: アクション
+      properties:
+        id:
+          type: string
+          description: ID
+          example: 0a1b2c3d4e5f6g7
+        name:
+          type: string
+          description: 名前
+          example: あいさつしよう
+        level:
+          type: string
+          description: どのレベルの関係性のときに候補として出すか(カンマ区切り)
+          example: '1,2,3'
+        type:
+          type: string
+          description: タイプ
+          example: question
+        tag_id:
+          type: string
+          description: AI分析用のタグ(カンマ区切り)
+          example: '1,3,8'
+    RelationPoint:
+      RelationshipPoint:
+        type: object
+        description: アカウント同士の関連性
+        properties:
+          account_relation_id:
+            type: string
+            description: アカウント同士の関連性ID
+            example: 0a1b2c3d4e5f6g7
+          point:
+            type: integer
+            description: ポイント
+            example: 100
+          date:
+            type: string
+            description: 作成された日付
+            example: 2022/01/01
