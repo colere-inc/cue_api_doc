@@ -33,7 +33,7 @@ paths:
           schema:
             type: string
           required: true
-          description: account_relationのID
+          description: relationship_pointのID
         - in: query
           name: offset
           schema:

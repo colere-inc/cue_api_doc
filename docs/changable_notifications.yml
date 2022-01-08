@@ -83,7 +83,7 @@ paths:
           schema:
             type: string
           required: true
-          description: account_relationのID
+          description: changable_notificationのID
       requestBody:
         content:
           application/json:

@@ -83,7 +83,7 @@ paths:
           schema:
             type: string
           required: true
-          description: account_relationのID
+          description: external_appのID
       requestBody:
         content:
           application/json:
