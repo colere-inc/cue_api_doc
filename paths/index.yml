@@ -1,5 +1,3 @@
-/account_relations/{id}/relationship_points?offset=10&limit=10&order=asc:
-  $ref: "./account_relations/relationship_points.yml"
 /accounts/{accounts_id}/actions?offset=10&limit=10&order=asc:
   $ref: "./accounts/actions.yml"
 /accounts/{accounts_id}/actions/{actions_id}:
@@ -28,6 +26,8 @@
   $ref: "./recommend_actions.yml"
 /recommend_actions/{recommend_actions_id}:
   $ref: "./recommend_actions_id.yml"
+/account_relations/{account_relations_id}/relationship_points?offset=10&limit=10&order=asc:
+  $ref: "./account_relations/relationship_points.yml"
 /relationship_points:
   $ref: "./relationship_points.yml"
 /action_tags:
