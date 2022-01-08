@@ -15,4 +15,4 @@ Feedback:
 RecomendAction:
   $ref: "./recomend_action.yml"
 RelationPoint:
-  $ref: "./relation_point.yml"
+  $ref: "./relationship_point.yml"
