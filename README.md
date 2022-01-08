@@ -3,4 +3,4 @@ Reflect the changes
 
 show local server
  `python -m http.server 8000`
- `http://127.0.0.1:8000/swagger-ui/`
+ `http://127.0.0.1:8000/docs/`
