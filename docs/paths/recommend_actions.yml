@@ -293,31 +293,3 @@ paths:
           description: アクセス権がない
         "500":
           description: サーバーの一時的なエラー
-
-
-components:
-  schemas:
-    RecomendAction:
-      type: object
-      description: アクション
-      properties:
-        id:
-          type: string
-          description: ID
-          example: 0a1b2c3d4e5f6g7
-        name:
-          type: string
-          description: 名前
-          example: あいさつしよう
-        level:
-          type: string
-          description: どのレベルの関係性のときに候補として出すか(カンマ区切り)
-          example: 1,2,3
-        type:
-          type: string
-          description: タイプ
-          example: question
-        tag_id:
-          type: string
-          description: AI分析用のタグ(カンマ区切り)
-          example: 1,3,8

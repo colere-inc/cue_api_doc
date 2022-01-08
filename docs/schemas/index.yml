@@ -1,0 +1,18 @@
+AccountRelation:
+  $ref: "./account_relation.yml"
+Account:
+  $ref: "./account.yml"
+ActionTag:
+  $ref: "./action_tag.yml"
+Action:
+  $ref: "./action.yml"
+ChangableNotification:
+  $ref: "./changable_notification.yml"
+ExternalApp:
+  $ref: "./external_app.yml"
+Feedback:
+  $ref: "./feedback.yml"
+RecomendAction:
+  $ref: "./recomend_action.yml"
+RelationPoint:
+  $ref: "./relation_point.yml"

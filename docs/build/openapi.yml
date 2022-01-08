@@ -1,14 +1,17 @@
 openapi: 3.0.0
 info:
-  title: アカウント関係
-  description: アカウント同士の関連性
-  version: "0.0.1"
+  version: 0.0.1
+  title: PMF API Docment
+  license:
+    name: MIT
+servers:
+  - url: 'http://api.pmf.com'
 paths:
-  /account_relations:
+  /action_tags:
     get:
       tags:
-        - アカウントの関連性取得
-      description: 現在ログインしているアカウントに関連するつながりをすべて取得する。
+        - アクションタグ取得
+      description: アクションタグ一覧を取得する。
       parameters:
         - in: header
           name: Content-Type
@@ -22,7 +25,7 @@ paths:
           schema:
             type: string
         - in: header
-          name: "Authorization: Bearer"
+          name: 'Authorization: Bearer'
           required: true
           description: アクセストークン
           schema:
@@ -33,9 +36,8 @@ paths:
           application/json:
             schema:
               type: object
-
       responses:
-        "200":
+        '200':
           description: 取得成功
           content:
             application/json:
@@ -43,21 +45,20 @@ paths:
                 type: array
                 items:
                   type: object
-                  properties:
-                  $ref: '#/components/schemas/AccountRelation'
-        "400":
+                  properties: null
+                  $ref: '#/paths/components/schemas/ActionTag'
+        '400':
           description: リクエストに問題あり
-        "401":
+        '401':
           description: Authorizationヘッダーに問題あり
-        "403":
+        '403':
           description: アクセス権がない
-        "500":
+        '500':
           description: サーバーの一時的なエラー
-
     post:
       tags:
-        - アカウントの関連性作成
-      description: アカウントの関連性情報を作成する。
+        - アクションタグ作成
+      description: アクションタグを作成する。
       parameters:
         - in: header
           name: Content-Type
@@ -71,7 +72,7 @@ paths:
           schema:
             type: string
         - in: header
-          name: "Authorization: Bearer"
+          name: 'Authorization: Bearer'
           required: true
           description: アクセストークン
           schema:
@@ -83,45 +84,34 @@ paths:
             schema:
               type: object
               properties:
-                manager_account_id:
+                name:
                   type: string
-                  description: 上司のアカウントID
-                  example: 0a1b2c3d4e5f6g7
-                member_account_id:
-                  type: string
-                  description: 部下のアカウントID
-                  example: 0a1b2c3d4e5f6g7
-                activated:
-                  type: boolean
-                  description: つながりを許可したか
-                  example: true
+                  description: 名前
+                  example: 私生活
               required:
-                - manager_account_id
-                - member_account_id
-
+                - name
       responses:
-        "200":
+        '200':
           description: 作成成功
           content:
             application/json:
               schema:
                 type: object
-                properties:
-                $ref: '#/components/schemas/AccountRelation'
-        "400":
+                properties: null
+                $ref: '#/paths/components/schemas/ActionTag'
+        '400':
           description: リクエストに問題あり
-        "401":
+        '401':
           description: Authorizationヘッダーに問題あり
-        "403":
+        '403':
           description: アクセス権がない
-        "500":
+        '500':
           description: サーバーの一時的なエラー
-
-  /account_relations/{id}:
+  '/action_tags/{action_tags_id}':
     get:
       tags:
-        - アカウントの関連性取得
-      description: 指定のアカウントの関連性情報を取得する。
+        - アクションタグ取得
+      description: 指定のアクションタグを取得する。
       parameters:
         - in: header
           name: Content-Type
@@ -135,7 +125,7 @@ paths:
           schema:
             type: string
         - in: header
-          name: "Authorization: Bearer"
+          name: 'Authorization: Bearer'
           required: true
           description: アクセストークン
           schema:
@@ -146,35 +136,33 @@ paths:
           schema:
             type: string
           required: true
-          description: account_relationのID
+          description: action_tagのID
       requestBody:
         content:
           application/json:
             schema:
               type: object
-
       responses:
-        "200":
-          description: 取得成功
+        '200':
+          description: 更新成功
           content:
             application/json:
               schema:
                 type: object
-                properties:
-                $ref: '#/components/schemas/AccountRelation'
-        "400":
+                properties: null
+                $ref: '#/paths/components/schemas/ActionTag'
+        '400':
           description: リクエストに問題あり
-        "401":
+        '401':
           description: Authorizationヘッダーに問題あり
-        "403":
+        '403':
           description: アクセス権がない
-        "500":
+        '500':
           description: サーバーの一時的なエラー
-
     put:
       tags:
-        - アカウントの関連性更新
-      description: 指定のアカウントの関連性情報を更新する。
+        - アクションタグ更新
+      description: 指定のアクションタグを更新する。
       parameters:
         - in: header
           name: Content-Type
@@ -188,7 +176,7 @@ paths:
           schema:
             type: string
         - in: header
-          name: "Authorization: Bearer"
+          name: 'Authorization: Bearer'
           required: true
           description: アクセストークン
           schema:
@@ -199,40 +187,38 @@ paths:
           schema:
             type: string
           required: true
-          description: account_relationのID
+          description: action_tagのID
       requestBody:
         content:
           application/json:
             schema:
               type: object
               properties:
-                activated:
-                  type: boolean
-                  description: つながりを許可したか
-                  example: true
-
+                name:
+                  type: string
+                  description: 名前
+                  example: 私生活
       responses:
-        "200":
+        '200':
           description: 更新成功
           content:
             application/json:
               schema:
                 type: object
-                properties:
-                $ref: '#/components/schemas/AccountRelation'
-        "400":
+                properties: null
+                $ref: '#/paths/components/schemas/ActionTag'
+        '400':
           description: リクエストに問題あり
-        "401":
+        '401':
           description: Authorizationヘッダーに問題あり
-        "403":
+        '403':
           description: アクセス権がない
-        "500":
+        '500':
           description: サーバーの一時的なエラー
-
     delete:
       tags:
-        - アカウントの関連性削除
-      description: 指定のアカウントの関連性情報を削除する。
+        - アクションタグ削除
+      description: 指定のアクションタグを削除する。
       parameters:
         - in: header
           name: Content-Type
@@ -246,7 +232,7 @@ paths:
           schema:
             type: string
         - in: header
-          name: "Authorization: Bearer"
+          name: 'Authorization: Bearer'
           required: true
           description: アクセストークン
           schema:
@@ -257,21 +243,64 @@ paths:
           schema:
             type: string
           required: true
-          description: account_relationのID
+          description: action_tagのID
       requestBody:
         content:
           application/json:
             schema:
               type: object
-
       responses:
-        "204":
+        '204':
           description: 削除成功
-        "400":
+        '400':
           description: リクエストに問題あり
-        "401":
+        '401':
           description: Authorizationヘッダーに問題あり
-        "403":
+        '403':
           description: アクセス権がない
-        "500":
+        '500':
           description: サーバーの一時的なエラー
+  components:
+    schemas:
+      ActionTag:
+        type: object
+        description: アクションタグ
+        properties:
+          id:
+            type: string
+            description: ID
+            example: 0a1b2c3d4e5f6g7
+          name:
+            type: string
+            description: 名前
+            example: 私生活
+components:
+  schemas:
+    AccountRelation:
+      type: object
+      description: アカウント同士の関連性
+      properties:
+        id:
+          type: string
+          description: ID
+          example: 0a1b2c3d4e5f6g7
+        manager_account_id:
+          type: string
+          description: 上司のアカウントID
+          example: 0a1b2c3d4e5f6g7
+        member_account_id:
+          type: string
+          description: 部下のアカウントID
+          example: 0a1b2c3d4e5f6g7
+        activated:
+          type: boolean
+          description: つながりを許可したか
+          example: true
+    Account: !<tag:yaml.org,2002:js/undefined> ''
+    ActionTag: !<tag:yaml.org,2002:js/undefined> ''
+    Action: !<tag:yaml.org,2002:js/undefined> ''
+    ChangableNotification: !<tag:yaml.org,2002:js/undefined> ''
+    ExternalApp: !<tag:yaml.org,2002:js/undefined> ''
+    Feedback: !<tag:yaml.org,2002:js/undefined> ''
+    RecomendAction: !<tag:yaml.org,2002:js/undefined> ''
+    RelationPoint: !<tag:yaml.org,2002:js/undefined> ''
