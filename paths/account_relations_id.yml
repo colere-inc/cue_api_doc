@@ -1,6 +1,6 @@
 get:
   tags:
-    - アカウントの関連性取得
+    - アカウントの関連性
   description: 指定のアカウントの関連性情報を取得する。
   parameters:
     - in: header
@@ -53,7 +53,7 @@ get:
 
 put:
   tags:
-    - アカウントの関連性更新
+    - アカウントの関連性
   description: 指定のアカウントの関連性情報を更新する。
   parameters:
     - in: header
@@ -111,7 +111,7 @@ put:
 
 delete:
   tags:
-    - アカウントの関連性削除
+    - アカウントの関連性
   description: 指定のアカウントの関連性情報を削除する。
   parameters:
     - in: header

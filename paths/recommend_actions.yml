@@ -1,6 +1,6 @@
 get:
   tags:
-    - アクション取得
+    - アクション候補
   description: アクション一覧を取得する。
   parameters:
     - in: header
@@ -49,7 +49,7 @@ get:
 
 post:
   tags:
-    - アクション作成
+    - アクション候補
   description: アクションを作成する。
   parameters:
     - in: header

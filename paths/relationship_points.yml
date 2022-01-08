@@ -1,6 +1,6 @@
 get:
       tags:
-        - 関係性レベルポイント取得
+        - 関係性レベルポイント
       description: 現在ログインしているアカウントに関連する関係性レベルのポイントをすべて取得する。<br>account_relationごとに最新の日付のもののみ取得する。
       parameters:
         - in: header

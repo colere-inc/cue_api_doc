@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
   title: ログイン
-  description: ログイン関連
+  description: ログイン
   version: "0.0.1"
 paths:
   /auth/token:

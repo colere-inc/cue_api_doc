@@ -1,6 +1,6 @@
 get:
       tags:
-        - 外部連携アプリ取得
+        - 外部連携アプリ
       description: ログインしているアカウントの連携した外部アプリ情報をすべて取得する。
       parameters:
         - in: header

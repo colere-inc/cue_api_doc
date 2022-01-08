@@ -8,7 +8,7 @@ paths:
   '/accounts/{accounts_id}/actions?offset=10&limit=10&order=asc':
     get:
       tags:
-        - アクション履歴取得
+        - アクション履歴
       description: 指定のアカウントに対するアクション履歴一覧を取得する。
       parameters:
         - in: header
@@ -77,7 +77,7 @@ paths:
   '/accounts/{accounts_id}/actions/{actions_id}':
     put:
       tags:
-        - アクション履歴更新
+        - アクション履歴
       description: 指定のアカウントに対する指定のアクション情報を更新する。
       parameters:
         - in: header
@@ -140,7 +140,7 @@ paths:
   '/actions/{actions_id}/feedbacks':
     get:
       tags:
-        - フィードバック取得
+        - フィードバック
       description: 特定のアクションに対するフィードバック一覧を取得する。
       parameters:
         - in: header
@@ -187,7 +187,7 @@ paths:
           description: サーバーの一時的なエラー
     post:
       tags:
-        - フィードバック作成
+        - フィードバック
       description: 特定のアクションに対するフィードバックを作成する。
       parameters:
         - in: header
@@ -254,7 +254,7 @@ paths:
   '/actions/{actions_id}/feedbacks/{feedbacks_id}':
     put:
       tags:
-        - フィードバック更新
+        - フィードバック
       description: 特定のアクションに対するフィードバックを更新する。
       parameters:
         - in: header
@@ -310,7 +310,7 @@ paths:
           description: サーバーの一時的なエラー
     delete:
       tags:
-        - フィードバック削除
+        - フィードバック
       description: 特定のアクションに対するフィードバックを削除する。
       parameters:
         - in: header
@@ -356,7 +356,7 @@ paths:
   /account_relations:
     get:
       tags:
-        - アカウントの関連性取得
+        - アカウントの関連性
       description: 現在ログインしているアカウントに関連するつながりをすべて取得する。
       parameters:
         - in: header
@@ -403,7 +403,7 @@ paths:
           description: サーバーの一時的なエラー
     post:
       tags:
-        - アカウントの関連性作成
+        - アカウントの関連性
       description: アカウントの関連性情報を作成する。
       parameters:
         - in: header
@@ -465,7 +465,7 @@ paths:
   '/account_relations/{account_relations_id}':
     get:
       tags:
-        - アカウントの関連性取得
+        - アカウントの関連性
       description: 指定のアカウントの関連性情報を取得する。
       parameters:
         - in: header
@@ -516,7 +516,7 @@ paths:
           description: サーバーの一時的なエラー
     put:
       tags:
-        - アカウントの関連性更新
+        - アカウントの関連性
       description: 指定のアカウントの関連性情報を更新する。
       parameters:
         - in: header
@@ -572,7 +572,7 @@ paths:
           description: サーバーの一時的なエラー
     delete:
       tags:
-        - アカウントの関連性削除
+        - アカウントの関連性
       description: 指定のアカウントの関連性情報を削除する。
       parameters:
         - in: header
@@ -618,7 +618,7 @@ paths:
   /account:
     get:
       tags:
-        - アカウント情報取得
+        - アカウント
       description: 現在ログインしているアカウントの情報を取得する。
       parameters:
         - in: header
@@ -663,7 +663,7 @@ paths:
           description: サーバーの一時的なエラー
     post:
       tags:
-        - アカウント作成
+        - アカウント
       description: '上司 or 部下からの招待で作成する場合(with_account_relation, id)は AccountRelation、InitialRelationship、RelationshipPointも作成される。'
       parameters:
         - in: header
@@ -731,7 +731,7 @@ paths:
           description: サーバーの一時的なエラー
     put:
       tags:
-        - アカウント情報更新
+        - アカウント
       description: アカウント情報を更新する。
       parameters:
         - in: header
@@ -796,7 +796,7 @@ paths:
   /accounts:
     get:
       tags:
-        - アカウント情報取得
+        - アカウント
       description: アカウントをすべて取得する。
       parameters:
         - in: header
@@ -844,7 +844,7 @@ paths:
   /changable_notifications:
     get:
       tags:
-        - ポイント変化通知取得
+        - ポイント変化通知
       description: ログインしているアカウントのポイント変化通知一覧を取得する。
       parameters:
         - in: header
@@ -892,7 +892,7 @@ paths:
   '/changable_notifications/{changable_notifications_id}':
     put:
       tags:
-        - ポイント変化通知更新
+        - ポイント変化通知
       description: ログインしているアカウントのポイント変化通知一覧を更新する。
       parameters:
         - in: header
@@ -949,7 +949,7 @@ paths:
   /external_apps:
     get:
       tags:
-        - 外部連携アプリ取得
+        - 外部連携アプリ
       description: ログインしているアカウントの連携した外部アプリ情報をすべて取得する。
       parameters:
         - in: header
@@ -997,7 +997,7 @@ paths:
   '/external_apps/{external_apps_id}':
     put:
       tags:
-        - 外部連携アプリ取得
+        - 外部連携アプリ
       description: 連携した外部アプリ情報を更新する。
       parameters:
         - in: header
@@ -1054,7 +1054,7 @@ paths:
   /recommend_actions:
     get:
       tags:
-        - アクション取得
+        - アクション候補
       description: アクション一覧を取得する。
       parameters:
         - in: header
@@ -1101,7 +1101,7 @@ paths:
           description: サーバーの一時的なエラー
     post:
       tags:
-        - アクション作成
+        - アクション候補
       description: アクションを作成する。
       parameters:
         - in: header
@@ -1169,7 +1169,7 @@ paths:
   '/recommend_actions/{recommend_actions_id}':
     get:
       tags:
-        - アクション取得
+        - アクション
       description: 指定のアクションを取得する。
       parameters:
         - in: header
@@ -1220,7 +1220,7 @@ paths:
           description: サーバーの一時的なエラー
     put:
       tags:
-        - アクション更新
+        - アクション
       description: 指定のアクションを更新する。
       parameters:
         - in: header
@@ -1288,7 +1288,7 @@ paths:
           description: サーバーの一時的なエラー
     delete:
       tags:
-        - アクション削除
+        - アクション
       description: 指定のアクションを削除する。
       parameters:
         - in: header
@@ -1334,7 +1334,7 @@ paths:
   '/account_relations/{account_relations_id}/relationship_points?offset=10&limit=10&order=asc':
     get:
       tags:
-        - 関係性レベルポイント取得
+        - 関係性レベルポイント
       description: 指定のaccount_relationの関係性レベルのポイントをすべてを取得する。
       parameters:
         - in: header
@@ -1403,7 +1403,7 @@ paths:
   /relationship_points:
     get:
       tags:
-        - 関係性レベルポイント取得
+        - 関係性レベルポイント
       description: 現在ログインしているアカウントに関連する関係性レベルのポイントをすべて取得する。<br>account_relationごとに最新の日付のもののみ取得する。
       parameters:
         - in: header
@@ -1451,7 +1451,7 @@ paths:
   /action_tags:
     get:
       tags:
-        - アクションタグ取得
+        - アクションタグ
       description: アクションタグ一覧を取得する。
       parameters:
         - in: header
@@ -1498,7 +1498,7 @@ paths:
           description: サーバーの一時的なエラー
     post:
       tags:
-        - アクションタグ作成
+        - アクションタグ
       description: アクションタグを作成する。
       parameters:
         - in: header
@@ -1551,7 +1551,7 @@ paths:
   '/action_tags/{action_tags_id}':
     get:
       tags:
-        - アクションタグ取得
+        - アクションタグ
       description: 指定のアクションタグを取得する。
       parameters:
         - in: header
@@ -1602,7 +1602,7 @@ paths:
           description: サーバーの一時的なエラー
     put:
       tags:
-        - アクションタグ更新
+        - アクションタグ
       description: 指定のアクションタグを更新する。
       parameters:
         - in: header
@@ -1658,7 +1658,7 @@ paths:
           description: サーバーの一時的なエラー
     delete:
       tags:
-        - アクションタグ削除
+        - アクションタグ
       description: 指定のアクションタグを削除する。
       parameters:
         - in: header

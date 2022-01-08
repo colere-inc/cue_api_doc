@@ -1,6 +1,6 @@
 get:
       tags:
-        - アクション履歴取得
+        - アクション履歴
       description: 指定のアカウントに対するアクション履歴一覧を取得する。
       parameters:
         - in: header

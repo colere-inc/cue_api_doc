@@ -1,6 +1,6 @@
 put:
       tags:
-        - アクション履歴更新
+        - アクション履歴
       description: 指定のアカウントに対する指定のアクション情報を更新する。
       parameters:
         - in: header

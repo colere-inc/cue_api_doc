@@ -1,6 +1,6 @@
 get:
       tags:
-        - 関係性レベルポイント取得
+        - 関係性レベルポイント
       description: 指定のaccount_relationの関係性レベルのポイントをすべてを取得する。
       parameters:
         - in: header

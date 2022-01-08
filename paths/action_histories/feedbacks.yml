@@ -1,6 +1,6 @@
 get:
   tags:
-    - フィードバック取得
+    - フィードバック
   description: 特定のアクションに対するフィードバック一覧を取得する。
   parameters:
     - in: header
@@ -49,7 +49,7 @@ get:
 
 post:
   tags:
-    - フィードバック作成
+    - フィードバック
   description: 特定のアクションに対するフィードバックを作成する。
   parameters:
     - in: header

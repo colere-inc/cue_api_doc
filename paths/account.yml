@@ -1,6 +1,6 @@
 get:
   tags:
-    - アカウント情報取得
+    - アカウント
   description: 現在ログインしているアカウントの情報を取得する。
   parameters:
     - in: header
@@ -47,7 +47,7 @@ get:
 
 post:
   tags:
-    - アカウント作成
+    - アカウント
   description: 上司 or 部下からの招待で作成する場合(with_account_relation, id)は AccountRelation、InitialRelationship、RelationshipPointも作成される。
   parameters:
     - in: header
@@ -117,7 +117,7 @@ post:
 
 put:
   tags:
-    - アカウント情報更新
+    - アカウント
   description: アカウント情報を更新する。
   parameters:
     - in: header
