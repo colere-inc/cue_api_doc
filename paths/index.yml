@@ -1,5 +1,7 @@
-/accounts/{accounts_id}/actions?offset=10&limit=10&order=asc:
+/accounts/{accounts_id}/actions:
   $ref: "./accounts/actions.yml"
+/accounts/{accounts_id}/actions?offset=10&limit=10&order=asc:
+  $ref: "./accounts/actions_query.yml"
 /accounts/{accounts_id}/actions/{actions_id}:
   $ref: "./accounts/actions_id.yml"
 /actions/{actions_id}/feedbacks:
