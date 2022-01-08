@@ -1,5 +1,5 @@
 Reflect the changes
-`swagger-cli bundle -o ./docs/build/openapi.yml -t yaml ./docs/openapi.yml`
+`swagger-cli bundle -o build/openapi.yml -t yaml openapi.yml`
 
 show local server
  `python -m http.server 8000`
