@@ -44,7 +44,7 @@ paths:
                 items:
                   type: object
                   properties:
-                  $ref: '#/components/schemas/ExternlApp'
+                  $ref: '../schemas/external_app.yml'
         "400":
           description: リクエストに問題あり
         "401":
@@ -103,7 +103,7 @@ paths:
               schema:
                 type: object
                 properties:
-                $ref: '#/components/schemas/ExternlApp'
+                $ref: '../schemas/external_app.yml'
         "400":
           description: リクエストに問題あり
         "401":

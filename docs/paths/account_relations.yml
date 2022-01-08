@@ -44,7 +44,7 @@ paths:
                 items:
                   type: object
                   properties:
-                  $ref: '#/components/schemas/AccountRelation'
+                  $ref: '../schemas/account_relation.yml'
         "400":
           description: リクエストに問題あり
         "401":
@@ -107,7 +107,7 @@ paths:
               schema:
                 type: object
                 properties:
-                $ref: '#/components/schemas/AccountRelation'
+                $ref: '../schemas/account_relation.yml'
         "400":
           description: リクエストに問題あり
         "401":
@@ -161,7 +161,7 @@ paths:
               schema:
                 type: object
                 properties:
-                $ref: '#/components/schemas/AccountRelation'
+                $ref: '../schemas/account_relation.yml'
         "400":
           description: リクエストに問題あり
         "401":
@@ -219,7 +219,7 @@ paths:
               schema:
                 type: object
                 properties:
-                $ref: '#/components/schemas/AccountRelation'
+                $ref: '../schemas/account_relation.yml'
         "400":
           description: リクエストに問題あり
         "401":

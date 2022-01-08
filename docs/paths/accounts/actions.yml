@@ -65,7 +65,7 @@ paths:
                 items:
                   type: object
                   properties:
-                  $ref: '#/components/schemas/Action'
+                  $ref: '../schemas/action.yml'
         "400":
           description: リクエストに問題あり
         "401":
@@ -130,7 +130,7 @@ paths:
               schema:
                 type: object
                 properties:
-                $ref: '#/components/schemas/Action'
+                $ref: '../schemas/action.yml'
         "400":
           description: リクエストに問題あり
         "401":

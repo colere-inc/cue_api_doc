@@ -44,7 +44,7 @@ paths:
                 items:
                   type: object
                   properties:
-                  $ref: '#/components/schemas/Account'
+                  $ref: '../schemas/account.yml'
         "400":
           description: リクエストに問題あり
         "401":
