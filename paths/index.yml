@@ -2,6 +2,8 @@
   $ref: "./account.yml"
 /accounts:
   $ref: "./accounts.yml"
+/accounts/{accounts_id}:
+  $ref: "./accounts_id.yml"
 /accounts/{accounts_id}/actions:
   $ref: "./accounts/actions.yml"
 /accounts/{accounts_id}/actions?offset=10&limit=10&order=asc:
