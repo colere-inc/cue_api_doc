@@ -1,3 +1,7 @@
+/account:
+  $ref: "./account.yml"
+/accounts:
+  $ref: "./accounts.yml"
 /accounts/{accounts_id}/actions:
   $ref: "./accounts/actions.yml"
 /accounts/{accounts_id}/actions?offset=10&limit=10&order=asc:
@@ -12,10 +16,12 @@
   $ref: "./account_relations.yml"
 /account_relations/{account_relations_id}:
   $ref: "./account_relations_id.yml"
-/account:
-  $ref: "./account.yml"
-/accounts:
-  $ref: "./accounts.yml"
+/account_relations/{account_relations_id}/relationship_points?offset=10&limit=10&order=asc:
+  $ref: "./account_relations/relationship_points.yml"
+/action_tags:
+  $ref: "./action_tags.yml"
+/action_tags/{action_tags_id}:
+  $ref: "./action_tags_id.yml"
 /changable_notifications:
   $ref: "./changable_notifications.yml"
 /changable_notifications/{changable_notifications_id}:
@@ -28,11 +34,5 @@
   $ref: "./recommend_actions.yml"
 /recommend_actions/{recommend_actions_id}:
   $ref: "./recommend_actions_id.yml"
-/account_relations/{account_relations_id}/relationship_points?offset=10&limit=10&order=asc:
-  $ref: "./account_relations/relationship_points.yml"
 /relationship_points:
   $ref: "./relationship_points.yml"
-/action_tags:
-  $ref: "./action_tags.yml"
-/action_tags/{action_tags_id}:
-  $ref: "./action_tags_id.yml"
