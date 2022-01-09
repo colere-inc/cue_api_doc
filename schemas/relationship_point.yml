@@ -1,5 +1,5 @@
 type: object
-description: アカウント同士の関連性
+description: アカウント同士の関連性に対するポイント
 properties:
   account_relation_id:
     type: string
