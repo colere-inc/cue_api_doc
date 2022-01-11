@@ -256,7 +256,7 @@ paths:
             type: string
             example: eyJhbGciOiJIUzI1NiJ9
         - in: path
-          name: id
+          name: accounts_id
           schema:
             type: string
           required: true
@@ -307,6 +307,12 @@ paths:
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiJ9
+        - in: path
+          name: accounts_id
+          schema:
+            type: string
+          required: true
+          description: accountのID
       requestBody:
         content:
           application/json:
@@ -506,6 +512,12 @@ paths:
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiJ9
+        - in: path
+          name: actions_id
+          schema:
+            type: string
+          required: true
+          description: actionのID
       requestBody:
         content:
           application/json:
@@ -553,6 +565,12 @@ paths:
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiJ9
+        - in: path
+          name: actions_id
+          schema:
+            type: string
+          required: true
+          description: actionのID
       requestBody:
         content:
           application/json:
@@ -621,7 +639,13 @@ paths:
             type: string
             example: eyJhbGciOiJIUzI1NiJ9
         - in: path
-          name: id
+          name: actions_id
+          schema:
+            type: string
+          required: true
+          description: actionのID
+        - in: path
+          name: feedbacks_id
           schema:
             type: string
           required: true
@@ -677,7 +701,13 @@ paths:
             type: string
             example: eyJhbGciOiJIUzI1NiJ9
         - in: path
-          name: id
+          name: actions_id
+          schema:
+            type: string
+          required: true
+          description: actionのID
+        - in: path
+          name: feedbacks_id
           schema:
             type: string
           required: true
@@ -832,7 +862,7 @@ paths:
             type: string
             example: eyJhbGciOiJIUzI1NiJ9
         - in: path
-          name: id
+          name: account_relations_id
           schema:
             type: string
           required: true
@@ -883,7 +913,7 @@ paths:
             type: string
             example: eyJhbGciOiJIUzI1NiJ9
         - in: path
-          name: id
+          name: account_relations_id
           schema:
             type: string
           required: true
@@ -939,7 +969,7 @@ paths:
             type: string
             example: eyJhbGciOiJIUzI1NiJ9
         - in: path
-          name: id
+          name: account_relations_id
           schema:
             type: string
           required: true
@@ -985,11 +1015,11 @@ paths:
             type: string
             example: eyJhbGciOiJIUzI1NiJ9
         - in: path
-          name: id
+          name: account_relations_id
           schema:
             type: string
           required: true
-          description: relationship_pointのID
+          description: accunt_relationのID
         - in: query
           name: offset
           schema:
@@ -1154,7 +1184,7 @@ paths:
             type: string
             example: eyJhbGciOiJIUzI1NiJ9
         - in: path
-          name: id
+          name: action_tags_id
           schema:
             type: string
           required: true
@@ -1205,7 +1235,7 @@ paths:
             type: string
             example: eyJhbGciOiJIUzI1NiJ9
         - in: path
-          name: id
+          name: action_tags_id
           schema:
             type: string
           required: true
@@ -1261,7 +1291,7 @@ paths:
             type: string
             example: eyJhbGciOiJIUzI1NiJ9
         - in: path
-          name: id
+          name: action_tags_id
           schema:
             type: string
           required: true
@@ -1355,7 +1385,7 @@ paths:
             type: string
             example: eyJhbGciOiJIUzI1NiJ9
         - in: path
-          name: id
+          name: changable_notifications_id
           schema:
             type: string
           required: true
@@ -1460,7 +1490,7 @@ paths:
             type: string
             example: eyJhbGciOiJIUzI1NiJ9
         - in: path
-          name: id
+          name: external_apps_id
           schema:
             type: string
           required: true
@@ -1632,7 +1662,7 @@ paths:
             type: string
             example: eyJhbGciOiJIUzI1NiJ9
         - in: path
-          name: id
+          name: recommend_actions_id
           schema:
             type: string
           required: true
@@ -1683,7 +1713,7 @@ paths:
             type: string
             example: eyJhbGciOiJIUzI1NiJ9
         - in: path
-          name: id
+          name: recommend_actions_id
           schema:
             type: string
           required: true
@@ -1751,7 +1781,7 @@ paths:
             type: string
             example: eyJhbGciOiJIUzI1NiJ9
         - in: path
-          name: id
+          name: recommend_actions_id
           schema:
             type: string
           required: true
