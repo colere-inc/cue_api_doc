@@ -21,6 +21,12 @@ get:
       schema:
         type: string
         example: eyJhbGciOiJIUzI1NiJ9
+    - in: path
+      name: actions_id
+      schema:
+        type: string
+      required: true
+      description: actionのID
   requestBody:
     content:
       application/json:
@@ -70,6 +76,12 @@ post:
       schema:
         type: string
         example: eyJhbGciOiJIUzI1NiJ9
+    - in: path
+      name: actions_id
+      schema:
+        type: string
+      required: true
+      description: actionのID
   requestBody:
     content:
       application/json:

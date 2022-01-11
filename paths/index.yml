@@ -11,9 +11,9 @@
 /accounts/{accounts_id}/actions/{actions_id}:
   $ref: "./accounts/actions_id.yml"
 /actions/{actions_id}/feedbacks:
-  $ref: "./action_histories/feedbacks.yml"
+  $ref: "./actions/feedbacks.yml"
 /actions/{actions_id}/feedbacks/{feedbacks_id}:
-  $ref: "./action_histories/feedbacks_id.yml"
+  $ref: "./actions/feedbacks_id.yml"
 /account_relations:
   $ref: "./account_relations.yml"
 /account_relations/{account_relations_id}:

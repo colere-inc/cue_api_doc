@@ -21,6 +21,12 @@ post:
       schema:
         type: string
         example: eyJhbGciOiJIUzI1NiJ9
+    - in: path
+      name: accounts_id
+      schema:
+        type: string
+      required: true
+      description: accountのID
   requestBody:
     content:
       application/json:

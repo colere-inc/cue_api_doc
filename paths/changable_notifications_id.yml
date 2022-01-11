@@ -22,7 +22,7 @@ put:
             type: string
             example: eyJhbGciOiJIUzI1NiJ9
         - in: path
-          name: id
+          name: changable_notifications_id
           schema:
             type: string
           required: true
