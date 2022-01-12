@@ -280,54 +280,6 @@ paths:
           description: アクセス権がない
         '500':
           description: サーバーの一時的なエラー
-  /accounts:
-    get:
-      tags:
-        - アカウント
-      description: アカウントをすべて取得する。
-      parameters:
-        - in: header
-          name: Content-Type
-          required: true
-          schema:
-            type: string
-            example: application/json
-        - in: header
-          name: X-Request-ID
-          required: false
-          schema:
-            type: string
-        - in: header
-          name: 'Authorization: Bearer'
-          required: true
-          description: アクセストークン
-          schema:
-            type: string
-            example: eyJhbGciOiJIUzI1NiJ9
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-      responses:
-        '200':
-          description: 取得成功
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  type: object
-                  properties: null
-                  $ref: '#/components/schemas/Account'
-        '400':
-          description: リクエストに問題あり
-        '401':
-          description: Authorizationヘッダーに問題あり
-        '403':
-          description: アクセス権がない
-        '500':
-          description: サーバーの一時的なエラー
   '/accounts/{accounts_id}':
     get:
       tags:
@@ -1156,259 +1108,6 @@ paths:
           description: アクセス権がない
         '500':
           description: サーバーの一時的なエラー
-  /action_tags:
-    get:
-      tags:
-        - アクションタグ
-      description: アクションタグ一覧を取得する。
-      parameters:
-        - in: header
-          name: Content-Type
-          required: true
-          schema:
-            type: string
-            example: application/json
-        - in: header
-          name: X-Request-ID
-          required: false
-          schema:
-            type: string
-        - in: header
-          name: 'Authorization: Bearer'
-          required: true
-          description: アクセストークン
-          schema:
-            type: string
-            example: eyJhbGciOiJIUzI1NiJ9
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-      responses:
-        '200':
-          description: 取得成功
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  type: object
-                  properties: null
-                  $ref: '#/components/schemas/ActionTag'
-        '400':
-          description: リクエストに問題あり
-        '401':
-          description: Authorizationヘッダーに問題あり
-        '403':
-          description: アクセス権がない
-        '500':
-          description: サーバーの一時的なエラー
-    post:
-      tags:
-        - アクションタグ
-      description: アクションタグを作成する。
-      parameters:
-        - in: header
-          name: Content-Type
-          required: true
-          schema:
-            type: string
-            example: application/json
-        - in: header
-          name: X-Request-ID
-          required: false
-          schema:
-            type: string
-        - in: header
-          name: 'Authorization: Bearer'
-          required: true
-          description: アクセストークン
-          schema:
-            type: string
-            example: eyJhbGciOiJIUzI1NiJ9
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                name:
-                  type: string
-                  description: 名前
-                  example: 私生活
-              required:
-                - name
-      responses:
-        '200':
-          description: 作成成功
-          content:
-            application/json:
-              schema:
-                type: object
-                properties: null
-                $ref: '#/components/schemas/ActionTag'
-        '400':
-          description: リクエストに問題あり
-        '401':
-          description: Authorizationヘッダーに問題あり
-        '403':
-          description: アクセス権がない
-        '500':
-          description: サーバーの一時的なエラー
-  '/action_tags/{action_tags_id}':
-    get:
-      tags:
-        - アクションタグ
-      description: 指定のアクションタグを取得する。
-      parameters:
-        - in: header
-          name: Content-Type
-          required: true
-          schema:
-            type: string
-            example: application/json
-        - in: header
-          name: X-Request-ID
-          required: false
-          schema:
-            type: string
-        - in: header
-          name: 'Authorization: Bearer'
-          required: true
-          description: アクセストークン
-          schema:
-            type: string
-            example: eyJhbGciOiJIUzI1NiJ9
-        - in: path
-          name: action_tags_id
-          schema:
-            type: string
-          required: true
-          description: action_tagのID
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-      responses:
-        '200':
-          description: 更新成功
-          content:
-            application/json:
-              schema:
-                type: object
-                properties: null
-                $ref: '#/components/schemas/ActionTag'
-        '400':
-          description: リクエストに問題あり
-        '401':
-          description: Authorizationヘッダーに問題あり
-        '403':
-          description: アクセス権がない
-        '500':
-          description: サーバーの一時的なエラー
-    put:
-      tags:
-        - アクションタグ
-      description: 指定のアクションタグを更新する。
-      parameters:
-        - in: header
-          name: Content-Type
-          required: true
-          schema:
-            type: string
-            example: application/json
-        - in: header
-          name: X-Request-ID
-          required: false
-          schema:
-            type: string
-        - in: header
-          name: 'Authorization: Bearer'
-          required: true
-          description: アクセストークン
-          schema:
-            type: string
-            example: eyJhbGciOiJIUzI1NiJ9
-        - in: path
-          name: action_tags_id
-          schema:
-            type: string
-          required: true
-          description: action_tagのID
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                name:
-                  type: string
-                  description: 名前
-                  example: 私生活
-      responses:
-        '200':
-          description: 更新成功
-          content:
-            application/json:
-              schema:
-                type: object
-                properties: null
-                $ref: '#/components/schemas/ActionTag'
-        '400':
-          description: リクエストに問題あり
-        '401':
-          description: Authorizationヘッダーに問題あり
-        '403':
-          description: アクセス権がない
-        '500':
-          description: サーバーの一時的なエラー
-    delete:
-      tags:
-        - アクションタグ
-      description: 指定のアクションタグを削除する。
-      parameters:
-        - in: header
-          name: Content-Type
-          required: true
-          schema:
-            type: string
-            example: application/json
-        - in: header
-          name: X-Request-ID
-          required: false
-          schema:
-            type: string
-        - in: header
-          name: 'Authorization: Bearer'
-          required: true
-          description: アクセストークン
-          schema:
-            type: string
-            example: eyJhbGciOiJIUzI1NiJ9
-        - in: path
-          name: action_tags_id
-          schema:
-            type: string
-          required: true
-          description: action_tagのID
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-      responses:
-        '204':
-          description: 削除成功
-        '400':
-          description: リクエストに問題あり
-        '401':
-          description: Authorizationヘッダーに問題あり
-        '403':
-          description: アクセス権がない
-        '500':
-          description: サーバーの一時的なエラー
   /changable_notifications:
     get:
       tags:
@@ -1619,10 +1318,359 @@ paths:
           description: アクセス権がない
         '500':
           description: サーバーの一時的なエラー
+  /relationship_points:
+    get:
+      tags:
+        - 関係性レベルポイント
+      description: 現在ログインしているアカウントに関連する関係性レベルのポイントをすべて取得する。<br>account_relationごとに最新の日付のもののみ取得する。
+      parameters:
+        - in: header
+          name: Content-Type
+          required: true
+          schema:
+            type: string
+            example: application/json
+        - in: header
+          name: X-Request-ID
+          required: false
+          schema:
+            type: string
+        - in: header
+          name: 'Authorization: Bearer'
+          required: true
+          description: アクセストークン
+          schema:
+            type: string
+            example: eyJhbGciOiJIUzI1NiJ9
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: 取得成功
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties: null
+                  $ref: '#/components/schemas/RelationPoint'
+        '400':
+          description: リクエストに問題あり
+        '401':
+          description: Authorizationヘッダーに問題あり
+        '403':
+          description: アクセス権がない
+        '500':
+          description: サーバーの一時的なエラー
+  /accounts:
+    get:
+      tags:
+        - アカウント(管理用)
+      description: アカウントをすべて取得する。
+      parameters:
+        - in: header
+          name: Content-Type
+          required: true
+          schema:
+            type: string
+            example: application/json
+        - in: header
+          name: X-Request-ID
+          required: false
+          schema:
+            type: string
+        - in: header
+          name: 'Authorization: Bearer'
+          required: true
+          description: アクセストークン
+          schema:
+            type: string
+            example: eyJhbGciOiJIUzI1NiJ9
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: 取得成功
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties: null
+                  $ref: '#/components/schemas/Account'
+        '400':
+          description: リクエストに問題あり
+        '401':
+          description: Authorizationヘッダーに問題あり
+        '403':
+          description: アクセス権がない
+        '500':
+          description: サーバーの一時的なエラー
+  /action_tags:
+    get:
+      tags:
+        - アクションタグ(管理用)
+      description: アクションタグ一覧を取得する。
+      parameters:
+        - in: header
+          name: Content-Type
+          required: true
+          schema:
+            type: string
+            example: application/json
+        - in: header
+          name: X-Request-ID
+          required: false
+          schema:
+            type: string
+        - in: header
+          name: 'Authorization: Bearer'
+          required: true
+          description: アクセストークン
+          schema:
+            type: string
+            example: eyJhbGciOiJIUzI1NiJ9
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: 取得成功
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties: null
+                  $ref: '#/components/schemas/ActionTag'
+        '400':
+          description: リクエストに問題あり
+        '401':
+          description: Authorizationヘッダーに問題あり
+        '403':
+          description: アクセス権がない
+        '500':
+          description: サーバーの一時的なエラー
+    post:
+      tags:
+        - アクションタグ(管理用)
+      description: アクションタグを作成する。
+      parameters:
+        - in: header
+          name: Content-Type
+          required: true
+          schema:
+            type: string
+            example: application/json
+        - in: header
+          name: X-Request-ID
+          required: false
+          schema:
+            type: string
+        - in: header
+          name: 'Authorization: Bearer'
+          required: true
+          description: アクセストークン
+          schema:
+            type: string
+            example: eyJhbGciOiJIUzI1NiJ9
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 名前
+                  example: 私生活
+              required:
+                - name
+      responses:
+        '200':
+          description: 作成成功
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: null
+                $ref: '#/components/schemas/ActionTag'
+        '400':
+          description: リクエストに問題あり
+        '401':
+          description: Authorizationヘッダーに問題あり
+        '403':
+          description: アクセス権がない
+        '500':
+          description: サーバーの一時的なエラー
+  '/action_tags/{action_tags_id}':
+    get:
+      tags:
+        - アクションタグ(管理用)
+      description: 指定のアクションタグを取得する。
+      parameters:
+        - in: header
+          name: Content-Type
+          required: true
+          schema:
+            type: string
+            example: application/json
+        - in: header
+          name: X-Request-ID
+          required: false
+          schema:
+            type: string
+        - in: header
+          name: 'Authorization: Bearer'
+          required: true
+          description: アクセストークン
+          schema:
+            type: string
+            example: eyJhbGciOiJIUzI1NiJ9
+        - in: path
+          name: action_tags_id
+          schema:
+            type: string
+          required: true
+          description: action_tagのID
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: 更新成功
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: null
+                $ref: '#/components/schemas/ActionTag'
+        '400':
+          description: リクエストに問題あり
+        '401':
+          description: Authorizationヘッダーに問題あり
+        '403':
+          description: アクセス権がない
+        '500':
+          description: サーバーの一時的なエラー
+    put:
+      tags:
+        - アクションタグ(管理用)
+      description: 指定のアクションタグを更新する。
+      parameters:
+        - in: header
+          name: Content-Type
+          required: true
+          schema:
+            type: string
+            example: application/json
+        - in: header
+          name: X-Request-ID
+          required: false
+          schema:
+            type: string
+        - in: header
+          name: 'Authorization: Bearer'
+          required: true
+          description: アクセストークン
+          schema:
+            type: string
+            example: eyJhbGciOiJIUzI1NiJ9
+        - in: path
+          name: action_tags_id
+          schema:
+            type: string
+          required: true
+          description: action_tagのID
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 名前
+                  example: 私生活
+      responses:
+        '200':
+          description: 更新成功
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: null
+                $ref: '#/components/schemas/ActionTag'
+        '400':
+          description: リクエストに問題あり
+        '401':
+          description: Authorizationヘッダーに問題あり
+        '403':
+          description: アクセス権がない
+        '500':
+          description: サーバーの一時的なエラー
+    delete:
+      tags:
+        - アクションタグ(管理用)
+      description: 指定のアクションタグを削除する。
+      parameters:
+        - in: header
+          name: Content-Type
+          required: true
+          schema:
+            type: string
+            example: application/json
+        - in: header
+          name: X-Request-ID
+          required: false
+          schema:
+            type: string
+        - in: header
+          name: 'Authorization: Bearer'
+          required: true
+          description: アクセストークン
+          schema:
+            type: string
+            example: eyJhbGciOiJIUzI1NiJ9
+        - in: path
+          name: action_tags_id
+          schema:
+            type: string
+          required: true
+          description: action_tagのID
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '204':
+          description: 削除成功
+        '400':
+          description: リクエストに問題あり
+        '401':
+          description: Authorizationヘッダーに問題あり
+        '403':
+          description: アクセス権がない
+        '500':
+          description: サーバーの一時的なエラー
   /recommend_actions:
     get:
       tags:
-        - アクション候補
+        - アクション候補(管理用)
       description: アクション一覧を取得する。
       parameters:
         - in: header
@@ -1669,7 +1717,7 @@ paths:
           description: サーバーの一時的なエラー
     post:
       tags:
-        - アクション候補
+        - アクション候補(管理用)
       description: アクションを作成する。
       parameters:
         - in: header
@@ -1737,7 +1785,7 @@ paths:
   '/recommend_actions/{recommend_actions_id}':
     get:
       tags:
-        - アクション
+        - アクション(管理用)
       description: 指定のアクションを取得する。
       parameters:
         - in: header
@@ -1788,7 +1836,7 @@ paths:
           description: サーバーの一時的なエラー
     put:
       tags:
-        - アクション
+        - アクション(管理用)
       description: 指定のアクションを更新する。
       parameters:
         - in: header
@@ -1856,7 +1904,7 @@ paths:
           description: サーバーの一時的なエラー
     delete:
       tags:
-        - アクション
+        - アクション(管理用)
       description: 指定のアクションを削除する。
       parameters:
         - in: header
@@ -1891,54 +1939,6 @@ paths:
       responses:
         '204':
           description: 削除成功
-        '400':
-          description: リクエストに問題あり
-        '401':
-          description: Authorizationヘッダーに問題あり
-        '403':
-          description: アクセス権がない
-        '500':
-          description: サーバーの一時的なエラー
-  /relationship_points:
-    get:
-      tags:
-        - 関係性レベルポイント
-      description: 現在ログインしているアカウントに関連する関係性レベルのポイントをすべて取得する。<br>account_relationごとに最新の日付のもののみ取得する。
-      parameters:
-        - in: header
-          name: Content-Type
-          required: true
-          schema:
-            type: string
-            example: application/json
-        - in: header
-          name: X-Request-ID
-          required: false
-          schema:
-            type: string
-        - in: header
-          name: 'Authorization: Bearer'
-          required: true
-          description: アクセストークン
-          schema:
-            type: string
-            example: eyJhbGciOiJIUzI1NiJ9
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-      responses:
-        '200':
-          description: 取得成功
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  type: object
-                  properties: null
-                  $ref: '#/components/schemas/RelationPoint'
         '400':
           description: リクエストに問題あり
         '401':

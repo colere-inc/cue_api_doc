@@ -1,6 +1,6 @@
 get:
   tags:
-    - アクションタグ
+    - アクションタグ(管理用)
   description: アクションタグ一覧を取得する。
   parameters:
     - in: header
@@ -49,7 +49,7 @@ get:
 
 post:
   tags:
-    - アクションタグ
+    - アクションタグ(管理用)
   description: アクションタグを作成する。
   parameters:
     - in: header
