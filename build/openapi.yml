@@ -1132,6 +1132,18 @@ paths:
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiJ9
+        - in: path
+          name: account_relations_id
+          schema:
+            type: string
+          required: true
+          description: account_relationのID
+        - in: path
+          name: recommend_action_id
+          schema:
+            type: string
+          required: true
+          description: recommend_actionのID
       requestBody:
         content:
           application/json:
