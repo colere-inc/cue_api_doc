@@ -41,7 +41,7 @@ get:
           schema:
             type: object
             properties:
-            $ref: '../schemas/recomend_action.yml'
+            $ref: '../schemas/recommend_action.yml'
     "400":
       description: リクエストに問題あり
     "401":
@@ -111,7 +111,7 @@ put:
           schema:
             type: object
             properties:
-            $ref: '../schemas/recomend_action.yml'
+            $ref: '../schemas/recommend_action.yml'
     "400":
       description: リクエストに問題あり
     "401":

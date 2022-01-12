@@ -30,6 +30,10 @@
   $ref: "./external_apps.yml"
 /external_apps/{external_apps_id}:
   $ref: "./external_apps_id.yml"
+/recommend_actions:
+  $ref: "./recommend_actions.yml"
+/recommend_actions/{recommend_actions_id}:
+  $ref: "./recommend_actions_id.yml"
 /relationship_points:
   $ref: "./relationship_points.yml"
 /accounts:
@@ -38,7 +42,3 @@
   $ref: "./action_tags.yml"
 /action_tags/{action_tags_id}:
   $ref: "./action_tags_id.yml"
-/recommend_actions:
-  $ref: "./recommend_actions.yml"
-/recommend_actions/{recommend_actions_id}:
-  $ref: "./recommend_actions_id.yml"

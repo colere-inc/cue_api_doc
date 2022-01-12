@@ -12,7 +12,7 @@ ExternalApp:
   $ref: "./external_app.yml"
 Feedback:
   $ref: "./feedback.yml"
-RecomendAction:
-  $ref: "./recomend_action.yml"
+recommendAction:
+  $ref: "./recommend_action.yml"
 RelationPoint:
   $ref: "./relationship_point.yml"

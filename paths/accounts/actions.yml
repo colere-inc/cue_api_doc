@@ -37,7 +37,7 @@ post:
               type: string
               description: アカウント同士の関連性ID
               example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
-            recomend_action_id:
+            recommend_action_id:
               type: string
               description: アクション候補ID
               example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
@@ -51,7 +51,7 @@ post:
               example: 2022/01/02
           required:
             - account_relation_id
-            - recomend_action_id
+            - recommend_action_id
             - view_date
 
   responses:

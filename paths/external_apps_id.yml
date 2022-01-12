@@ -1,6 +1,6 @@
 put:
   tags:
-    - 外部連携アプリ
+    - 外部連携アプリ(管理)
   description: 連携した外部アプリ情報を更新する。
   parameters:
     - in: header
