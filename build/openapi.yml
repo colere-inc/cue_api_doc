@@ -1108,6 +1108,52 @@ paths:
           description: アクセス権がない
         '500':
           description: サーバーの一時的なエラー
+  '/account_relations/{account_relations_id}/recommend_actions/{recommend_action_id}/external_apps':
+    get:
+      tags:
+        - 外部連携アプリ
+      description: 指定のアカウントのつながりとアクションに設定された外部アプリ情報を取得する。
+      parameters:
+        - in: header
+          name: Content-Type
+          required: true
+          schema:
+            type: string
+            example: application/json
+        - in: header
+          name: X-Request-ID
+          required: false
+          schema:
+            type: string
+        - in: header
+          name: 'Authorization: Bearer'
+          required: true
+          description: アクセストークン
+          schema:
+            type: string
+            example: eyJhbGciOiJIUzI1NiJ9
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: 取得成功
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: null
+                description: ポイント変更通知
+        '400':
+          description: リクエストに問題あり
+        '401':
+          description: Authorizationヘッダーに問題あり
+        '403':
+          description: アクセス権がない
+        '500':
+          description: サーバーの一時的なエラー
   /changable_notifications:
     get:
       tags:
@@ -1349,6 +1395,60 @@ paths:
                   type: object
                   properties: null
                   $ref: '#/components/schemas/Account'
+        '400':
+          description: リクエストに問題あり
+        '401':
+          description: Authorizationヘッダーに問題あり
+        '403':
+          description: アクセス権がない
+        '500':
+          description: サーバーの一時的なエラー
+  '/accounts/{accounts_id}/external_apps':
+    get:
+      tags:
+        - 外部連携アプリ(管理)
+      description: 指定のアカウントの連携した外部アプリ情報をすべて取得する。
+      parameters:
+        - in: header
+          name: Content-Type
+          required: true
+          schema:
+            type: string
+            example: application/json
+        - in: header
+          name: X-Request-ID
+          required: false
+          schema:
+            type: string
+        - in: header
+          name: 'Authorization: Bearer'
+          required: true
+          description: アクセストークン
+          schema:
+            type: string
+            example: eyJhbGciOiJIUzI1NiJ9
+        - in: path
+          name: accounts_id
+          schema:
+            type: string
+          required: true
+          description: accountのID
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: 取得成功
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties: null
+                  $ref: '#/components/schemas/ExternalApp'
         '400':
           description: リクエストに問題あり
         '401':
@@ -1728,7 +1828,7 @@ paths:
   '/recommend_actions/{recommend_actions_id}':
     get:
       tags:
-        - アクション(管理用)
+        - アクション候補(管理用)
       description: 指定のアクションを取得する。
       parameters:
         - in: header
@@ -1779,7 +1879,7 @@ paths:
           description: サーバーの一時的なエラー
     put:
       tags:
-        - アクション(管理用)
+        - アクション候補(管理用)
       description: 指定のアクションを更新する。
       parameters:
         - in: header
@@ -1847,7 +1947,7 @@ paths:
           description: サーバーの一時的なエラー
     delete:
       tags:
-        - アクション(管理用)
+        - アクション候補(管理用)
       description: 指定のアクションを削除する。
       parameters:
         - in: header
