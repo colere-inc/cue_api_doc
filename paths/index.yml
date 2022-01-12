@@ -1,3 +1,7 @@
+/auth/token:
+  $ref: "./auth/token.yml"
+/auth/login/email:
+  $ref: "./auth/login/email.yml"
 /account:
   $ref: "./account.yml"
 /accounts:

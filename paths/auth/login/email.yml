@@ -1,70 +1,63 @@
-openapi: 3.0.0
-info:
-  title: ログイン
-  description: ログイン
-  version: "0.0.1"
-paths:
-  /auth/token:
-    post:
-      tags:
-        - ログイン
-      description: メールアドレスとパスワードでログインする。
-      parameters:
-        - in: header
-          name: Content-Type
-          required: true
-          schema:
-            type: string
-            example: application/json
-        - in: header
-          name: X-Request-ID
-          required: false
-          schema:
-            type: string
-        - in: header
-          name: "Authorization: Bearer"
-          required: true
-          description: アクセストークン
-          schema:
-            type: string
-            example: eyJhbGciOiJIUzI1NiJ9
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                email:
-                  type: string
-                  description: メールアドレス
-                  example: example@colere.inc
-                password:
-                  type: string
-                  description: パスワード
-                  example: password
-              required:
-                - email
-                - password
+post:
+  tags:
+    - ログイン
+  description: メールアドレスとパスワードでログインする。
+  parameters:
+    - in: header
+      name: Content-Type
+      required: true
+      schema:
+        type: string
+        example: application/json
+    - in: header
+      name: X-Request-ID
+      required: false
+      schema:
+        type: string
+    - in: header
+      name: "Authorization: Bearer"
+      required: true
+      description: アクセストークン
+      schema:
+        type: string
+        example: eyJhbGciOiJIUzI1NiJ9
+  requestBody:
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            email:
+              type: string
+              description: メールアドレス
+              example: example@colere.inc
+            password:
+              type: string
+              description: パスワード
+              example: password
+          required:
+            - email
+            - password
 
-      responses:
-        "200":
-          description: ログイン成功
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  access_token:
-                    type: string
-                    description: ログイン後のアクセストークン
-                    example: eyJhbGciOiJIUzI1NiJ9
-        "400":
-          description: リクエストに問題あり
-        "401":
-          description: Authorizationヘッダーに問題あり
-        "403":
-          description: アクセス権がない
-        "404":
-          description: ログイン失敗
-        "500":
-          description: サーバーの一時的なエラー
+  responses:
+    "200":
+      description: ログイン成功
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              access_token:
+                type: string
+                description: ログイン後のアクセストークン
+                example: eyJhbGciOiJIUzI1NiJ9
+    "400":
+      description: リクエストに問題あり
+    "401":
+      description: Authorizationヘッダーに問題あり
+    "403":
+      description: アクセス権がない
+    "404":
+      description: ログイン失敗
+    "500":
+      description: サーバーの一時的なエラー
