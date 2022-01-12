@@ -1145,7 +1145,7 @@ paths:
               schema:
                 type: object
                 properties: null
-                description: ポイント変更通知
+                $ref: '#/components/schemas/ExternalApp'
         '400':
           description: リクエストに問題あり
         '401':
