@@ -9,6 +9,10 @@ properties:
     type: string
     description: 対象のアカウント関連ID
     example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
+  recommend_action_id:
+    type: string
+    description: 対象のアクションID
+    example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
   name:
     type: string
     description: アプリの名前
