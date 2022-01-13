@@ -17,6 +17,10 @@ properties:
     type: string
     description: アプリの名前
     example: Microsoft Teams
+  category:
+    type: string
+    description: アプリのカテゴリ
+    example: Chat
   link:
     type: string
     description: 外部アプリへの遷移リンク

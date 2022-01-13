@@ -2038,7 +2038,7 @@ paths:
             schema:
               type: object
               properties:
-                url:
+                link:
                   type: string
                   description: 外部アプリへの遷移先URL(Custom URL Scheme含む)
                   example: 'instagram://app'
@@ -2183,7 +2183,7 @@ components:
           type: string
           description: ID
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
-        account_relations_id:
+        account_relation_id:
           type: string
           description: 対象のアカウント関連ID
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
@@ -2195,6 +2195,10 @@ components:
           type: string
           description: アプリの名前
           example: Microsoft Teams
+        category:
+          type: string
+          description: アプリのカテゴリ
+          example: Chat
         link:
           type: string
           description: 外部アプリへの遷移リンク

@@ -33,7 +33,7 @@ put:
         schema:
           type: object
           properties:
-            url:
+            link:
               type: string
               description: 外部アプリへの遷移先URL(Custom URL Scheme含む)
               example: instagram://app
