@@ -1,6 +1,6 @@
 get:
   tags:
-    - 外部連携アプリ(管理)
+    - 外部連携アプリ(管理専用)
   description: 指定のアカウントの連携した外部アプリ情報をすべて取得する。
   parameters:
     - in: header

@@ -1,6 +1,6 @@
 get:
   tags:
-    - オペレーター(管理用)
+    - オペレーター(管理専用)
   description: オペレーターをすべて取得する。
   parameters:
     - in: header
@@ -49,7 +49,7 @@ get:
 
 post:
   tags:
-    - オペレーター(管理用)
+    - オペレーター(管理専用)
   description: オペレーターを作成する。
   parameters:
     - in: header

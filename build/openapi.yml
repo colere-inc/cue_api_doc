@@ -1382,7 +1382,7 @@ paths:
   /accounts:
     get:
       tags:
-        - アカウント(管理用)
+        - アカウント(管理専用)
       description: アカウントをすべて取得する。
       parameters:
         - in: header
@@ -1430,7 +1430,7 @@ paths:
   '/accounts/{accounts_id}/external_apps':
     get:
       tags:
-        - 外部連携アプリ(管理)
+        - 外部連携アプリ(管理専用)
       description: 指定のアカウントの連携した外部アプリ情報をすべて取得する。
       parameters:
         - in: header
@@ -1484,7 +1484,7 @@ paths:
   /action_tags:
     get:
       tags:
-        - アクションタグ(管理用)
+        - アクションタグ(管理専用)
       description: アクションタグ一覧を取得する。
       parameters:
         - in: header
@@ -1531,7 +1531,7 @@ paths:
           description: サーバーの一時的なエラー
     post:
       tags:
-        - アクションタグ(管理用)
+        - アクションタグ(管理専用)
       description: アクションタグを作成する。
       parameters:
         - in: header
@@ -1584,7 +1584,7 @@ paths:
   '/action_tags/{action_tags_id}':
     get:
       tags:
-        - アクションタグ(管理用)
+        - アクションタグ(管理専用)
       description: 指定のアクションタグを取得する。
       parameters:
         - in: header
@@ -1635,7 +1635,7 @@ paths:
           description: サーバーの一時的なエラー
     put:
       tags:
-        - アクションタグ(管理用)
+        - アクションタグ(管理専用)
       description: 指定のアクションタグを更新する。
       parameters:
         - in: header
@@ -1691,7 +1691,7 @@ paths:
           description: サーバーの一時的なエラー
     delete:
       tags:
-        - アクションタグ(管理用)
+        - アクションタグ(管理専用)
       description: 指定のアクションタグを削除する。
       parameters:
         - in: header
@@ -1737,7 +1737,7 @@ paths:
   /recommend_actions:
     get:
       tags:
-        - アクション候補(管理用)
+        - アクション候補(管理専用)
       description: アクション一覧を取得する。
       parameters:
         - in: header
@@ -1784,7 +1784,7 @@ paths:
           description: サーバーの一時的なエラー
     post:
       tags:
-        - アクション候補(管理用)
+        - アクション候補(管理専用)
       description: アクションを作成する。
       parameters:
         - in: header
@@ -1852,7 +1852,7 @@ paths:
   '/recommend_actions/{recommend_actions_id}':
     get:
       tags:
-        - アクション候補(管理用)
+        - アクション候補(管理専用)
       description: 指定のアクションを取得する。
       parameters:
         - in: header
@@ -1903,7 +1903,7 @@ paths:
           description: サーバーの一時的なエラー
     put:
       tags:
-        - アクション候補(管理用)
+        - アクション候補(管理専用)
       description: 指定のアクションを更新する。
       parameters:
         - in: header
@@ -1971,7 +1971,7 @@ paths:
           description: サーバーの一時的なエラー
     delete:
       tags:
-        - アクション候補(管理用)
+        - アクション候補(管理専用)
       description: 指定のアクションを削除する。
       parameters:
         - in: header
@@ -2017,7 +2017,7 @@ paths:
   '/external_apps/{external_apps_id}':
     put:
       tags:
-        - 外部連携アプリ(管理)
+        - 外部連携アプリ(管理専用)
       description: 連携した外部アプリ情報を更新する。
       parameters:
         - in: header
@@ -2074,7 +2074,7 @@ paths:
   /operators:
     get:
       tags:
-        - オペレーター(管理用)
+        - オペレーター(管理専用)
       description: オペレーターをすべて取得する。
       parameters:
         - in: header
@@ -2121,7 +2121,7 @@ paths:
           description: サーバーの一時的なエラー
     post:
       tags:
-        - オペレーター(管理用)
+        - オペレーター(管理専用)
       description: オペレーターを作成する。
       parameters:
         - in: header
@@ -2188,7 +2188,7 @@ paths:
   '/operators/{operators_id}':
     get:
       tags:
-        - オペレーター(管理)
+        - オペレーター(管理専用)
       description: 指定したオペレーターを取得する。
       parameters:
         - in: header
@@ -2239,7 +2239,7 @@ paths:
           description: サーバーの一時的なエラー
     put:
       tags:
-        - オペレーター(管理)
+        - オペレーター(管理専用)
       description: 指定のオペレーターを更新する。
       parameters:
         - in: header
@@ -2307,7 +2307,7 @@ paths:
           description: サーバーの一時的なエラー
     delete:
       tags:
-        - オペレーター(管理)
+        - オペレーター(管理専用)
       description: 指定のオペレーターを削除する。
       parameters:
         - in: header
