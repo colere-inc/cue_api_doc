@@ -520,6 +520,10 @@ paths:
             schema:
               type: object
               properties:
+                view_date:
+                  type: string
+                  description: 表示した日付
+                  example: 2022/01/02
                 action_date:
                   type: string
                   description: 実行した日付
