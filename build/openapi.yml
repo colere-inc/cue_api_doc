@@ -1262,7 +1262,7 @@ paths:
             schema:
               type: object
               properties:
-                is_read:
+                read:
                   type: boolean
                   description: 既読したかどうか
                   example: true
@@ -2466,7 +2466,7 @@ components:
           type: string
           description: 日付
           example: 2022/01/01
-        is_read:
+        read:
           type: boolean
           description: 既読したかどうか
           example: true

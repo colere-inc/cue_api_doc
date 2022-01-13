@@ -33,7 +33,7 @@ put:
         schema:
           type: object
           properties:
-            is_read:
+            read:
               type: boolean
               description: 既読したかどうか
               example: true
