@@ -49,6 +49,10 @@ post:
               type: string
               description: 実行した日付
               example: 2022/01/02
+            skipped:
+              type: boolean
+              description: スキップしたか
+              example: boolean
           required:
             - account_relation_id
             - recommend_action_id

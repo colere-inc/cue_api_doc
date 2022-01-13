@@ -43,6 +43,10 @@ put:
               type: string
               description: 実行した日付
               example: 2022/01/02
+            skipped:
+              type: boolean
+              description: スキップしたか
+              example: boolean
 
   responses:
     "200":
