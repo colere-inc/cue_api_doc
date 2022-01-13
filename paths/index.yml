@@ -46,3 +46,7 @@
   $ref: "./recommend_actions_id.yml"
 /external_apps/{external_apps_id}:
   $ref: "./external_apps_id.yml"
+/operators:
+  $ref: "./operators.yml"
+/operators/{operators_id}:
+  $ref: "./operators_id.yml"

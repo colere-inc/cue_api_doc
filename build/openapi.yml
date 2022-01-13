@@ -1773,7 +1773,7 @@ paths:
                 items:
                   type: object
                   properties: null
-                  $ref: '#/components/schemas/recommendAction'
+                  $ref: '#/components/schemas/RecommendAction'
         '400':
           description: リクエストに問題あり
         '401':
@@ -1840,7 +1840,7 @@ paths:
               schema:
                 type: object
                 properties: null
-                $ref: '#/components/schemas/recommendAction'
+                $ref: '#/components/schemas/RecommendAction'
         '400':
           description: リクエストに問題あり
         '401':
@@ -1892,7 +1892,7 @@ paths:
               schema:
                 type: object
                 properties: null
-                $ref: '#/components/schemas/recommendAction'
+                $ref: '#/components/schemas/RecommendAction'
         '400':
           description: リクエストに問題あり
         '401':
@@ -1960,7 +1960,7 @@ paths:
               schema:
                 type: object
                 properties: null
-                $ref: '#/components/schemas/recommendAction'
+                $ref: '#/components/schemas/RecommendAction'
         '400':
           description: リクエストに問題あり
         '401':
@@ -2063,6 +2063,285 @@ paths:
                 type: object
                 properties: null
                 $ref: '#/components/schemas/ExternalApp'
+        '400':
+          description: リクエストに問題あり
+        '401':
+          description: Authorizationヘッダーに問題あり
+        '403':
+          description: アクセス権がない
+        '500':
+          description: サーバーの一時的なエラー
+  /operators:
+    get:
+      tags:
+        - オペレーター(管理用)
+      description: オペレーターをすべて取得する。
+      parameters:
+        - in: header
+          name: Content-Type
+          required: true
+          schema:
+            type: string
+            example: application/json
+        - in: header
+          name: X-Request-ID
+          required: false
+          schema:
+            type: string
+        - in: header
+          name: 'Authorization: Bearer'
+          required: true
+          description: アクセストークン
+          schema:
+            type: string
+            example: eyJhbGciOiJIUzI1NiJ9
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: 取得成功
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties: null
+                  $ref: '#/components/schemas/Account'
+        '400':
+          description: リクエストに問題あり
+        '401':
+          description: Authorizationヘッダーに問題あり
+        '403':
+          description: アクセス権がない
+        '500':
+          description: サーバーの一時的なエラー
+    post:
+      tags:
+        - オペレーター(管理用)
+      description: オペレーターを作成する。
+      parameters:
+        - in: header
+          name: Content-Type
+          required: true
+          schema:
+            type: string
+            example: application/json
+        - in: header
+          name: X-Request-ID
+          required: false
+          schema:
+            type: string
+        - in: header
+          name: 'Authorization: Bearer'
+          required: true
+          description: アクセストークン
+          schema:
+            type: string
+            example: eyJhbGciOiJIUzI1NiJ9
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                last_name:
+                  type: string
+                  description: 名
+                  example: 太郎
+                first_name:
+                  type: string
+                  description: 姓
+                  example: 山田
+                email:
+                  type: string
+                  description: メールアドレス
+                  example: example@colere.inc
+                icon:
+                  type: string
+                  description: アイコンのURL
+                  example: icon@pmf.com
+              required:
+                - last_name
+                - first_name
+                - email
+      responses:
+        '200':
+          description: 作成成功
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: null
+                $ref: '#/components/schemas/ActionTag'
+        '400':
+          description: リクエストに問題あり
+        '401':
+          description: Authorizationヘッダーに問題あり
+        '403':
+          description: アクセス権がない
+        '500':
+          description: サーバーの一時的なエラー
+  '/operators/{operators_id}':
+    get:
+      tags:
+        - オペレーター(管理)
+      description: 指定したオペレーターを取得する。
+      parameters:
+        - in: header
+          name: Content-Type
+          required: true
+          schema:
+            type: string
+            example: application/json
+        - in: header
+          name: X-Request-ID
+          required: false
+          schema:
+            type: string
+        - in: header
+          name: 'Authorization: Bearer'
+          required: true
+          description: アクセストークン
+          schema:
+            type: string
+            example: eyJhbGciOiJIUzI1NiJ9
+        - in: path
+          name: operators_id
+          schema:
+            type: string
+          required: true
+          description: operatorのID
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: 取得成功
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: null
+                $ref: '#/components/schemas/Operator'
+        '400':
+          description: リクエストに問題あり
+        '401':
+          description: Authorizationヘッダーに問題あり
+        '403':
+          description: アクセス権がない
+        '500':
+          description: サーバーの一時的なエラー
+    put:
+      tags:
+        - オペレーター(管理)
+      description: 指定のオペレーターを更新する。
+      parameters:
+        - in: header
+          name: Content-Type
+          required: true
+          schema:
+            type: string
+            example: application/json
+        - in: header
+          name: X-Request-ID
+          required: false
+          schema:
+            type: string
+        - in: header
+          name: 'Authorization: Bearer'
+          required: true
+          description: アクセストークン
+          schema:
+            type: string
+            example: eyJhbGciOiJIUzI1NiJ9
+        - in: path
+          name: operetors_id
+          schema:
+            type: string
+          required: true
+          description: operatorのID
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                last_name:
+                  type: string
+                  description: 名
+                  example: 太郎
+                first_name:
+                  type: string
+                  description: 姓
+                  example: 山田
+                email:
+                  type: string
+                  description: メールアドレス
+                  example: example@colere.inc
+                icon:
+                  type: string
+                  description: アイコンのURL
+                  example: icon@pmf.com
+      responses:
+        '200':
+          description: 更新成功
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: null
+                $ref: '#/components/schemas/Operator'
+        '400':
+          description: リクエストに問題あり
+        '401':
+          description: Authorizationヘッダーに問題あり
+        '403':
+          description: アクセス権がない
+        '500':
+          description: サーバーの一時的なエラー
+    delete:
+      tags:
+        - オペレーター(管理)
+      description: 指定のオペレーターを削除する。
+      parameters:
+        - in: header
+          name: Content-Type
+          required: true
+          schema:
+            type: string
+            example: application/json
+        - in: header
+          name: X-Request-ID
+          required: false
+          schema:
+            type: string
+        - in: header
+          name: 'Authorization: Bearer'
+          required: true
+          description: アクセストークン
+          schema:
+            type: string
+            example: eyJhbGciOiJIUzI1NiJ9
+        - in: path
+          name: operetors_id
+          schema:
+            type: string
+          required: true
+          description: operatorのID
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '204':
+          description: 削除成功
         '400':
           description: リクエストに問題あり
         '401':
@@ -2243,7 +2522,27 @@ components:
           type: string
           description: feedback内容
           example: よかったです。
-    recommendAction:
+    Operator:
+      type: object
+      description: オペレーター
+      properties:
+        last_name:
+          type: string
+          description: 名
+          example: 太郎
+        first_name:
+          type: string
+          description: 姓
+          example: 山田
+        email:
+          type: string
+          description: メールアドレス
+          example: example@colere.inc
+        icon:
+          type: string
+          description: アイコンのURL
+          example: icon@pmf.com
+    RecommendAction:
       type: object
       description: アクション
       properties:
