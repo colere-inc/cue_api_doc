@@ -1,7 +1,7 @@
 post:
   tags:
       - アクション履歴
-  description: 指定のアカウントに対するアクション履歴を作成する。
+  description: 指定の関係性に対するアクション履歴を作成する。
   parameters:
     - in: header
       name: Content-Type

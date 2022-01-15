@@ -1,7 +1,7 @@
-get:
+put:
   tags:
     - アクション履歴
-  description: 指定のアカウントに対するアクション履歴一覧を取得する。
+  description: 指定の関係性に対する指定のアクション情報を更新する。
   parameters:
     - in: header
       name: Content-Type
@@ -27,38 +27,40 @@ get:
         type: string
       required: true
       description: accountのID
-    - in: query
-      name: offset
-      schema:
-        type: integer
-      description: 何件目から取得するか
-    - in: query
-      name: limit
-      schema:
-        type: integer
-      description: 何件取得するか
-    - in: query
-      name: order
+    - in: path
+      name: actions_id
       schema:
         type: string
-      description: 昇順(asc) or 降順(desc)
+      required: true
+      description: actionのID
   requestBody:
     content:
       application/json:
         schema:
           type: object
+          properties:
+            view_date:
+              type: string
+              description: 表示した日付
+              example: 2022/01/02
+            action_date:
+              type: string
+              description: 実行した日付
+              example: 2022/01/02
+            skipped:
+              type: boolean
+              description: スキップしたか
+              example: boolean
 
   responses:
     "200":
-      description: 取得成功
+      description: 更新成功
       content:
         application/json:
           schema:
-            type: array
-            items:
-              type: object
-              properties:
-              $ref: '../../schemas/action.yml'
+            type: object
+            properties:
+            $ref: '../../schemas/action.yml'
     "400":
       description: リクエストに問題あり
     "401":

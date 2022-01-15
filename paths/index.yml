@@ -6,12 +6,6 @@
   $ref: "./account.yml"
 /accounts/{accounts_id}:
   $ref: "./accounts_id.yml"
-/accounts/{accounts_id}/actions:
-  $ref: "./accounts/actions.yml"
-/accounts/{accounts_id}/actions?offset=10&limit=10&order=asc:
-  $ref: "./accounts/actions_query.yml"
-/accounts/{accounts_id}/actions/{actions_id}:
-  $ref: "./accounts/actions_id.yml"
 /actions/{actions_id}/feedbacks:
   $ref: "./actions/feedbacks.yml"
 /actions/{actions_id}/feedbacks/{feedbacks_id}:
@@ -20,6 +14,12 @@
   $ref: "./account_relations.yml"
 /account_relations/{account_relations_id}:
   $ref: "./account_relations_id.yml"
+/account_relations/{account_relations_id}/actions?offset=10&limit=10&order=asc:
+  $ref: "./account_relations/actions_query.yml"
+/account_relations/{account_relations_id}/actions:
+  $ref: "./account_relations/actions.yml"
+/account_relations/{account_relations_id}/actions/{actions_id}:
+  $ref: "./account_relations/actions_id.yml"
 /account_relations/{account_relations_id}/relationship_points?offset=10&limit=10&order=asc:
   $ref: "./account_relations/relationship_points.yml"
 /account_relations/{account_relations_id}/recommend_actions/{recommend_action_id}/external_apps:
