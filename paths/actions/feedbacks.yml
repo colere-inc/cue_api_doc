@@ -88,10 +88,6 @@ post:
         schema:
           type: object
           properties:
-            action_id:
-              type: string
-              description: actionID
-              example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
             feedback_id:
               type: string
               description: feedbackID

@@ -22,11 +22,11 @@ put:
         type: string
         example: eyJhbGciOiJIUzI1NiJ9
     - in: path
-      name: accounts_id
+      name: account_relations_id
       schema:
         type: string
       required: true
-      description: accountのID
+      description: account_relationのID
     - in: path
       name: actions_id
       schema:

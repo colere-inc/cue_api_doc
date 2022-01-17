@@ -22,21 +22,17 @@ post:
         type: string
         example: eyJhbGciOiJIUzI1NiJ9
     - in: path
-      name: accounts_id
+      name: account_relations_id
       schema:
         type: string
       required: true
-      description: accountのID
+      description: account_relationのID
   requestBody:
     content:
       application/json:
         schema:
           type: object
           properties:
-            account_relation_id:
-              type: string
-              description: アカウント同士の関連性ID
-              example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
             recommend_action_id:
               type: string
               description: アクション候補ID
@@ -54,7 +50,6 @@ post:
               description: スキップしたか
               example: boolean
           required:
-            - account_relation_id
             - recommend_action_id
             - view_date
 
