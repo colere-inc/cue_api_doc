@@ -16,5 +16,5 @@ Operator:
   $ref: "./operator.yml"
 RecommendAction:
   $ref: "./recommend_action.yml"
-RelationPoint:
+RelationshipPoint:
   $ref: "./relationship_point.yml"
