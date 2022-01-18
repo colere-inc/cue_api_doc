@@ -1111,6 +1111,7 @@ paths:
           description: アクセス権がない
         '500':
           description: サーバーの一時的なエラー
+  '/account_relations/{account_relations_id}/relationship_points':
     post:
       tags:
         - 関係性レベルポイント

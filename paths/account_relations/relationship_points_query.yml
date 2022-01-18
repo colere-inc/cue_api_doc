@@ -1,7 +1,7 @@
-post:
+get:
   tags:
     - 関係性レベルポイント
-  description: 指定のaccount_relationの関係性レベルのポイントを作成する。
+  description: 指定のaccount_relationの関係性レベルのポイントをすべてを取得する。
   parameters:
     - in: header
       name: Content-Type
@@ -27,32 +27,37 @@ post:
         type: string
       required: true
       description: accunt_relationのID
+    - in: query
+      name: offset
+      schema:
+        type: integer
+      description: 何件目から取得するか
+    - in: query
+      name: limit
+      schema:
+        type: integer
+      description: 何件取得するか
+    - in: query
+      name: order
+      schema:
+        type: string
+      description: 昇順(asc) or 降順(desc)
   requestBody:
     content:
       application/json:
         schema:
           type: object
-          properties:
-            point:
-              type: integer
-              description: ポイント
-              example: 100
-            date:
-              type: string
-              description: 作成された日付
-              example: 2022/01/01
-          required:
-            - point
-            - date
 
   responses:
     "200":
-      description: 作成成功
+      description: 取得成功
       content:
         application/json:
           schema:
-            type: object
-            properties:
+            type: array
+            items:
+              type: object
+              properties:
               $ref: '../../schemas/relationship_point.yml'
     "400":
       description: リクエストに問題あり
@@ -62,3 +67,4 @@ post:
       description: アクセス権がない
     "500":
       description: サーバーの一時的なエラー
+
