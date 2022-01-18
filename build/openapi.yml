@@ -1206,7 +1206,7 @@ paths:
           required: true
           description: account_relationのID
         - in: path
-          name: recommend_action_id
+          name: recommend_actions_id
           schema:
             type: string
           required: true
@@ -1263,7 +1263,7 @@ paths:
           required: true
           description: account_relationのID
         - in: path
-          name: recommend_action_id
+          name: recommend_actions_id
           schema:
             type: string
           required: true
@@ -1274,14 +1274,6 @@ paths:
             schema:
               type: object
               properties:
-                account_relation_id:
-                  type: string
-                  description: 対象のアカウント関連ID
-                  example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
-                recommend_action_id:
-                  type: string
-                  description: 対象のアクションID
-                  example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
                 name:
                   type: string
                   description: アプリの名前
@@ -1295,8 +1287,6 @@ paths:
                   description: 外部アプリへの遷移リンク
                   example: 'https://teams.microsoft.com/l/chat/0/0?users=taro@colere.inc,jiro@colere.inc&topicName=Prep%20For%20Meeting%20Tomorrow&message=Hi%20folks%2C%20kicking%20off%20a%20chat%20about%20our%20meeting%20tomorrow'
               required:
-                - account_relation_id
-                - recommend_action_id
                 - name
                 - category
                 - link
@@ -1347,37 +1337,17 @@ paths:
           required: true
           description: account_relationのID
         - in: path
-          name: account_relations_id
-          schema:
-            type: string
-          required: true
-          description: account_relationのID
-        - in: path
-          name: recommend_action_id
+          name: recommend_actions_id
           schema:
             type: string
           required: true
           description: recommend_actionのID
-        - in: path
-          name: external_app_id
-          schema:
-            type: string
-          required: true
-          description: external_appのID
       requestBody:
         content:
           application/json:
             schema:
               type: object
               properties:
-                account_relation_id:
-                  type: string
-                  description: 対象のアカウント関連ID
-                  example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
-                recommend_action_id:
-                  type: string
-                  description: 対象のアクションID
-                  example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
                 name:
                   type: string
                   description: アプリの名前
