@@ -26,6 +26,8 @@
   $ref: "./account_relations/relationship_points.yml"
 /account_relations/{account_relations_id}/recommend_actions/{recommend_action_id}/external_apps:
   $ref: "./account_relations/recommend_actions/external_apps.yml"
+/account_relations/{account_relations_id}/recommend_actions/{recommend_action_id}/external_apps/{external_app_id}:
+  $ref: "./account_relations/recommend_actions/external_apps_id.yml"
 /changable_notifications:
   $ref: "./changable_notifications.yml"
 /changable_notifications/{changable_notifications_id}:
@@ -46,8 +48,6 @@
   $ref: "./recommend_actions.yml"
 /recommend_actions/{recommend_actions_id}:
   $ref: "./recommend_actions_id.yml"
-/external_apps/{external_apps_id}:
-  $ref: "./external_apps_id.yml"
 /operators:
   $ref: "./operators.yml"
 /operators/{operators_id}:
