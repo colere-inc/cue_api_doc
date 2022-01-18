@@ -1175,7 +1175,7 @@ paths:
           description: アクセス権がない
         '500':
           description: サーバーの一時的なエラー
-  '/account_relations/{account_relations_id}/recommend_actions/{recommend_action_id}/external_apps':
+  '/account_relations/{account_relations_id}/recommend_actions/{recommend_action_id}/external_app':
     get:
       tags:
         - 外部連携アプリ
@@ -1317,7 +1317,6 @@ paths:
           description: アクセス権がない
         '500':
           description: サーバーの一時的なエラー
-  '/account_relations/{account_relations_id}/recommend_actions/{recommend_action_id}/external_apps/{external_app_id}':
     put:
       tags:
         - 外部連携アプリ

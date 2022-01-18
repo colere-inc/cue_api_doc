@@ -24,10 +24,8 @@
   $ref: "./account_relations/relationship_points_query.yml"
 /account_relations/{account_relations_id}/relationship_points:
   $ref: "./account_relations/relationship_points.yml"
-/account_relations/{account_relations_id}/recommend_actions/{recommend_action_id}/external_apps:
-  $ref: "./account_relations/recommend_actions/external_apps.yml"
-/account_relations/{account_relations_id}/recommend_actions/{recommend_action_id}/external_apps/{external_app_id}:
-  $ref: "./account_relations/recommend_actions/external_apps_id.yml"
+/account_relations/{account_relations_id}/recommend_actions/{recommend_action_id}/external_app:
+  $ref: "./account_relations/recommend_actions/external_app.yml"
 /changable_notifications:
   $ref: "./changable_notifications.yml"
 /changable_notifications/{changable_notifications_id}:
