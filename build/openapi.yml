@@ -38,7 +38,7 @@ paths:
                   access_token:
                     type: string
                     description: アクセストークン
-                    example: eyJhbGciOiJIUzI1NiJ9
+                    example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
   /auth/login/email:
     post:
       tags:
@@ -62,7 +62,7 @@ paths:
           description: アクセストークン
           schema:
             type: string
-            example: eyJhbGciOiJIUzI1NiJ9
+            example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
       requestBody:
         content:
           application/json:
@@ -91,7 +91,7 @@ paths:
                   access_token:
                     type: string
                     description: ログイン後のアクセストークン
-                    example: eyJhbGciOiJIUzI1NiJ9
+                    example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
         '400':
           description: リクエストに問題あり
         '401':
@@ -125,7 +125,7 @@ paths:
           description: アクセストークン
           schema:
             type: string
-            example: eyJhbGciOiJIUzI1NiJ9
+            example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
       requestBody:
         content:
           application/json:
@@ -170,7 +170,7 @@ paths:
           description: アクセストークン
           schema:
             type: string
-            example: eyJhbGciOiJIUzI1NiJ9
+            example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
       requestBody:
         content:
           application/json:
@@ -238,7 +238,7 @@ paths:
           description: アクセストークン
           schema:
             type: string
-            example: eyJhbGciOiJIUzI1NiJ9
+            example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
       requestBody:
         content:
           application/json:
@@ -303,7 +303,7 @@ paths:
           description: アクセストークン
           schema:
             type: string
-            example: eyJhbGciOiJIUzI1NiJ9
+            example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
         - in: path
           name: accounts_id
           schema:
@@ -355,7 +355,7 @@ paths:
           description: アクセストークン
           schema:
             type: string
-            example: eyJhbGciOiJIUzI1NiJ9
+            example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
         - in: path
           name: actions_id
           schema:
@@ -408,7 +408,7 @@ paths:
           description: アクセストークン
           schema:
             type: string
-            example: eyJhbGciOiJIUzI1NiJ9
+            example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
         - in: path
           name: actions_id
           schema:
@@ -477,7 +477,7 @@ paths:
           description: アクセストークン
           schema:
             type: string
-            example: eyJhbGciOiJIUzI1NiJ9
+            example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
         - in: path
           name: actions_id
           schema:
@@ -539,7 +539,7 @@ paths:
           description: アクセストークン
           schema:
             type: string
-            example: eyJhbGciOiJIUzI1NiJ9
+            example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
         - in: path
           name: actions_id
           schema:
@@ -591,7 +591,7 @@ paths:
           description: アクセストークン
           schema:
             type: string
-            example: eyJhbGciOiJIUzI1NiJ9
+            example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
       requestBody:
         content:
           application/json:
@@ -638,7 +638,7 @@ paths:
           description: アクセストークン
           schema:
             type: string
-            example: eyJhbGciOiJIUzI1NiJ9
+            example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
       requestBody:
         content:
           application/json:
@@ -700,7 +700,7 @@ paths:
           description: アクセストークン
           schema:
             type: string
-            example: eyJhbGciOiJIUzI1NiJ9
+            example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
         - in: path
           name: account_relations_id
           schema:
@@ -751,7 +751,7 @@ paths:
           description: アクセストークン
           schema:
             type: string
-            example: eyJhbGciOiJIUzI1NiJ9
+            example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
         - in: path
           name: account_relations_id
           schema:
@@ -807,7 +807,7 @@ paths:
           description: アクセストークン
           schema:
             type: string
-            example: eyJhbGciOiJIUzI1NiJ9
+            example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
         - in: path
           name: account_relations_id
           schema:
@@ -853,7 +853,7 @@ paths:
           description: アクセストークン
           schema:
             type: string
-            example: eyJhbGciOiJIUzI1NiJ9
+            example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
         - in: path
           name: account_relations_id
           schema:
@@ -922,7 +922,7 @@ paths:
           description: アクセストークン
           schema:
             type: string
-            example: eyJhbGciOiJIUzI1NiJ9
+            example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
         - in: path
           name: account_relations_id
           schema:
@@ -994,7 +994,7 @@ paths:
           description: アクセストークン
           schema:
             type: string
-            example: eyJhbGciOiJIUzI1NiJ9
+            example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
         - in: path
           name: account_relations_id
           schema:
@@ -1065,7 +1065,7 @@ paths:
           description: アクセストークン
           schema:
             type: string
-            example: eyJhbGciOiJIUzI1NiJ9
+            example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
         - in: path
           name: account_relations_id
           schema:
@@ -1134,7 +1134,7 @@ paths:
           description: アクセストークン
           schema:
             type: string
-            example: eyJhbGciOiJIUzI1NiJ9
+            example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
         - in: path
           name: account_relations_id
           schema:
@@ -1198,7 +1198,7 @@ paths:
           description: アクセストークン
           schema:
             type: string
-            example: eyJhbGciOiJIUzI1NiJ9
+            example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
         - in: path
           name: account_relations_id
           schema:
@@ -1255,7 +1255,7 @@ paths:
           description: アクセストークン
           schema:
             type: string
-            example: eyJhbGciOiJIUzI1NiJ9
+            example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
         - in: path
           name: account_relations_id
           schema:
@@ -1329,7 +1329,7 @@ paths:
           description: アクセストークン
           schema:
             type: string
-            example: eyJhbGciOiJIUzI1NiJ9
+            example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
         - in: path
           name: account_relations_id
           schema:
@@ -1400,7 +1400,7 @@ paths:
           description: アクセストークン
           schema:
             type: string
-            example: eyJhbGciOiJIUzI1NiJ9
+            example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
       requestBody:
         content:
           application/json:
@@ -1448,7 +1448,7 @@ paths:
           description: アクセストークン
           schema:
             type: string
-            example: eyJhbGciOiJIUzI1NiJ9
+            example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
         - in: path
           name: changable_notifications_id
           schema:
@@ -1505,7 +1505,7 @@ paths:
           description: アクセストークン
           schema:
             type: string
-            example: eyJhbGciOiJIUzI1NiJ9
+            example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
       requestBody:
         content:
           application/json:
@@ -1553,7 +1553,7 @@ paths:
           description: アクセストークン
           schema:
             type: string
-            example: eyJhbGciOiJIUzI1NiJ9
+            example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
       requestBody:
         content:
           application/json:
@@ -1601,7 +1601,7 @@ paths:
           description: アクセストークン
           schema:
             type: string
-            example: eyJhbGciOiJIUzI1NiJ9
+            example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
       requestBody:
         content:
           application/json:
@@ -1649,7 +1649,7 @@ paths:
           description: アクセストークン
           schema:
             type: string
-            example: eyJhbGciOiJIUzI1NiJ9
+            example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
         - in: path
           name: accounts_id
           schema:
@@ -1703,7 +1703,7 @@ paths:
           description: アクセストークン
           schema:
             type: string
-            example: eyJhbGciOiJIUzI1NiJ9
+            example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
       requestBody:
         content:
           application/json:
@@ -1750,7 +1750,7 @@ paths:
           description: アクセストークン
           schema:
             type: string
-            example: eyJhbGciOiJIUzI1NiJ9
+            example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
       requestBody:
         content:
           application/json:
@@ -1803,7 +1803,7 @@ paths:
           description: アクセストークン
           schema:
             type: string
-            example: eyJhbGciOiJIUzI1NiJ9
+            example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
         - in: path
           name: action_tags_id
           schema:
@@ -1854,7 +1854,7 @@ paths:
           description: アクセストークン
           schema:
             type: string
-            example: eyJhbGciOiJIUzI1NiJ9
+            example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
         - in: path
           name: action_tags_id
           schema:
@@ -1910,7 +1910,7 @@ paths:
           description: アクセストークン
           schema:
             type: string
-            example: eyJhbGciOiJIUzI1NiJ9
+            example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
         - in: path
           name: action_tags_id
           schema:
@@ -1956,7 +1956,7 @@ paths:
           description: アクセストークン
           schema:
             type: string
-            example: eyJhbGciOiJIUzI1NiJ9
+            example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
       requestBody:
         content:
           application/json:
@@ -2003,7 +2003,7 @@ paths:
           description: アクセストークン
           schema:
             type: string
-            example: eyJhbGciOiJIUzI1NiJ9
+            example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
       requestBody:
         content:
           application/json:
@@ -2071,7 +2071,7 @@ paths:
           description: アクセストークン
           schema:
             type: string
-            example: eyJhbGciOiJIUzI1NiJ9
+            example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
         - in: path
           name: recommend_actions_id
           schema:
@@ -2122,7 +2122,7 @@ paths:
           description: アクセストークン
           schema:
             type: string
-            example: eyJhbGciOiJIUzI1NiJ9
+            example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
         - in: path
           name: recommend_actions_id
           schema:
@@ -2190,7 +2190,7 @@ paths:
           description: アクセストークン
           schema:
             type: string
-            example: eyJhbGciOiJIUzI1NiJ9
+            example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
         - in: path
           name: recommend_actions_id
           schema:
@@ -2236,7 +2236,7 @@ paths:
           description: アクセストークン
           schema:
             type: string
-            example: eyJhbGciOiJIUzI1NiJ9
+            example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
       requestBody:
         content:
           application/json:
@@ -2283,7 +2283,7 @@ paths:
           description: アクセストークン
           schema:
             type: string
-            example: eyJhbGciOiJIUzI1NiJ9
+            example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
       requestBody:
         content:
           application/json:
@@ -2350,7 +2350,7 @@ paths:
           description: アクセストークン
           schema:
             type: string
-            example: eyJhbGciOiJIUzI1NiJ9
+            example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
         - in: path
           name: operators_id
           schema:
@@ -2401,7 +2401,7 @@ paths:
           description: アクセストークン
           schema:
             type: string
-            example: eyJhbGciOiJIUzI1NiJ9
+            example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
         - in: path
           name: operetors_id
           schema:
@@ -2469,7 +2469,7 @@ paths:
           description: アクセストークン
           schema:
             type: string
-            example: eyJhbGciOiJIUzI1NiJ9
+            example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
         - in: path
           name: operetors_id
           schema:
