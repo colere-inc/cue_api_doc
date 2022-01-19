@@ -27,11 +27,6 @@ get:
         type: string
       required: true
       description: actionのID
-  requestBody:
-    content:
-      application/json:
-        schema:
-          type: object
 
   responses:
     "200":

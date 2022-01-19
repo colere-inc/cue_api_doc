@@ -22,11 +22,6 @@ paths:
           required: false
           schema:
             type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
       responses:
         '200':
           description: 発行成功
@@ -171,11 +166,6 @@ paths:
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
       responses:
         '200':
           description: 取得成功
@@ -355,11 +345,6 @@ paths:
             type: string
           required: true
           description: accountのID
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
       responses:
         '200':
           description: 取得成功
@@ -407,11 +392,6 @@ paths:
             type: string
           required: true
           description: actionのID
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
       responses:
         '200':
           description: 取得成功
@@ -597,11 +577,6 @@ paths:
             type: string
           required: true
           description: feedbackのID
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
       responses:
         '204':
           description: 削除成功
@@ -637,11 +612,6 @@ paths:
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
       responses:
         '200':
           description: 取得成功
@@ -752,11 +722,6 @@ paths:
             type: string
           required: true
           description: account_relationのID
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
       responses:
         '200':
           description: 取得成功
@@ -859,11 +824,6 @@ paths:
             type: string
           required: true
           description: account_relationのID
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
       responses:
         '204':
           description: 削除成功
@@ -920,11 +880,6 @@ paths:
           schema:
             type: string
           description: 昇順(asc) or 降順(desc)
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
       responses:
         '200':
           description: 取得成功
@@ -1132,11 +1087,6 @@ paths:
           schema:
             type: string
           description: 昇順(asc) or 降順(desc)
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
       responses:
         '200':
           description: 取得成功
@@ -1256,11 +1206,6 @@ paths:
             type: string
           required: true
           description: recommend_actionのID
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
       responses:
         '200':
           description: 取得成功
@@ -1446,11 +1391,6 @@ paths:
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
       responses:
         '200':
           description: 取得成功
@@ -1551,11 +1491,6 @@ paths:
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
       responses:
         '200':
           description: 取得成功
@@ -1599,11 +1534,6 @@ paths:
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
       responses:
         '200':
           description: 取得成功
@@ -1647,11 +1577,6 @@ paths:
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
       responses:
         '200':
           description: 取得成功
@@ -1701,11 +1626,6 @@ paths:
             type: string
           required: true
           description: accountのID
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
       responses:
         '200':
           description: 取得成功
@@ -1749,11 +1669,6 @@ paths:
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
       responses:
         '200':
           description: 取得成功
@@ -1855,11 +1770,6 @@ paths:
             type: string
           required: true
           description: action_tagのID
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
       responses:
         '200':
           description: 更新成功
@@ -1962,11 +1872,6 @@ paths:
             type: string
           required: true
           description: action_tagのID
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
       responses:
         '204':
           description: 削除成功
@@ -2002,11 +1907,6 @@ paths:
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
       responses:
         '200':
           description: 取得成功
@@ -2123,11 +2023,6 @@ paths:
             type: string
           required: true
           description: recommend_actionのID
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
       responses:
         '200':
           description: 更新成功
@@ -2242,11 +2137,6 @@ paths:
             type: string
           required: true
           description: recommend_actionのID
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
       responses:
         '204':
           description: 削除成功
@@ -2282,11 +2172,6 @@ paths:
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
       responses:
         '200':
           description: 取得成功
@@ -2402,11 +2287,6 @@ paths:
             type: string
           required: true
           description: operatorのID
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
       responses:
         '200':
           description: 取得成功
@@ -2521,11 +2401,6 @@ paths:
             type: string
           required: true
           description: operatorのID
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
       responses:
         '204':
           description: 削除成功

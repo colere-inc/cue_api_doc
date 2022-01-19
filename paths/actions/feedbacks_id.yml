@@ -97,11 +97,6 @@ delete:
         type: string
       required: true
       description: feedbackのID
-  requestBody:
-    content:
-      application/json:
-        schema:
-          type: object
 
   responses:
     "204":

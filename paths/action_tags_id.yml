@@ -27,11 +27,6 @@ get:
         type: string
       required: true
       description: action_tagのID
-  requestBody:
-    content:
-      application/json:
-        schema:
-          type: object
 
   responses:
     "200":
@@ -138,11 +133,6 @@ delete:
         type: string
       required: true
       description: action_tagのID
-  requestBody:
-    content:
-      application/json:
-        schema:
-          type: object
 
   responses:
     "204":

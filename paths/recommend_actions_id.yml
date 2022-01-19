@@ -27,11 +27,6 @@ get:
         type: string
       required: true
       description: recommend_actionのID
-  requestBody:
-    content:
-      application/json:
-        schema:
-          type: object
 
   responses:
     "200":
@@ -150,11 +145,6 @@ delete:
         type: string
       required: true
       description: recommend_actionのID
-  requestBody:
-    content:
-      application/json:
-        schema:
-          type: object
 
   responses:
     "204":

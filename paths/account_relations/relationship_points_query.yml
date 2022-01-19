@@ -42,11 +42,6 @@ get:
       schema:
         type: string
       description: 昇順(asc) or 降順(desc)
-  requestBody:
-    content:
-      application/json:
-        schema:
-          type: object
 
   responses:
     "200":
