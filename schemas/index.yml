@@ -18,3 +18,5 @@ RecommendAction:
   $ref: "./recommend_action.yml"
 RelationshipPoint:
   $ref: "./relationship_point.yml"
+IncludedFeedback:
+  $ref: "./included/feedback.yml"

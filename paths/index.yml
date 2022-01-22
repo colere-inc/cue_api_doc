@@ -6,6 +6,8 @@
   $ref: "./account.yml"
 /accounts/{accounts_id}:
   $ref: "./accounts_id.yml"
+/actions/{actions_id}/feedbacks?offset=10&limit=10&order=asc:
+  $ref: "./actions/feedbacks_query.yml"
 /actions/{actions_id}/feedbacks:
   $ref: "./actions/feedbacks.yml"
 /actions/{actions_id}/feedbacks/{feedbacks_id}:

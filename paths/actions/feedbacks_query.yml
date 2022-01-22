@@ -1,7 +1,7 @@
-post:
+get:
   tags:
     - フィードバック
-  description: 特定のアクションに対するフィードバックを作成する。
+  description: 特定のアクションに対するフィードバック一覧を取得する。
   parameters:
     - in: header
       name: Content-Type
@@ -27,38 +27,34 @@ post:
         type: string
       required: true
       description: actionのID
-  requestBody:
-    content:
-      application/json:
-        schema:
-          type: object
-          properties:
-            parent_feedback_id:
-              type: string
-              description: feedbackID
-              example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
-            account_id:
-              type: string
-              description: feedbackしたアカウントID
-              example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
-            contents:
-              type: string
-              description: feedback内容
-              example: よかったです。
-          required:
-            - parent_feedback_id
-            - account_id
-            - contents
+    - in: query
+      name: offset
+      schema:
+        type: integer
+      description: 何件目から取得するか
+    - in: query
+      name: limit
+      schema:
+        type: integer
+      description: 何件取得するか
+    - in: query
+      name: order
+      schema:
+        type: string
+      description: 昇順(asc) or 降順(desc)
 
   responses:
     "200":
-      description: 作成成功
+      description: 取得成功
       content:
         application/json:
           schema:
-            type: object
-            properties:
-            $ref: '../../schemas/feedback.yml'
+            type: array
+            items:
+              type: object
+              properties:
+              $ref: '../../schemas/included/feedback.yml'
+              
     "400":
       description: リクエストに問題あり
     "401":
