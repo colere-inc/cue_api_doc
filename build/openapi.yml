@@ -186,7 +186,7 @@ paths:
     post:
       tags:
         - アカウント
-      description: '上司 or 部下からの招待で作成する場合(with_account_relation, id)は AccountRelation、InitialRelationship、RelationshipPointも作成される。'
+      description: アカウントを作成する。
       parameters:
         - in: header
           name: Content-Type
