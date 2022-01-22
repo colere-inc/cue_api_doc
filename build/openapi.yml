@@ -224,6 +224,10 @@ paths:
                   type: string
                   description: メールアドレス
                   example: example@colere.inc
+                password:
+                  type: string
+                  description: パスワード
+                  example: password
                 icon:
                   type: string
                   description: アイコンのURL
@@ -254,7 +258,7 @@ paths:
     put:
       tags:
         - アカウント
-      description: アカウント情報を更新する。
+      description: 現在ログインしているアカウントの情報を更新する。
       parameters:
         - in: header
           name: Content-Type
@@ -292,6 +296,10 @@ paths:
                   type: string
                   description: メールアドレス
                   example: example@colere.inc
+                password:
+                  type: string
+                  description: パスワード
+                  example: password
                 icon:
                   type: string
                   description: アイコンのURL
