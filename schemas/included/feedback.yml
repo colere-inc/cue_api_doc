@@ -22,30 +22,4 @@ properties:
     description: feedback内容
     example: よかったです。
   account:
-    type: object
-    description: アカウント
-    properties:
-      account_id:
-        type: string
-        description: ID
-        example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
-      last_name:
-        type: string
-        description: 名
-        example: 太郎
-      first_name:
-        type: string
-        description: 姓
-        example: 山田
-      email:
-        type: string
-        description: メールアドレス
-        example: example@colere.inc
-      icon:
-        type: string
-        description: アイコンのURL
-        example: icon@pmf.com
-      gender:
-        type: string
-        description: 性
-        example: 男
+    $ref: "../account.yml"
