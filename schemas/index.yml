@@ -22,6 +22,8 @@ IncludedAccountRelation:
   $ref: "./included/account_relation.yml"
 IncludedAction:
   $ref: "./included/action.yml"
+IncludedChangableNotification:
+  $ref: "./included/changable_notification.yml"
 IncludedExternalApp:
   $ref: "./included/external_app.yml"
 IncludedFeedback:

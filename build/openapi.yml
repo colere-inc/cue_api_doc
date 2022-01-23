@@ -1238,7 +1238,7 @@ paths:
               schema:
                 type: object
                 properties: null
-                $ref: '#/components/schemas/ExternalApp'
+                $ref: '#/components/schemas/IncludedExternalApp'
         '400':
           description: リクエストに問題あり
         '401':
@@ -1425,7 +1425,7 @@ paths:
                 items:
                   type: object
                   properties: null
-                  $ref: '#/components/schemas/ChangableNotification'
+                  $ref: '#/components/schemas/IncludedChangableNotification'
         '400':
           description: リクエストに問題あり
         '401':
@@ -2722,6 +2722,36 @@ components:
           example: boolean
         recommend_action:
           $ref: '#/components/schemas/RecommendAction'
+    IncludedChangableNotification:
+      type: object
+      description: ポイント変更通知
+      properties:
+        changable_notification_id:
+          type: string
+          description: ID
+          example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
+        account_id:
+          type: string
+          description: 対象のアカウントID
+          example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
+        account_relation_id:
+          type: string
+          description: 対象のaccount_relationID
+          example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
+        point:
+          type: integer
+          description: ポイント
+          example: 100
+        date:
+          type: string
+          description: 日付
+          example: '2022/01/01T05:42:22.000Z'
+        read:
+          type: boolean
+          description: 既読したかどうか
+          example: true
+        account_relation:
+          $ref: '#/components/schemas/IncludedAccountRelation'
     IncludedExternalApp:
       type: object
       description: ポイント変更通知

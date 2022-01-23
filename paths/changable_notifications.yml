@@ -32,7 +32,7 @@ get:
             items:
               type: object
               properties:
-              $ref: '../schemas/changable_notification.yml'
+              $ref: '../schemas/included/changable_notification.yml'
     "400":
       description: リクエストに問題あり
     "401":
