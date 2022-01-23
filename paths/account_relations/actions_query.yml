@@ -53,7 +53,7 @@ get:
             items:
               type: object
               properties:
-              $ref: '../../schemas/action.yml'
+              $ref: '../../schemas/included/action.yml'
     "400":
       description: リクエストに問題あり
     "401":

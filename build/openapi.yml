@@ -914,7 +914,7 @@ paths:
                 items:
                   type: object
                   properties: null
-                  $ref: '#/components/schemas/Action'
+                  $ref: '#/components/schemas/IncludedAction'
         '400':
           description: リクエストに問題あり
         '401':
@@ -2718,3 +2718,33 @@ components:
           example: よかったです。
         account:
           $ref: '#/components/schemas/Account'
+    IncludedAction:
+      type: object
+      description: アクション
+      properties:
+        action_id:
+          type: string
+          description: ID
+          example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
+        account_relation_id:
+          type: string
+          description: アカウント同士の関連性ID
+          example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
+        recommend_action_id:
+          type: string
+          description: アクション候補ID
+          example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
+        view_date:
+          type: string
+          description: 表示した日付
+          example: 2022/01/01
+        action_date:
+          type: string
+          description: 実行した日付
+          example: 2022/01/02
+        skipped:
+          type: boolean
+          description: スキップしたか
+          example: boolean
+        recommend_action:
+          $ref: '#/components/schemas/RecommendAction'

@@ -22,3 +22,5 @@ IncludedAccountRelation:
   $ref: "./included/account_relation.yml"
 IncludedFeedback:
   $ref: "./included/feedback.yml"
+IncludedAction:
+  $ref: "./included/action.yml"
