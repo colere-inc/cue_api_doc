@@ -16,11 +16,11 @@ properties:
   view_date:
     type: string
     description: 表示した日付
-    example: 2022/01/01
+    example: 2022/01/01T05:42:22.000Z
   action_date:
     type: string
     description: 実行した日付
-    example: 2022/01/02
+    example: 2022/01/02T05:42:22.000Z
   skipped:
     type: boolean
     description: スキップしたか

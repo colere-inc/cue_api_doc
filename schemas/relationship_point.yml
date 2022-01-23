@@ -12,4 +12,4 @@ properties:
   date:
     type: string
     description: 作成された日付
-    example: 2022/01/01
+    example: 2022/01/01T05:42:22.000Z

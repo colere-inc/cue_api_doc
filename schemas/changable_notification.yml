@@ -20,7 +20,7 @@ properties:
   date:
     type: string
     description: 日付
-    example: 2022/01/01
+    example: 2022/01/01T05:42:22.000Z
   read:
     type: boolean
     description: 既読したかどうか
