@@ -646,7 +646,7 @@ paths:
                 items:
                   type: object
                   properties: null
-                  $ref: '#/components/schemas/AccountRelation'
+                  $ref: '#/components/schemas/IncludedAccountRelation'
         '400':
           description: リクエストに問題あり
         '401':
@@ -754,7 +754,7 @@ paths:
               schema:
                 type: object
                 properties: null
-                $ref: '#/components/schemas/AccountRelation'
+                $ref: '#/components/schemas/IncludedAccountRelation'
         '400':
           description: リクエストに問題あり
         '401':
@@ -2668,6 +2668,30 @@ components:
           type: string
           description: 作成された日付
           example: 2022/01/01
+    IncludedAccountRelation:
+      type: object
+      description: アカウント同士の関連性
+      properties:
+        account_relation_id:
+          type: string
+          description: ID
+          example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
+        manager_account_id:
+          type: string
+          description: 上司のアカウントID
+          example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
+        member_account_id:
+          type: string
+          description: 部下のアカウントID
+          example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
+        activated:
+          type: boolean
+          description: つながりを許可したか
+          example: true
+        manager:
+          $ref: '#/components/schemas/Account'
+        member:
+          $ref: '#/components/schemas/Account'
     IncludedFeedback:
       type: object
       description: フィードバック

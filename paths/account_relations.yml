@@ -32,7 +32,7 @@ get:
             items:
               type: object
               properties:
-              $ref: '../schemas/account_relation.yml'
+              $ref: '../schemas/included/account_relation.yml'
     "400":
       description: リクエストに問題あり
     "401":
