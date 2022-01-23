@@ -32,7 +32,7 @@ get:
             items:
               type: object
               properties:
-              $ref: '../schemas/external_app.yml'
+              $ref: '../schemas/included/external_app.yml'
     "400":
       description: リクエストに問題あり
     "401":

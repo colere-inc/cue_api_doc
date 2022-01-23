@@ -20,7 +20,9 @@ RelationshipPoint:
   $ref: "./relationship_point.yml"
 IncludedAccountRelation:
   $ref: "./included/account_relation.yml"
-IncludedFeedback:
-  $ref: "./included/feedback.yml"
 IncludedAction:
   $ref: "./included/action.yml"
+IncludedExternalApp:
+  $ref: "./included/external_app.yml"
+IncludedFeedback:
+  $ref: "./included/feedback.yml"
