@@ -1660,7 +1660,7 @@ paths:
                 items:
                   type: object
                   properties: null
-                  $ref: '#/components/schemas/ExternalApp'
+                  $ref: '#/components/schemas/IncludedExternalApp'
         '400':
           description: リクエストに問題あり
         '401':
