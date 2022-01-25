@@ -370,7 +370,7 @@ paths:
           description: アクセス権がない
         '500':
           description: サーバーの一時的なエラー
-  '/actions/{actions_id}/feedbacks?offset=10&limit=10&order=asc':
+  '/actions/{actions_id}/feedbacks':
     get:
       tags:
         - フィードバック
@@ -434,7 +434,6 @@ paths:
           description: アクセス権がない
         '500':
           description: サーバーの一時的なエラー
-  '/actions/{actions_id}/feedbacks':
     post:
       tags:
         - フィードバック
@@ -859,7 +858,7 @@ paths:
           description: アクセス権がない
         '500':
           description: サーバーの一時的なエラー
-  '/account_relations/{account_relations_id}/actions?offset=10&limit=10&order=asc':
+  '/account_relations/{account_relations_id}/actions':
     get:
       tags:
         - アクション履歴
@@ -923,7 +922,6 @@ paths:
           description: アクセス権がない
         '500':
           description: サーバーの一時的なエラー
-  '/account_relations/{account_relations_id}/actions':
     post:
       tags:
         - アクション履歴
@@ -1066,7 +1064,7 @@ paths:
           description: アクセス権がない
         '500':
           description: サーバーの一時的なエラー
-  '/account_relations/{account_relations_id}/relationship_points?offset=10&limit=10&order=asc':
+  '/account_relations/{account_relations_id}/relationship_points':
     get:
       tags:
         - 関係性レベルポイント
@@ -1130,7 +1128,6 @@ paths:
           description: アクセス権がない
         '500':
           description: サーバーの一時的なエラー
-  '/account_relations/{account_relations_id}/relationship_points':
     post:
       tags:
         - 関係性レベルポイント
