@@ -28,11 +28,11 @@ put:
       required: true
       description: actionのID
     - in: path
-      name: feedbacks_id
+      name: action_comments_id
       schema:
         type: string
       required: true
-      description: feedbackのID
+      description: action_commentのID
   requestBody:
     content:
       application/json:
@@ -41,7 +41,7 @@ put:
           properties:
             contents:
               type: string
-              description: feedback内容
+              description: action_comment内容
               example: よかったです。
 
   responses:
@@ -52,7 +52,7 @@ put:
           schema:
             type: object
             properties:
-            $ref: '../../schemas/feedback.yml'
+            $ref: '../../schemas/action_comment.yml'
     "400":
       description: リクエストに問題あり
     "401":
@@ -92,11 +92,11 @@ delete:
       required: true
       description: actionのID
     - in: path
-      name: feedbacks_id
+      name: action_comments_id
       schema:
         type: string
       required: true
-      description: feedbackのID
+      description: action_commentのID
 
   responses:
     "204":

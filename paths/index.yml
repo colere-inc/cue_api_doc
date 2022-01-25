@@ -6,10 +6,10 @@
   $ref: "./account.yml"
 /accounts/{accounts_id}:
   $ref: "./accounts_id.yml"
-/actions/{actions_id}/feedbacks:
-  $ref: "./actions/feedbacks.yml"
-/actions/{actions_id}/feedbacks/{feedbacks_id}:
-  $ref: "./actions/feedbacks_id.yml"
+/actions/{actions_id}/action_comments:
+  $ref: "./actions/action_comments.yml"
+/actions/{actions_id}/action_comments/{action_comments_id}:
+  $ref: "./actions/action_comments_id.yml"
 /account_relations:
   $ref: "./account_relations.yml"
 /account_relations/{account_relations_id}:

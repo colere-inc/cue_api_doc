@@ -11,7 +11,7 @@ ChangableNotification:
 ExternalApp:
   $ref: "./external_app.yml"
 Feedback:
-  $ref: "./feedback.yml"
+  $ref: "./action_comment.yml"
 Operator:
   $ref: "./operator.yml"
 RecommendAction:
@@ -27,4 +27,4 @@ IncludedChangableNotification:
 IncludedExternalApp:
   $ref: "./included/external_app.yml"
 IncludedFeedback:
-  $ref: "./included/feedback.yml"
+  $ref: "./included/action_comment.yml"

@@ -370,7 +370,7 @@ paths:
           description: アクセス権がない
         '500':
           description: サーバーの一時的なエラー
-  '/actions/{actions_id}/feedbacks':
+  '/actions/{actions_id}/action_comments':
     get:
       tags:
         - フィードバック
@@ -469,20 +469,20 @@ paths:
             schema:
               type: object
               properties:
-                parent_feedback_id:
+                parent_action_comment_id:
                   type: string
-                  description: feedbackID
+                  description: action_commentID
                   example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
                 account_id:
                   type: string
-                  description: feedbackしたアカウントID
+                  description: action_commentしたアカウントID
                   example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
                 contents:
                   type: string
-                  description: feedback内容
+                  description: action_comment内容
                   example: よかったです。
               required:
-                - parent_feedback_id
+                - parent_action_comment_id
                 - account_id
                 - contents
       responses:
@@ -502,7 +502,7 @@ paths:
           description: アクセス権がない
         '500':
           description: サーバーの一時的なエラー
-  '/actions/{actions_id}/feedbacks/{feedbacks_id}':
+  '/actions/{actions_id}/action_comments/{action_comments_id}':
     put:
       tags:
         - フィードバック
@@ -533,11 +533,11 @@ paths:
           required: true
           description: actionのID
         - in: path
-          name: feedbacks_id
+          name: action_comments_id
           schema:
             type: string
           required: true
-          description: feedbackのID
+          description: action_commentのID
       requestBody:
         content:
           application/json:
@@ -546,7 +546,7 @@ paths:
               properties:
                 contents:
                   type: string
-                  description: feedback内容
+                  description: action_comment内容
                   example: よかったです。
       responses:
         '200':
@@ -595,11 +595,11 @@ paths:
           required: true
           description: actionのID
         - in: path
-          name: feedbacks_id
+          name: action_comments_id
           schema:
             type: string
           required: true
-          description: feedbackのID
+          description: action_commentのID
       responses:
         '204':
           description: 削除成功
@@ -2637,7 +2637,7 @@ components:
       type: object
       description: フィードバック
       properties:
-        feedback_id:
+        action_comment_id:
           type: string
           description: ID
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
@@ -2645,17 +2645,17 @@ components:
           type: string
           description: actionID
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
-        parent_feedback_id:
+        parent_action_comment_id:
           type: string
-          description: フィードバック先のfeedbackID。空ならアクションに対する最初のフィードバック。
+          description: フィードバック先のaction_commentID。空ならアクションに対する最初のフィードバック。
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
         account_id:
           type: string
-          description: feedbackしたアカウントID
+          description: action_commentしたアカウントID
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
         contents:
           type: string
-          description: feedback内容
+          description: action_comment内容
           example: よかったです。
     Operator:
       type: object
@@ -2837,7 +2837,7 @@ components:
       type: object
       description: フィードバック
       properties:
-        feedback_id:
+        action_comment_id:
           type: string
           description: ID
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
@@ -2845,17 +2845,17 @@ components:
           type: string
           description: actionID
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
-        parent_feedback_id:
+        parent_action_comment_id:
           type: string
-          description: フィードバック先のfeedbackID。空ならアクションに対する最初のフィードバック。
+          description: フィードバック先のaction_commentID。空ならアクションに対する最初のフィードバック。
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
         account_id:
           type: string
-          description: feedbackしたアカウントID
+          description: action_commentしたアカウントID
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
         contents:
           type: string
-          description: feedback内容
+          description: action_comment内容
           example: よかったです。
         account:
           $ref: '#/components/schemas/Account'

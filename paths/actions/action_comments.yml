@@ -53,7 +53,7 @@ get:
             items:
               type: object
               properties:
-              $ref: '../../schemas/included/feedback.yml'
+              $ref: '../../schemas/included/action_comment.yml'
               
     "400":
       description: リクエストに問題あり
@@ -99,20 +99,20 @@ post:
         schema:
           type: object
           properties:
-            parent_feedback_id:
+            parent_action_comment_id:
               type: string
-              description: feedbackID
+              description: action_commentID
               example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
             account_id:
               type: string
-              description: feedbackしたアカウントID
+              description: action_commentしたアカウントID
               example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
             contents:
               type: string
-              description: feedback内容
+              description: action_comment内容
               example: よかったです。
           required:
-            - parent_feedback_id
+            - parent_action_comment_id
             - account_id
             - contents
 
@@ -124,7 +124,7 @@ post:
           schema:
             type: object
             properties:
-            $ref: '../../schemas/feedback.yml'
+            $ref: '../../schemas/action_comment.yml'
     "400":
       description: リクエストに問題あり
     "401":

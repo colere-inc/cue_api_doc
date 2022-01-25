@@ -1,7 +1,7 @@
 type: object
 description: フィードバック
 properties:
-  feedback_id:
+  action_comment_id:
     type: string
     description: ID
     example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
@@ -9,15 +9,15 @@ properties:
     type: string
     description: actionID
     example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
-  parent_feedback_id:
+  parent_action_comment_id:
     type: string
-    description: フィードバック先のfeedbackID。空ならアクションに対する最初のフィードバック。
+    description: フィードバック先のaction_commentID。空ならアクションに対する最初のフィードバック。
     example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
   account_id:
     type: string
-    description: feedbackしたアカウントID
+    description: action_commentしたアカウントID
     example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
   contents:
     type: string
-    description: feedback内容
+    description: action_comment内容
     example: よかったです。
