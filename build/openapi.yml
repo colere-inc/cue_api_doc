@@ -425,7 +425,7 @@ paths:
                 items:
                   type: object
                   properties: null
-                  $ref: '#/components/schemas/IncludedFeedback'
+                  $ref: '#/components/schemas/IncludedActionComment'
         '400':
           description: リクエストに問題あり
         '401':
@@ -493,7 +493,7 @@ paths:
               schema:
                 type: object
                 properties: null
-                $ref: '#/components/schemas/Feedback'
+                $ref: '#/components/schemas/ActionComment'
         '400':
           description: リクエストに問題あり
         '401':
@@ -556,7 +556,7 @@ paths:
               schema:
                 type: object
                 properties: null
-                $ref: '#/components/schemas/Feedback'
+                $ref: '#/components/schemas/ActionComment'
         '400':
           description: リクエストに問題あり
         '401':
@@ -600,6 +600,227 @@ paths:
             type: string
           required: true
           description: action_commentのID
+      responses:
+        '204':
+          description: 削除成功
+        '400':
+          description: リクエストに問題あり
+        '401':
+          description: Authorizationヘッダーに問題あり
+        '403':
+          description: アクセス権がない
+        '500':
+          description: サーバーの一時的なエラー
+  '/actions/{actions_id}/feedbacks':
+    get:
+      tags:
+        - フィードバック
+      description: 特定のアクションに対するフィードバック一覧を取得する。
+      parameters:
+        - in: header
+          name: Content-Type
+          required: true
+          schema:
+            type: string
+            example: application/json
+        - in: header
+          name: X-Request-ID
+          required: false
+          schema:
+            type: string
+        - in: header
+          name: 'Authorization: Bearer'
+          required: true
+          description: アクセストークン
+          schema:
+            type: string
+            example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
+        - in: path
+          name: actions_id
+          schema:
+            type: string
+          required: true
+          description: actionのID
+      responses:
+        '200':
+          description: 取得成功
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties: null
+                  $ref: '#/components/schemas/IncludedFeedback'
+        '400':
+          description: リクエストに問題あり
+        '401':
+          description: Authorizationヘッダーに問題あり
+        '403':
+          description: アクセス権がない
+        '500':
+          description: サーバーの一時的なエラー
+    post:
+      tags:
+        - フィードバック
+      description: 特定のアクションに対するフィードバックを作成する。
+      parameters:
+        - in: header
+          name: Content-Type
+          required: true
+          schema:
+            type: string
+            example: application/json
+        - in: header
+          name: X-Request-ID
+          required: false
+          schema:
+            type: string
+        - in: header
+          name: 'Authorization: Bearer'
+          required: true
+          description: アクセストークン
+          schema:
+            type: string
+            example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
+        - in: path
+          name: actions_id
+          schema:
+            type: string
+          required: true
+          description: actionのID
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                account_id:
+                  type: string
+                  description: action_commentしたアカウントID
+                  example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
+                evaluated:
+                  type: integer
+                  description: '評価(0=未実施, 1=good, 2=bad)'
+                  example: 0
+              required:
+                - account_id
+                - evaluated
+      responses:
+        '200':
+          description: 作成成功
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: null
+                $ref: '#/components/schemas/Feedback'
+        '400':
+          description: リクエストに問題あり
+        '401':
+          description: Authorizationヘッダーに問題あり
+        '403':
+          description: アクセス権がない
+        '500':
+          description: サーバーの一時的なエラー
+  '/actions/{actions_id}/feedbacks/{feedbacks_id}':
+    put:
+      tags:
+        - フィードバック
+      description: 特定のアクションに対するフィードバックを更新する。
+      parameters:
+        - in: header
+          name: Content-Type
+          required: true
+          schema:
+            type: string
+            example: application/json
+        - in: header
+          name: X-Request-ID
+          required: false
+          schema:
+            type: string
+        - in: header
+          name: 'Authorization: Bearer'
+          required: true
+          description: アクセストークン
+          schema:
+            type: string
+            example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
+        - in: path
+          name: actions_id
+          schema:
+            type: string
+          required: true
+          description: actionのID
+        - in: path
+          name: feedbacks_id
+          schema:
+            type: string
+          required: true
+          description: feedbackのID
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                evaluated:
+                  type: integer
+                  description: '評価(0=未実施, 1=good, 2=bad)'
+                  example: 1
+      responses:
+        '200':
+          description: 更新成功
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: null
+                $ref: '#/components/schemas/Feedback'
+        '400':
+          description: リクエストに問題あり
+        '401':
+          description: Authorizationヘッダーに問題あり
+        '403':
+          description: アクセス権がない
+        '500':
+          description: サーバーの一時的なエラー
+    delete:
+      tags:
+        - フィードバック
+      description: 特定のアクションに対するフィードバックを削除する。
+      parameters:
+        - in: header
+          name: Content-Type
+          required: true
+          schema:
+            type: string
+            example: application/json
+        - in: header
+          name: X-Request-ID
+          required: false
+          schema:
+            type: string
+        - in: header
+          name: 'Authorization: Bearer'
+          required: true
+          description: アクセストークン
+          schema:
+            type: string
+            example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
+        - in: path
+          name: actions_id
+          schema:
+            type: string
+          required: true
+          description: actionのID
+        - in: path
+          name: feedbacks_id
+          schema:
+            type: string
+          required: true
+          description: feedbackのID
       responses:
         '204':
           description: 削除成功
@@ -2537,6 +2758,30 @@ components:
           example: 男
       required:
         - id
+    ActionComment:
+      type: object
+      description: アクションコメント
+      properties:
+        action_comment_id:
+          type: string
+          description: ID
+          example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
+        action_id:
+          type: string
+          description: actionID
+          example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
+        parent_action_comment_id:
+          type: string
+          description: アクションコメント先のaction_commentID。空ならアクションに対する最初のアクションコメント。
+          example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
+        account_id:
+          type: string
+          description: action_commentしたアカウントID
+          example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
+        contents:
+          type: string
+          description: action_comment内容
+          example: よかったです。
     ActionTag:
       type: object
       description: アクションタグ
@@ -2635,9 +2880,9 @@ components:
           example: 'https://teams.microsoft.com/l/chat/0/0?users=taro@colere.inc,jiro@colere.inc&topicName=Prep%20For%20Meeting%20Tomorrow&message=Hi%20folks%2C%20kicking%20off%20a%20chat%20about%20our%20meeting%20tomorrow'
     Feedback:
       type: object
-      description: アクションコメント
+      description: フィードバック
       properties:
-        action_comment_id:
+        feedback_id:
           type: string
           description: ID
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
@@ -2645,18 +2890,14 @@ components:
           type: string
           description: actionID
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
-        parent_action_comment_id:
-          type: string
-          description: アクションコメント先のaction_commentID。空ならアクションに対する最初のアクションコメント。
-          example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
         account_id:
           type: string
           description: action_commentしたアカウントID
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
-        contents:
-          type: string
-          description: action_comment内容
-          example: よかったです。
+        evaluated:
+          type: integer
+          description: '評価(0=未実施, 1=good, 2=bad)'
+          example: 0
     Operator:
       type: object
       description: オペレーター
@@ -2771,6 +3012,32 @@ components:
           example: boolean
         recommend_action:
           $ref: '#/components/schemas/RecommendAction'
+    IncludedActionComment:
+      type: object
+      description: アクションコメント
+      properties:
+        action_comment_id:
+          type: string
+          description: ID
+          example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
+        action_id:
+          type: string
+          description: actionID
+          example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
+        parent_action_comment_id:
+          type: string
+          description: アクションコメント先のaction_commentID。空ならアクションに対する最初のアクションコメント。
+          example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
+        account_id:
+          type: string
+          description: action_commentしたアカウントID
+          example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
+        contents:
+          type: string
+          description: action_comment内容
+          example: よかったです。
+        account:
+          $ref: '#/components/schemas/Account'
     IncludedChangableNotification:
       type: object
       description: ポイント変更通知
@@ -2835,9 +3102,9 @@ components:
           $ref: '#/components/schemas/RecommendAction'
     IncludedFeedback:
       type: object
-      description: アクションコメント
+      description: フィードバック
       properties:
-        action_comment_id:
+        feedback_id:
           type: string
           description: ID
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
@@ -2845,17 +3112,13 @@ components:
           type: string
           description: actionID
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
-        parent_action_comment_id:
-          type: string
-          description: アクションコメント先のaction_commentID。空ならアクションに対する最初のアクションコメント。
-          example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
         account_id:
           type: string
           description: action_commentしたアカウントID
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
-        contents:
-          type: string
-          description: action_comment内容
-          example: よかったです。
+        evaluated:
+          type: integer
+          description: '評価(0=未実施, 1=good, 2=bad)'
+          example: 0
         account:
           $ref: '#/components/schemas/Account'

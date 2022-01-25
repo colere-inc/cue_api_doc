@@ -2,6 +2,8 @@ AccountRelation:
   $ref: "./account_relation.yml"
 Account:
   $ref: "./account.yml"
+ActionComment:
+  $ref: "./action_comment.yml"
 ActionTag:
   $ref: "./action_tag.yml"
 Action:
@@ -11,7 +13,7 @@ ChangableNotification:
 ExternalApp:
   $ref: "./external_app.yml"
 Feedback:
-  $ref: "./action_comment.yml"
+  $ref: "./feedback.yml"
 Operator:
   $ref: "./operator.yml"
 RecommendAction:
@@ -22,9 +24,11 @@ IncludedAccountRelation:
   $ref: "./included/account_relation.yml"
 IncludedAction:
   $ref: "./included/action.yml"
+IncludedActionComment:
+  $ref: "./included/action_comment.yml"
 IncludedChangableNotification:
   $ref: "./included/changable_notification.yml"
 IncludedExternalApp:
   $ref: "./included/external_app.yml"
 IncludedFeedback:
-  $ref: "./included/action_comment.yml"
+  $ref: "./included/feedback.yml"

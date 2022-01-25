@@ -1,0 +1,21 @@
+type: object
+description: フィードバック
+properties:
+  feedback_id:
+    type: string
+    description: ID
+    example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
+  action_id:
+    type: string
+    description: actionID
+    example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
+  account_id:
+    type: string
+    description: action_commentしたアカウントID
+    example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
+  evaluated:
+    type: integer
+    description: 評価(0=未実施, 1=good, 2=bad)
+    example: 0
+  account:
+    $ref: "../account.yml"
