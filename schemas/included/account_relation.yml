@@ -14,9 +14,9 @@ properties:
     description: 部下のアカウントID
     example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
   activated:
-    type: boolean
+    type: integer
     description: つながりを許可したか
-    example: true
+    example: 0
   manager:
     $ref: "../account.yml"
   member:

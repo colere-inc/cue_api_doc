@@ -82,9 +82,9 @@ put:
           type: object
           properties:
             activated:
-              type: boolean
+              type: integer
               description: つながりを許可したか
-              example: true
+              example: 0
 
   responses:
     "200":

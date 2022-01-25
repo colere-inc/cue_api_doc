@@ -692,9 +692,9 @@ paths:
                   description: 部下のアカウントID
                   example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
                 activated:
-                  type: boolean
+                  type: integer
                   description: つながりを許可したか
-                  example: true
+                  example: 0
               required:
                 - manager_account_id
                 - member_account_id
@@ -798,9 +798,9 @@ paths:
               type: object
               properties:
                 activated:
-                  type: boolean
+                  type: integer
                   description: つながりを許可したか
-                  example: true
+                  example: 0
       responses:
         '200':
           description: 更新成功
@@ -2504,9 +2504,9 @@ components:
           description: 部下のアカウントID
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
         activated:
-          type: boolean
+          type: integer
           description: つながりを許可したか
-          example: true
+          example: 0
     Account:
       type: object
       description: アカウント
@@ -2734,9 +2734,9 @@ components:
           description: 部下のアカウントID
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
         activated:
-          type: boolean
+          type: integer
           description: つながりを許可したか
-          example: true
+          example: 0
         manager:
           $ref: '#/components/schemas/Account'
         member:
