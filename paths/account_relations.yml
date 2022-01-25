@@ -81,7 +81,7 @@ post:
               example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
             activated:
               type: integer
-              description: つながりを許可したか
+              description: つながりを許可したか(0=未承認, 1=承認, 2=却下)
               example: 0
           required:
             - manager_account_id
