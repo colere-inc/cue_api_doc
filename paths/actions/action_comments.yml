@@ -1,7 +1,7 @@
 get:
   tags:
-    - フィードバック
-  description: 特定のアクションに対するフィードバック一覧を取得する。
+    - アクションコメント
+  description: 特定のアクションに対するアクションコメント一覧を取得する。
   parameters:
     - in: header
       name: Content-Type
@@ -66,8 +66,8 @@ get:
 
 post:
   tags:
-    - フィードバック
-  description: 特定のアクションに対するフィードバックを作成する。
+    - アクションコメント
+  description: 特定のアクションに対するアクションコメントを作成する。
   parameters:
     - in: header
       name: Content-Type

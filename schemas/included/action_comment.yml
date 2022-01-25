@@ -1,5 +1,5 @@
 type: object
-description: フィードバック
+description: アクションコメント
 properties:
   action_comment_id:
     type: string
@@ -11,7 +11,7 @@ properties:
     example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
   parent_action_comment_id:
     type: string
-    description: フィードバック先のaction_commentID。空ならアクションに対する最初のフィードバック。
+    description: アクションコメント先のaction_commentID。空ならアクションに対する最初のアクションコメント。
     example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
   account_id:
     type: string

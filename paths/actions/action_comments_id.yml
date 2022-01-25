@@ -1,7 +1,7 @@
 put:
   tags:
-    - フィードバック
-  description: 特定のアクションに対するフィードバックを更新する。
+    - アクションコメント
+  description: 特定のアクションに対するアクションコメントを更新する。
   parameters:
     - in: header
       name: Content-Type
@@ -64,8 +64,8 @@ put:
 
 delete:
   tags:
-    - フィードバック
-  description: 特定のアクションに対するフィードバックを削除する。
+    - アクションコメント
+  description: 特定のアクションに対するアクションコメントを削除する。
   parameters:
     - in: header
       name: Content-Type

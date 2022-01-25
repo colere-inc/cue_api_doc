@@ -373,8 +373,8 @@ paths:
   '/actions/{actions_id}/action_comments':
     get:
       tags:
-        - フィードバック
-      description: 特定のアクションに対するフィードバック一覧を取得する。
+        - アクションコメント
+      description: 特定のアクションに対するアクションコメント一覧を取得する。
       parameters:
         - in: header
           name: Content-Type
@@ -436,8 +436,8 @@ paths:
           description: サーバーの一時的なエラー
     post:
       tags:
-        - フィードバック
-      description: 特定のアクションに対するフィードバックを作成する。
+        - アクションコメント
+      description: 特定のアクションに対するアクションコメントを作成する。
       parameters:
         - in: header
           name: Content-Type
@@ -505,8 +505,8 @@ paths:
   '/actions/{actions_id}/action_comments/{action_comments_id}':
     put:
       tags:
-        - フィードバック
-      description: 特定のアクションに対するフィードバックを更新する。
+        - アクションコメント
+      description: 特定のアクションに対するアクションコメントを更新する。
       parameters:
         - in: header
           name: Content-Type
@@ -567,8 +567,8 @@ paths:
           description: サーバーの一時的なエラー
     delete:
       tags:
-        - フィードバック
-      description: 特定のアクションに対するフィードバックを削除する。
+        - アクションコメント
+      description: 特定のアクションに対するアクションコメントを削除する。
       parameters:
         - in: header
           name: Content-Type
@@ -2635,7 +2635,7 @@ components:
           example: 'https://teams.microsoft.com/l/chat/0/0?users=taro@colere.inc,jiro@colere.inc&topicName=Prep%20For%20Meeting%20Tomorrow&message=Hi%20folks%2C%20kicking%20off%20a%20chat%20about%20our%20meeting%20tomorrow'
     Feedback:
       type: object
-      description: フィードバック
+      description: アクションコメント
       properties:
         action_comment_id:
           type: string
@@ -2647,7 +2647,7 @@ components:
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
         parent_action_comment_id:
           type: string
-          description: フィードバック先のaction_commentID。空ならアクションに対する最初のフィードバック。
+          description: アクションコメント先のaction_commentID。空ならアクションに対する最初のアクションコメント。
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
         account_id:
           type: string
@@ -2835,7 +2835,7 @@ components:
           $ref: '#/components/schemas/RecommendAction'
     IncludedFeedback:
       type: object
-      description: フィードバック
+      description: アクションコメント
       properties:
         action_comment_id:
           type: string
@@ -2847,7 +2847,7 @@ components:
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
         parent_action_comment_id:
           type: string
-          description: フィードバック先のaction_commentID。空ならアクションに対する最初のフィードバック。
+          description: アクションコメント先のaction_commentID。空ならアクションに対する最初のアクションコメント。
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
         account_id:
           type: string
