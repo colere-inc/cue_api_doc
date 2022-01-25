@@ -614,8 +614,8 @@ paths:
   /account_relations:
     get:
       tags:
-        - アカウントの関連性
-      description: 現在ログインしているアカウントに関連するつながりをすべて取得する。
+        - アカウントの関係性
+      description: 現在ログインしているアカウントに関係するつながりをすべて取得する。
       parameters:
         - in: header
           name: Content-Type
@@ -656,8 +656,8 @@ paths:
           description: サーバーの一時的なエラー
     post:
       tags:
-        - アカウントの関連性
-      description: アカウントの関連性情報を作成する。
+        - アカウントの関係性
+      description: アカウントの関係性情報を作成する。
       parameters:
         - in: header
           name: Content-Type
@@ -718,8 +718,8 @@ paths:
   '/account_relations/{account_relations_id}':
     get:
       tags:
-        - アカウントの関連性
-      description: 指定のアカウントの関連性情報を取得する。
+        - アカウントの関係性
+      description: 指定のアカウントの関係性情報を取得する。
       parameters:
         - in: header
           name: Content-Type
@@ -764,8 +764,8 @@ paths:
           description: サーバーの一時的なエラー
     put:
       tags:
-        - アカウントの関連性
-      description: 指定のアカウントの関連性情報を更新する。
+        - アカウントの関係性
+      description: 指定のアカウントの関係性情報を更新する。
       parameters:
         - in: header
           name: Content-Type
@@ -820,8 +820,8 @@ paths:
           description: サーバーの一時的なエラー
     delete:
       tags:
-        - アカウントの関連性
-      description: 指定のアカウントの関連性情報を削除する。
+        - アカウントの関係性
+      description: 指定のアカウントの関係性情報を削除する。
       parameters:
         - in: header
           name: Content-Type
@@ -1587,7 +1587,7 @@ paths:
     get:
       tags:
         - 関係性レベルポイント
-      description: 現在ログインしているアカウントに関連する関係性レベルのポイントをすべて取得する。<br>account_relationごとに最新の日付のもののみ取得する。
+      description: 現在ログインしているアカウントに関係する関係性レベルのポイントをすべて取得する。<br>account_relationごとに最新の日付のもののみ取得する。
       parameters:
         - in: header
           name: Content-Type
@@ -2489,7 +2489,7 @@ components:
   schemas:
     AccountRelation:
       type: object
-      description: アカウント同士の関連性
+      description: アカウント同士の関係性
       properties:
         account_relation_id:
           type: string
@@ -2559,7 +2559,7 @@ components:
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
         account_relation_id:
           type: string
-          description: アカウント同士の関連性ID
+          description: アカウント同士の関係性ID
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
         recommend_action_id:
           type: string
@@ -2615,7 +2615,7 @@ components:
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
         account_relation_id:
           type: string
-          description: 対象のアカウント関連ID
+          description: 対象のアカウント関係ID
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
         recommend_action_id:
           type: string
@@ -2703,11 +2703,11 @@ components:
           example: '1,3,8'
     RelationshipPoint:
       type: object
-      description: アカウント同士の関連性に対するポイント
+      description: アカウント同士の関係性に対するポイント
       properties:
         account_relation_id:
           type: string
-          description: アカウント同士の関連性ID
+          description: アカウント同士の関係性ID
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
         point:
           type: integer
@@ -2719,7 +2719,7 @@ components:
           example: '2022/01/01T05:42:22.000Z'
     IncludedAccountRelation:
       type: object
-      description: アカウント同士の関連性
+      description: アカウント同士の関係性
       properties:
         account_relation_id:
           type: string
@@ -2751,7 +2751,7 @@ components:
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
         account_relation_id:
           type: string
-          description: アカウント同士の関連性ID
+          description: アカウント同士の関係性ID
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
         recommend_action_id:
           type: string
@@ -2811,7 +2811,7 @@ components:
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
         account_relation_id:
           type: string
-          description: 対象のアカウント関連ID
+          description: 対象のアカウント関係ID
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
         recommend_action_id:
           type: string

@@ -1,7 +1,7 @@
 get:
   tags:
-    - アカウントの関連性
-  description: 現在ログインしているアカウントに関連するつながりをすべて取得する。
+    - アカウントの関係性
+  description: 現在ログインしているアカウントに関係するつながりをすべて取得する。
   parameters:
     - in: header
       name: Content-Type
@@ -44,8 +44,8 @@ get:
 
 post:
   tags:
-    - アカウントの関連性
-  description: アカウントの関連性情報を作成する。
+    - アカウントの関係性
+  description: アカウントの関係性情報を作成する。
   parameters:
     - in: header
       name: Content-Type

@@ -1,7 +1,7 @@
 get:
   tags:
-    - アカウントの関連性
-  description: 指定のアカウントの関連性情報を取得する。
+    - アカウントの関係性
+  description: 指定のアカウントの関係性情報を取得する。
   parameters:
     - in: header
       name: Content-Type
@@ -48,8 +48,8 @@ get:
 
 put:
   tags:
-    - アカウントの関連性
-  description: 指定のアカウントの関連性情報を更新する。
+    - アカウントの関係性
+  description: 指定のアカウントの関係性情報を更新する。
   parameters:
     - in: header
       name: Content-Type
@@ -106,8 +106,8 @@ put:
 
 delete:
   tags:
-    - アカウントの関連性
-  description: 指定のアカウントの関連性情報を削除する。
+    - アカウントの関係性
+  description: 指定のアカウントの関係性情報を削除する。
   parameters:
     - in: header
       name: Content-Type
