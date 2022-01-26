@@ -444,6 +444,88 @@ paths:
           description: アクセス権がない
         '500':
           description: サーバーの一時的なエラー
+  /accounts/invite:
+    post:
+      tags:
+        - アカウント招待
+      description: アカウントを招待する。
+      parameters:
+        - in: header
+          name: Content-Type
+          required: true
+          schema:
+            type: string
+            example: application/json
+        - in: header
+          name: X-Request-ID
+          required: false
+          schema:
+            type: string
+        - in: header
+          name: 'Authorization: Bearer'
+          required: true
+          description: アクセストークン
+          schema:
+            type: string
+            example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                last_name:
+                  type: string
+                  description: 名
+                  example: 太郎
+                first_name:
+                  type: string
+                  description: 姓
+                  example: 山田
+                email:
+                  type: string
+                  description: メールアドレス
+                  example: example@colere.inc
+                relation_point:
+                  type: integer
+                  description: 関係性ポイント
+                  example: 20
+                member:
+                  type: boolean
+                  description: '部下を招待=true, 上司を招待=false'
+                  example: true
+      responses:
+        '200':
+          description: 作成成功
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  account_id:
+                    type: string
+                    description: ID
+                    example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
+                  last_name:
+                    type: string
+                    description: 名
+                    example: 太郎
+                  first_name:
+                    type: string
+                    description: 姓
+                    example: 山田
+                  email:
+                    type: string
+                    description: メールアドレス
+                    example: example@colere.inc
+        '400':
+          description: リクエストに問題あり
+        '401':
+          description: Authorizationヘッダーに問題あり
+        '403':
+          description: アクセス権がない
+        '500':
+          description: サーバーの一時的なエラー
   '/actions/{actions_id}/action_comments':
     get:
       tags:
