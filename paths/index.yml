@@ -4,6 +4,8 @@
   $ref: "./auth/login/email.yml"
 /account:
   $ref: "./account.yml"
+/account/actions/summary:
+  $ref: "./account/actions/summary.yml"
 /accounts/{accounts_id}:
   $ref: "./accounts_id.yml"
 /accounts/{accounts_id}/summary:
