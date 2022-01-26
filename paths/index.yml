@@ -6,6 +6,8 @@
   $ref: "./account.yml"
 /accounts/{accounts_id}:
   $ref: "./accounts_id.yml"
+/accounts/{accounts_id}/summary:
+  $ref: "./accounts/summary.yml"
 /actions/{actions_id}/action_comments:
   $ref: "./actions/action_comments.yml"
 /actions/{actions_id}/action_comments/{action_comments_id}:
