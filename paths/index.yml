@@ -14,6 +14,8 @@
   $ref: "./actions/feedbacks.yml"
 /actions/{actions_id}/feedbacks/{feedbacks_id}:
   $ref: "./actions/feedbacks_id.yml"
+/activity:
+  $ref: "./activity.yml"
 /account_relations:
   $ref: "./account_relations.yml"
 /account_relations/{account_relations_id}:
