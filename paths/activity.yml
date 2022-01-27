@@ -64,7 +64,7 @@ get:
                         type: string
                         description: 背景色
                         example: "#0000ff"
-                      date:
+                      time:
                         type: string
                         description: 時刻
                         example: "15:00"
