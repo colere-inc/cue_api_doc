@@ -44,6 +44,10 @@ get:
                         type: string
                         description: ID
                         example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
+                      account_relation_id:
+                        type: string
+                        description: アカウント同士の関係性ID
+                        example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
                       last_name:
                         type: string
                         description: 名
