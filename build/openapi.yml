@@ -1915,6 +1915,83 @@ paths:
           description: アクセス権がない
         '500':
           description: サーバーの一時的なエラー
+  '/account_relations/{account_relations_id}/action_comments/summary':
+    get:
+      tags:
+        - アクションコメント一覧サマリ
+      description: 指定の関係性に対するアクション履歴ページで使うためのサマリを取得する。
+      parameters:
+        - in: header
+          name: Content-Type
+          required: true
+          schema:
+            type: string
+            example: application/json
+        - in: header
+          name: X-Request-ID
+          required: false
+          schema:
+            type: string
+        - in: header
+          name: 'Authorization: Bearer'
+          required: true
+          description: アクセストークン
+          schema:
+            type: string
+            example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
+        - in: path
+          name: account_relations_id
+          schema:
+            type: string
+          required: true
+          description: account_relationのID
+      responses:
+        '200':
+          description: 取得成功
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    action_id:
+                      type: string
+                      description: ID
+                      example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
+                    action_date:
+                      type: string
+                      description: 日付
+                      example: 2022/01/01
+                    action_name:
+                      type: string
+                      description: 名前
+                      example: あいさつしよう
+                    executed:
+                      type: boolean
+                      description: 実行したかどうか
+                      example: true
+                    comments:
+                      type: array
+                      items:
+                        type: object
+                        properties:
+                          icon:
+                            type: string
+                            description: アイコンのURL
+                            example: icon@pmf.com
+                        contents:
+                          type: string
+                          description: action_comment内容
+                          example: よかったです。
+        '400':
+          description: リクエストに問題あり
+        '401':
+          description: Authorizationヘッダーに問題あり
+        '403':
+          description: アクセス権がない
+        '500':
+          description: サーバーの一時的なエラー
   '/account_relations/{account_relations_id}/relationship_points':
     get:
       tags:
