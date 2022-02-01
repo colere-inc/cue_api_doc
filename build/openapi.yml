@@ -1148,6 +1148,21 @@ paths:
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
+        - in: query
+          name: offset
+          schema:
+            type: integer
+          description: 何件目から取得するか
+        - in: query
+          name: limit
+          schema:
+            type: integer
+          description: 何件取得するか
+        - in: query
+          name: order
+          schema:
+            type: string
+          description: 昇順(asc) or 降順(desc)
       responses:
         '200':
           description: 取得成功
