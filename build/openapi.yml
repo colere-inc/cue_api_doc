@@ -1201,6 +1201,10 @@ paths:
                             type: string
                             description: アイコンのURL
                             example: icon@pmf.com
+                          type:
+                            type: string
+                            description: アクティビティタイプ
+                            example: individual_score
                           message:
                             type: string
                             description: メッセージ
