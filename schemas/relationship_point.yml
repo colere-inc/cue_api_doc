@@ -8,7 +8,11 @@ properties:
   point:
     type: integer
     description: ポイント
-    example: 100
+    example: 51
+  level:
+    type: integer
+    description: レベル
+    example: 3
   date:
     type: string
     description: 作成された日付
