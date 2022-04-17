@@ -1,6 +1,6 @@
 get:
   tags:
-    - アカウントの関係性
+    - Account Relationships
   description: 指定のアカウントの関係性情報を取得する。
   parameters:
     - in: header
@@ -48,7 +48,7 @@ get:
 
 put:
   tags:
-    - アカウントの関係性
+    - Account Relationships
   description: 指定のアカウントの関係性情報を更新する。
   parameters:
     - in: header
@@ -106,7 +106,7 @@ put:
 
 delete:
   tags:
-    - アカウントの関係性
+    - Account Relationships
   description: 指定のアカウントの関係性情報を削除する。
   parameters:
     - in: header

@@ -1,6 +1,6 @@
 get:
   tags:
-    - アカウント
+    - Account
   description: 現在ログインしているアカウントの情報を取得する。
   parameters:
     - in: header
@@ -42,7 +42,7 @@ get:
 
 post:
   tags:
-    - アカウント
+    - Account
   description: アカウントを作成する。
   parameters:
     - in: header
@@ -116,7 +116,7 @@ post:
 
 put:
   tags:
-    - アカウント
+    - Account
   description: 現在ログインしているアカウントの情報を更新する。
   parameters:
     - in: header

@@ -1,6 +1,6 @@
 get:
   tags:
-    - アカウントサマリ
+    - Account Summary
   description: 指定のアカウントの詳細ページで使うためのサマリを取得する。
   parameters:
     - in: header

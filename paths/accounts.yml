@@ -1,6 +1,6 @@
 get:
   tags:
-    - アカウント(管理専用)
+    - Account(Admin)
   description: アカウントをすべて取得する。
   parameters:
     - in: header

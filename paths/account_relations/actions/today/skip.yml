@@ -1,6 +1,6 @@
 post:
   tags:
-    - 今日のアクション
+    - Today Action
   description: 指定の関係性に対する今日のアクションをスキップし新しいアクションを取得する。
   parameters:
     - in: header

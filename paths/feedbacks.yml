@@ -1,6 +1,6 @@
 put:
   tags:
-    - フィードバック一覧
+    - Feedback List
   description: 複数のフィードバックを更新する。
   parameters:
     - in: header

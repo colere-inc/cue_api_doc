@@ -1,6 +1,6 @@
 get:
   tags:
-    - ポイント変化通知
+    - Point Change Notification
   description: ログインしているアカウントのポイント変化通知一覧を取得する。
   parameters:
     - in: header

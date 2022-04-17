@@ -1,6 +1,6 @@
 get:
   tags:
-    - アクション候補(管理専用)
+    - Action Candidate(Admin)
   description: 指定のアクションを取得する。
   parameters:
     - in: header
@@ -48,7 +48,7 @@ get:
 
 put:
   tags:
-    - アクション候補(管理専用)
+    - Action Candidate(Admin)
   description: 指定のアクションを更新する。
   parameters:
     - in: header
@@ -118,7 +118,7 @@ put:
 
 delete:
   tags:
-    - アクション候補(管理専用)
+    - Action Candidate(Admin)
   description: 指定のアクションを削除する。
   parameters:
     - in: header

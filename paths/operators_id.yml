@@ -1,6 +1,6 @@
 get:
   tags:
-    - オペレーター(管理専用)
+    - Operator(Admin)
   description: 指定したオペレーターを取得する。
   parameters:
     - in: header
@@ -48,7 +48,7 @@ get:
 
 put:
   tags:
-    - オペレーター(管理専用)
+    - Operator(Admin)
   description: 指定のオペレーターを更新する。
   parameters:
     - in: header
@@ -118,7 +118,7 @@ put:
 
 delete:
   tags:
-    - オペレーター(管理専用)
+    - Operator(Admin)
   description: 指定のオペレーターを削除する。
   parameters:
     - in: header

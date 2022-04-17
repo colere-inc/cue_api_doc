@@ -1,6 +1,6 @@
 get:
   tags:
-    - 今日のアクション
+    - Today Action
   description: 指定の関係性に対する今日のアクション情報を取得する。(存在しなければ新しく作ったものを返す)
   parameters:
     - in: header

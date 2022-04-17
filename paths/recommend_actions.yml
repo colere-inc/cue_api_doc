@@ -1,6 +1,6 @@
 get:
   tags:
-    - アクション候補(管理専用)
+    - Action Candidate(Admin)
   description: アクション一覧を取得する。
   parameters:
     - in: header
@@ -44,7 +44,7 @@ get:
 
 post:
   tags:
-    - アクション候補(管理専用)
+    - Action Candidate(Admin)
   description: アクションを作成する。
   parameters:
     - in: header

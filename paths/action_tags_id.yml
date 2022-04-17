@@ -1,6 +1,6 @@
 get:
   tags:
-    - アクションタグ(管理専用)
+    - Action Tag(Admin)
   description: 指定のアクションタグを取得する。
   parameters:
     - in: header
@@ -48,7 +48,7 @@ get:
 
 put:
   tags:
-    - アクションタグ(管理専用)
+    - Action Tag(Admin)
   description: 指定のアクションタグを更新する。
   parameters:
     - in: header
@@ -106,7 +106,7 @@ put:
 
 delete:
   tags:
-    - アクションタグ(管理専用)
+    - Action Tag(Admin)
   description: 指定のアクションタグを削除する。
   parameters:
     - in: header

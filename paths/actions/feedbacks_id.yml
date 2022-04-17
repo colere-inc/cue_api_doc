@@ -1,6 +1,6 @@
 put:
   tags:
-    - フィードバック
+    - Feedback
   description: 特定のアクションに対するフィードバックを更新する。
   parameters:
     - in: header
@@ -64,7 +64,7 @@ put:
 
 delete:
   tags:
-    - フィードバック
+    - Feedback
   description: 特定のアクションに対するフィードバックを削除する。
   parameters:
     - in: header

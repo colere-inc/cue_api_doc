@@ -1,6 +1,6 @@
 get:
   tags:
-    - 外部連携アプリ
+    - External Apps
   description: 指定のアカウントのつながりとアクションに設定された外部アプリ情報を取得する。
   parameters:
     - in: header
@@ -54,7 +54,7 @@ get:
 
 post:
   tags:
-    - 外部連携アプリ
+    - External Apps
   description: 指定のアカウントのつながりとアクションに設定された外部アプリ情報を作成する。
   parameters:
     - in: header
@@ -130,7 +130,7 @@ post:
 
 put:
   tags:
-    - 外部連携アプリ
+    - External Apps
   description: 指定のアカウントのつながりとアクションに設定された外部アプリ情報を更新する。
   parameters:
     - in: header

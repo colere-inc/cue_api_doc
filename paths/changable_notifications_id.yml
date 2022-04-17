@@ -1,6 +1,6 @@
 put:
   tags:
-    - ポイント変化通知
+    - Point Change Notification
   description: ログインしているアカウントのポイント変化通知一覧を更新する。
   parameters:
     - in: header

@@ -1,6 +1,6 @@
 get:
   tags:
-    - アカウント
+    - Account
   description: 指定したアカウントを取得する。
   parameters:
     - in: header

@@ -1,6 +1,6 @@
 post:
   tags:
-    - アクセストークン新規発行
+    - Access token
   description: アクセストークンを発行する。
   parameters:
     - in: header

@@ -1,6 +1,6 @@
 get:
   tags:
-    - アクションコメント
+    - Action Comment
   description: 特定のアクションに対するアクションコメント一覧を取得する。
   parameters:
     - in: header
@@ -66,7 +66,7 @@ get:
 
 post:
   tags:
-    - アクションコメント
+    - Action Comment
   description: 特定のアクションに対するアクションコメントを作成する。
   parameters:
     - in: header

@@ -1,6 +1,6 @@
 get:
   tags:
-    - アクティビティ
+    - Activity
   description: 現在ログインしているアカウントのアクティビティを取得する。
   parameters:
     - in: header

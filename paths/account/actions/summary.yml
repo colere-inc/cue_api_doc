@@ -1,6 +1,6 @@
 get:
   tags:
-    - アクション一覧サマリ
+    - Action List Summary
   description: ログインしているアカウントのアクション振り返りページで使うためのサマリを取得する。
   parameters:
     - in: header

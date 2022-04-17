@@ -1,6 +1,6 @@
 put:
   tags:
-    - アクションコメント
+    - Action Comment
   description: 特定のアクションに対するアクションコメントを更新する。
   parameters:
     - in: header
@@ -64,7 +64,7 @@ put:
 
 delete:
   tags:
-    - アクションコメント
+    - Action Comment
   description: 特定のアクションに対するアクションコメントを削除する。
   parameters:
     - in: header

@@ -1,6 +1,6 @@
 get:
   tags:
-    - オペレーター(管理専用)
+    - Operator(Admin)
   description: オペレーターをすべて取得する。
   parameters:
     - in: header
@@ -44,7 +44,7 @@ get:
 
 post:
   tags:
-    - オペレーター(管理専用)
+    - Operator(Admin)
   description: オペレーターを作成する。
   parameters:
     - in: header

@@ -1,6 +1,6 @@
 get:
   tags:
-    - アクション履歴
+    - Action History
   description: 指定の関係性に対するアクション履歴一覧を取得する。
   parameters:
     - in: header
@@ -65,7 +65,7 @@ get:
 
 post:
   tags:
-      - アクション履歴
+      - Action History
   description: 指定の関係性に対するアクション履歴を作成する。
   parameters:
     - in: header

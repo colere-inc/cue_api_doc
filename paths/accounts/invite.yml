@@ -1,6 +1,6 @@
 post:
   tags:
-    - アカウント招待
+    - Account Invite
   description: アカウントを招待する。
   parameters:
     - in: header
