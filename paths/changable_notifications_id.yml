@@ -1,7 +1,7 @@
 put:
   tags:
     - Point Change Notification
-  description: ログインしているアカウントのポイント変化通知一覧を更新する。
+  description: Update the list of point change notifications for the logged-in account.
   parameters:
     - in: header
       name: Content-Type

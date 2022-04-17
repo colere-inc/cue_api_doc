@@ -1,7 +1,7 @@
 get:
   tags:
     - External Apps
-  description: ログインしているアカウントの連携した外部アプリ情報をすべて取得する。
+  description: Get all external application information linked to the account you are logged in to.
   parameters:
     - in: header
       name: Content-Type

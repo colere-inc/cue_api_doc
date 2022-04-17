@@ -1,7 +1,7 @@
 get:
   tags:
     - Relationship Point
-  description: 指定のaccount_relationの関係性レベルのポイントをすべてを取得する。
+  description: Get all relationship level points for a given account_relation.
   parameters:
     - in: header
       name: Content-Type
@@ -66,7 +66,7 @@ get:
 post:
   tags:
     - Relationship Point
-  description: 指定のaccount_relationの関係性レベルのポイントを作成する。
+  description: Create a relationship level point for the specified account_relation.
   parameters:
     - in: header
       name: Content-Type

@@ -1,7 +1,7 @@
 get:
   tags:
     - Operator(Admin)
-  description: オペレーターをすべて取得する。
+  description: Get all operators.
   parameters:
     - in: header
       name: Content-Type
@@ -45,7 +45,7 @@ get:
 post:
   tags:
     - Operator(Admin)
-  description: オペレーターを作成する。
+  description: Create an operator.
   parameters:
     - in: header
       name: Content-Type

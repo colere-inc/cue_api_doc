@@ -1,7 +1,7 @@
 get:
   tags:
     - Action Comment
-  description: 特定のアクションに対するアクションコメント一覧を取得する。
+  description: Obtain a list of action comments for a specific action.
   parameters:
     - in: header
       name: Content-Type
@@ -67,7 +67,7 @@ get:
 post:
   tags:
     - Action Comment
-  description: 特定のアクションに対するアクションコメントを作成する。
+  description: Create action comments for specific actions.
   parameters:
     - in: header
       name: Content-Type

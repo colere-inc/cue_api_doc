@@ -1,7 +1,7 @@
 get:
   tags:
     - Feedback
-  description: 特定のアクションに対するフィードバック一覧を取得する。
+  description: Obtain a list of feedback for a specific action.
   parameters:
     - in: header
       name: Content-Type
@@ -52,7 +52,7 @@ get:
 post:
   tags:
     - Feedback
-  description: 特定のアクションに対するフィードバックを作成する。
+  description: Create feedback for specific actions.
   parameters:
     - in: header
       name: Content-Type

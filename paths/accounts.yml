@@ -1,7 +1,7 @@
 get:
   tags:
     - Account(Admin)
-  description: アカウントをすべて取得する。
+  description: Obtain all accounts.
   parameters:
     - in: header
       name: Content-Type

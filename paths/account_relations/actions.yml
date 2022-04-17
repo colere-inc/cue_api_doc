@@ -1,7 +1,7 @@
 get:
   tags:
     - Action History
-  description: 指定の関係性に対するアクション履歴一覧を取得する。
+  description: Get a list of action history for the specified relationship.
   parameters:
     - in: header
       name: Content-Type
@@ -66,7 +66,7 @@ get:
 post:
   tags:
       - Action History
-  description: 指定の関係性に対するアクション履歴を作成する。
+  description: Create an action history for the specified relationship.
   parameters:
     - in: header
       name: Content-Type

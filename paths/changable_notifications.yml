@@ -1,7 +1,7 @@
 get:
   tags:
     - Point Change Notification
-  description: ログインしているアカウントのポイント変化通知一覧を取得する。
+  description: Get a list of point change notifications for the account you are logged in to.
   parameters:
     - in: header
       name: Content-Type

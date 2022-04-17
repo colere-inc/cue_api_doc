@@ -1,7 +1,7 @@
 get:
   tags:
     - Account Relationships
-  description: 指定のアカウントの関係性情報を取得する。
+  description: Obtain relationship information for a given account.
   parameters:
     - in: header
       name: Content-Type
@@ -49,7 +49,7 @@ get:
 put:
   tags:
     - Account Relationships
-  description: 指定のアカウントの関係性情報を更新する。
+  description: Update relationship information for the specified account.
   parameters:
     - in: header
       name: Content-Type
@@ -107,7 +107,7 @@ put:
 delete:
   tags:
     - Account Relationships
-  description: 指定のアカウントの関係性情報を削除する。
+  description: Delete relationship information for a given account.
   parameters:
     - in: header
       name: Content-Type

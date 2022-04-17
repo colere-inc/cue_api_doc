@@ -1,7 +1,7 @@
 put:
   tags:
     - Action Comment
-  description: 特定のアクションに対するアクションコメントを更新する。
+  description: Update action comments for specific actions.
   parameters:
     - in: header
       name: Content-Type
@@ -65,7 +65,7 @@ put:
 delete:
   tags:
     - Action Comment
-  description: 特定のアクションに対するアクションコメントを削除する。
+  description: Remove action comments for a specific action.
   parameters:
     - in: header
       name: Content-Type

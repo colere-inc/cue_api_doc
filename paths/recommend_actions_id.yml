@@ -1,7 +1,7 @@
 get:
   tags:
     - Action Candidate(Admin)
-  description: 指定のアクションを取得する。
+  description: Get the specified action.
   parameters:
     - in: header
       name: Content-Type
@@ -49,7 +49,7 @@ get:
 put:
   tags:
     - Action Candidate(Admin)
-  description: 指定のアクションを更新する。
+  description: Update the specified action.
   parameters:
     - in: header
       name: Content-Type
@@ -119,7 +119,7 @@ put:
 delete:
   tags:
     - Action Candidate(Admin)
-  description: 指定のアクションを削除する。
+  description: Delete the specified action.
   parameters:
     - in: header
       name: Content-Type

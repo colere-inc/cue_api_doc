@@ -9,7 +9,7 @@ paths:
     post:
       tags:
         - Access token
-      description: アクセストークンを発行する。
+      description: Issue an access token.
       parameters:
         - in: header
           name: Content-Type
@@ -38,7 +38,7 @@ paths:
     post:
       tags:
         - Authentication
-      description: メールアドレスとパスワードでログインする。
+      description: Log in with your email address and password.
       parameters:
         - in: header
           name: Content-Type
@@ -100,7 +100,7 @@ paths:
     delete:
       tags:
         - Authentication
-      description: ログアウトする。
+      description: Log out.
       parameters:
         - in: header
           name: Content-Type
@@ -146,7 +146,7 @@ paths:
     get:
       tags:
         - Account
-      description: 現在ログインしているアカウントの情報を取得する。
+      description: Get information about the currently logged-in account.
       parameters:
         - in: header
           name: Content-Type
@@ -186,7 +186,7 @@ paths:
     post:
       tags:
         - Account
-      description: アカウントを作成する。
+      description: Create an account.
       parameters:
         - in: header
           name: Content-Type
@@ -258,7 +258,7 @@ paths:
     put:
       tags:
         - Account
-      description: 現在ログインしているアカウントの情報を更新する。
+      description: Update the information of the currently logged-in account.
       parameters:
         - in: header
           name: Content-Type
@@ -327,7 +327,7 @@ paths:
     get:
       tags:
         - Action List Summary
-      description: ログインしているアカウントのアクション振り返りページで使うためのサマリを取得する。
+      description: Get a summary for use in the Action Look Back page for the account you are logged in to.
       parameters:
         - in: header
           name: Content-Type
@@ -397,7 +397,7 @@ paths:
     get:
       tags:
         - Account
-      description: 指定したアカウントを取得する。
+      description: Obtain the specified account.
       parameters:
         - in: header
           name: Content-Type
@@ -444,7 +444,7 @@ paths:
     get:
       tags:
         - Account Summary
-      description: 指定のアカウントの詳細ページで使うためのサマリを取得する。
+      description: Get a summary for use on the detail page of a given account.
       parameters:
         - in: header
           name: Content-Type
@@ -518,7 +518,7 @@ paths:
     post:
       tags:
         - Account Invite
-      description: アカウントを招待する。
+      description: Invite an account.
       parameters:
         - in: header
           name: Content-Type
@@ -600,7 +600,7 @@ paths:
     get:
       tags:
         - Action Comment
-      description: 特定のアクションに対するアクションコメント一覧を取得する。
+      description: Obtain a list of action comments for a specific action.
       parameters:
         - in: header
           name: Content-Type
@@ -663,7 +663,7 @@ paths:
     post:
       tags:
         - Action Comment
-      description: 特定のアクションに対するアクションコメントを作成する。
+      description: Create action comments for specific actions.
       parameters:
         - in: header
           name: Content-Type
@@ -732,7 +732,7 @@ paths:
     put:
       tags:
         - Action Comment
-      description: 特定のアクションに対するアクションコメントを更新する。
+      description: Update action comments for specific actions.
       parameters:
         - in: header
           name: Content-Type
@@ -794,7 +794,7 @@ paths:
     delete:
       tags:
         - Action Comment
-      description: 特定のアクションに対するアクションコメントを削除する。
+      description: Remove action comments for a specific action.
       parameters:
         - in: header
           name: Content-Type
@@ -841,7 +841,7 @@ paths:
     get:
       tags:
         - Feedback
-      description: 特定のアクションに対するフィードバック一覧を取得する。
+      description: Obtain a list of feedback for a specific action.
       parameters:
         - in: header
           name: Content-Type
@@ -889,7 +889,7 @@ paths:
     post:
       tags:
         - Feedback
-      description: 特定のアクションに対するフィードバックを作成する。
+      description: Create feedback for specific actions.
       parameters:
         - in: header
           name: Content-Type
@@ -953,7 +953,7 @@ paths:
     put:
       tags:
         - Feedback
-      description: 特定のアクションに対するフィードバックを更新する。
+      description: Update feedback for specific actions.
       parameters:
         - in: header
           name: Content-Type
@@ -1015,7 +1015,7 @@ paths:
     delete:
       tags:
         - Feedback
-      description: 特定のアクションに対するフィードバックを削除する。
+      description: Remove feedback for a specific action.
       parameters:
         - in: header
           name: Content-Type
@@ -1062,7 +1062,7 @@ paths:
     put:
       tags:
         - Feedback List
-      description: 複数のフィードバックを更新する。
+      description: Update multiple feedback.
       parameters:
         - in: header
           name: Content-Type
@@ -1128,7 +1128,7 @@ paths:
     get:
       tags:
         - Activity
-      description: 現在ログインしているアカウントのアクティビティを取得する。
+      description: Get activity for the currently logged in account.
       parameters:
         - in: header
           name: Content-Type
@@ -1229,7 +1229,7 @@ paths:
     get:
       tags:
         - Account Relationships
-      description: 現在ログインしているアカウントに関係するつながりをすべて取得する。
+      description: Get all connections related to the currently logged in account.
       parameters:
         - in: header
           name: Content-Type
@@ -1271,7 +1271,7 @@ paths:
     post:
       tags:
         - Account Relationships
-      description: アカウントの関係性情報を作成する。
+      description: Create account relationship information.
       parameters:
         - in: header
           name: Content-Type
@@ -1333,7 +1333,7 @@ paths:
     get:
       tags:
         - Account Relationships
-      description: 指定のアカウントの関係性情報を取得する。
+      description: Obtain relationship information for a given account.
       parameters:
         - in: header
           name: Content-Type
@@ -1379,7 +1379,7 @@ paths:
     put:
       tags:
         - Account Relationships
-      description: 指定のアカウントの関係性情報を更新する。
+      description: Update relationship information for the specified account.
       parameters:
         - in: header
           name: Content-Type
@@ -1435,7 +1435,7 @@ paths:
     delete:
       tags:
         - Account Relationships
-      description: 指定のアカウントの関係性情報を削除する。
+      description: Delete relationship information for a given account.
       parameters:
         - in: header
           name: Content-Type
@@ -1476,7 +1476,7 @@ paths:
     get:
       tags:
         - Action History
-      description: 指定の関係性に対するアクション履歴一覧を取得する。
+      description: Get a list of action history for the specified relationship.
       parameters:
         - in: header
           name: Content-Type
@@ -1539,7 +1539,7 @@ paths:
     post:
       tags:
         - Action History
-      description: 指定の関係性に対するアクション履歴を作成する。
+      description: Create an action history for the specified relationship.
       parameters:
         - in: header
           name: Content-Type
@@ -1611,7 +1611,7 @@ paths:
     get:
       tags:
         - Action History
-      description: 指定の関係性に対する指定のアクション情報を取得する。
+      description: Get the specified action information for the specified relationship.
       parameters:
         - in: header
           name: Content-Type
@@ -1663,7 +1663,7 @@ paths:
     put:
       tags:
         - Action History
-      description: 指定の関係性に対する指定のアクション情報を更新する。
+      description: Update the specified action information for the specified relationship.
       parameters:
         - in: header
           name: Content-Type
@@ -1734,7 +1734,7 @@ paths:
     get:
       tags:
         - Action List Summary
-      description: 指定の関係性に対するアクション履歴ページで使うためのサマリを取得する。
+      description: Get a summary for use in the action history page for the specified relationship.
       parameters:
         - in: header
           name: Content-Type
@@ -1810,7 +1810,7 @@ paths:
     get:
       tags:
         - Today Action
-      description: 指定の関係性に対する今日のアクション情報を取得する。(存在しなければ新しく作ったものを返す)
+      description: 'Get today''s action information for the specified relationship. (If it does not exist, return a newly created one.)'
       parameters:
         - in: header
           name: Content-Type
@@ -1876,7 +1876,7 @@ paths:
     post:
       tags:
         - Today Action
-      description: 指定の関係性に対する今日のアクションをスキップし新しいアクションを取得する。
+      description: Skip today's action for the specified relationship and get a new action.
       parameters:
         - in: header
           name: Content-Type
@@ -1942,7 +1942,7 @@ paths:
     get:
       tags:
         - Action Comment List Summary
-      description: 指定の関係性に対するアクション履歴ページで使うためのサマリを取得する。
+      description: Get a summary for use in the action history page for the specified relationship.
       parameters:
         - in: header
           name: Content-Type
@@ -2019,7 +2019,7 @@ paths:
     get:
       tags:
         - Relationship Point
-      description: 指定のaccount_relationの関係性レベルのポイントをすべてを取得する。
+      description: Get all relationship level points for a given account_relation.
       parameters:
         - in: header
           name: Content-Type
@@ -2082,7 +2082,7 @@ paths:
     post:
       tags:
         - Relationship Point
-      description: 指定のaccount_relationの関係性レベルのポイントを作成する。
+      description: Create a relationship level point for the specified account_relation.
       parameters:
         - in: header
           name: Content-Type
@@ -2146,7 +2146,7 @@ paths:
     get:
       tags:
         - External Apps
-      description: 指定のアカウントのつながりとアクションに設定された外部アプリ情報を取得する。
+      description: Get external application information set for the specified account connections and actions.
       parameters:
         - in: header
           name: Content-Type
@@ -2198,7 +2198,7 @@ paths:
     post:
       tags:
         - External Apps
-      description: 指定のアカウントのつながりとアクションに設定された外部アプリ情報を作成する。
+      description: Create external application information set for the specified account connections and actions.
       parameters:
         - in: header
           name: Content-Type
@@ -2272,7 +2272,7 @@ paths:
     put:
       tags:
         - External Apps
-      description: 指定のアカウントのつながりとアクションに設定された外部アプリ情報を更新する。
+      description: Update the external app information set in the connections and actions for the specified account.
       parameters:
         - in: header
           name: Content-Type
@@ -2343,7 +2343,7 @@ paths:
     get:
       tags:
         - Point Change Notification
-      description: ログインしているアカウントのポイント変化通知一覧を取得する。
+      description: Get a list of point change notifications for the account you are logged in to.
       parameters:
         - in: header
           name: Content-Type
@@ -2386,7 +2386,7 @@ paths:
     put:
       tags:
         - Point Change Notification
-      description: ログインしているアカウントのポイント変化通知一覧を更新する。
+      description: Update the list of point change notifications for the logged-in account.
       parameters:
         - in: header
           name: Content-Type
@@ -2443,7 +2443,7 @@ paths:
     get:
       tags:
         - External Apps
-      description: ログインしているアカウントの連携した外部アプリ情報をすべて取得する。
+      description: Get all external application information linked to the account you are logged in to.
       parameters:
         - in: header
           name: Content-Type
@@ -2486,7 +2486,7 @@ paths:
     get:
       tags:
         - Relationship Point
-      description: 現在ログインしているアカウントに関係する関係性レベルのポイントをすべて取得する。<br>account_relationごとに最新の日付のもののみ取得する。
+      description: 'Get all relationship level points related to the currently logged in account, only the most recently dated one for each account_relation.'
       parameters:
         - in: header
           name: Content-Type
@@ -2529,7 +2529,7 @@ paths:
     get:
       tags:
         - Account(Admin)
-      description: アカウントをすべて取得する。
+      description: Obtain all accounts.
       parameters:
         - in: header
           name: Content-Type
@@ -2572,7 +2572,7 @@ paths:
     get:
       tags:
         - External Apps(Admin)
-      description: 指定のアカウントの連携した外部アプリ情報をすべて取得する。
+      description: Get all linked external application information for the specified account.
       parameters:
         - in: header
           name: Content-Type
@@ -2621,7 +2621,7 @@ paths:
     get:
       tags:
         - Action Tag(Admin)
-      description: アクションタグ一覧を取得する。
+      description: Get a list of action tags.
       parameters:
         - in: header
           name: Content-Type
@@ -2663,7 +2663,7 @@ paths:
     post:
       tags:
         - Action Tag(Admin)
-      description: アクションタグを作成する。
+      description: Create an action tag.
       parameters:
         - in: header
           name: Content-Type
@@ -2716,7 +2716,7 @@ paths:
     get:
       tags:
         - Action Tag(Admin)
-      description: 指定のアクションタグを取得する。
+      description: Get the specified action tag.
       parameters:
         - in: header
           name: Content-Type
@@ -2762,7 +2762,7 @@ paths:
     put:
       tags:
         - Action Tag(Admin)
-      description: 指定のアクションタグを更新する。
+      description: Update the specified action tag.
       parameters:
         - in: header
           name: Content-Type
@@ -2818,7 +2818,7 @@ paths:
     delete:
       tags:
         - Action Tag(Admin)
-      description: 指定のアクションタグを削除する。
+      description: Deletes the specified action tag.
       parameters:
         - in: header
           name: Content-Type
@@ -2859,7 +2859,7 @@ paths:
     get:
       tags:
         - Action Candidate(Admin)
-      description: アクション一覧を取得する。
+      description: Get a list of actions.
       parameters:
         - in: header
           name: Content-Type
@@ -2901,7 +2901,7 @@ paths:
     post:
       tags:
         - Action Candidate(Admin)
-      description: アクションを作成する。
+      description: Create an action.
       parameters:
         - in: header
           name: Content-Type
@@ -2969,7 +2969,7 @@ paths:
     get:
       tags:
         - Action Candidate(Admin)
-      description: 指定のアクションを取得する。
+      description: Get the specified action.
       parameters:
         - in: header
           name: Content-Type
@@ -3015,7 +3015,7 @@ paths:
     put:
       tags:
         - Action Candidate(Admin)
-      description: 指定のアクションを更新する。
+      description: Update the specified action.
       parameters:
         - in: header
           name: Content-Type
@@ -3083,7 +3083,7 @@ paths:
     delete:
       tags:
         - Action Candidate(Admin)
-      description: 指定のアクションを削除する。
+      description: Delete the specified action.
       parameters:
         - in: header
           name: Content-Type
@@ -3124,7 +3124,7 @@ paths:
     get:
       tags:
         - Operator(Admin)
-      description: オペレーターをすべて取得する。
+      description: Get all operators.
       parameters:
         - in: header
           name: Content-Type
@@ -3166,7 +3166,7 @@ paths:
     post:
       tags:
         - Operator(Admin)
-      description: オペレーターを作成する。
+      description: Create an operator.
       parameters:
         - in: header
           name: Content-Type
@@ -3233,7 +3233,7 @@ paths:
     get:
       tags:
         - Operator(Admin)
-      description: 指定したオペレーターを取得する。
+      description: Get the specified operator.
       parameters:
         - in: header
           name: Content-Type
@@ -3279,7 +3279,7 @@ paths:
     put:
       tags:
         - Operator(Admin)
-      description: 指定のオペレーターを更新する。
+      description: Update the designated operator.
       parameters:
         - in: header
           name: Content-Type
@@ -3347,7 +3347,7 @@ paths:
     delete:
       tags:
         - Operator(Admin)
-      description: 指定のオペレーターを削除する。
+      description: Delete a specified operator.
       parameters:
         - in: header
           name: Content-Type

@@ -1,7 +1,7 @@
 put:
   tags:
     - Feedback List
-  description: 複数のフィードバックを更新する。
+  description: Update multiple feedback.
   parameters:
     - in: header
       name: Content-Type

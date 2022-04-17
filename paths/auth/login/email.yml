@@ -1,7 +1,7 @@
 post:
   tags:
     - Authentication
-  description: メールアドレスとパスワードでログインする。
+  description: Log in with your email address and password.
   parameters:
     - in: header
       name: Content-Type
@@ -65,7 +65,7 @@ post:
 delete:
   tags:
     - Authentication
-  description: ログアウトする。
+  description: Log out.
   parameters:
     - in: header
       name: Content-Type

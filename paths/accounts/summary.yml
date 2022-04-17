@@ -1,7 +1,7 @@
 get:
   tags:
     - Account Summary
-  description: 指定のアカウントの詳細ページで使うためのサマリを取得する。
+  description: Get a summary for use on the detail page of a given account.
   parameters:
     - in: header
       name: Content-Type

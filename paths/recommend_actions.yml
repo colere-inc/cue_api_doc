@@ -1,7 +1,7 @@
 get:
   tags:
     - Action Candidate(Admin)
-  description: アクション一覧を取得する。
+  description: Get a list of actions.
   parameters:
     - in: header
       name: Content-Type
@@ -45,7 +45,7 @@ get:
 post:
   tags:
     - Action Candidate(Admin)
-  description: アクションを作成する。
+  description: Create an action.
   parameters:
     - in: header
       name: Content-Type

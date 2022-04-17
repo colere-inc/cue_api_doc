@@ -1,7 +1,7 @@
 get:
   tags:
     - External Apps
-  description: 指定のアカウントのつながりとアクションに設定された外部アプリ情報を取得する。
+  description: Get external application information set for the specified account connections and actions.
   parameters:
     - in: header
       name: Content-Type
@@ -55,7 +55,7 @@ get:
 post:
   tags:
     - External Apps
-  description: 指定のアカウントのつながりとアクションに設定された外部アプリ情報を作成する。
+  description: Create external application information set for the specified account connections and actions.
   parameters:
     - in: header
       name: Content-Type
@@ -131,7 +131,7 @@ post:
 put:
   tags:
     - External Apps
-  description: 指定のアカウントのつながりとアクションに設定された外部アプリ情報を更新する。
+  description: Update the external app information set in the connections and actions for the specified account.
   parameters:
     - in: header
       name: Content-Type

@@ -1,7 +1,7 @@
 get:
   tags:
     - Action History
-  description: 指定の関係性に対する指定のアクション情報を取得する。
+  description: Get the specified action information for the specified relationship.
   parameters:
     - in: header
       name: Content-Type
@@ -55,7 +55,7 @@ get:
 put:
   tags:
     - Action History
-  description: 指定の関係性に対する指定のアクション情報を更新する。
+  description: Update the specified action information for the specified relationship.
   parameters:
     - in: header
       name: Content-Type

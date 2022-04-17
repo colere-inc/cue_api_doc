@@ -1,7 +1,7 @@
 get:
   tags:
     - Account
-  description: 現在ログインしているアカウントの情報を取得する。
+  description: Get information about the currently logged-in account.
   parameters:
     - in: header
       name: Content-Type
@@ -43,7 +43,7 @@ get:
 post:
   tags:
     - Account
-  description: アカウントを作成する。
+  description: Create an account.
   parameters:
     - in: header
       name: Content-Type
@@ -117,7 +117,7 @@ post:
 put:
   tags:
     - Account
-  description: 現在ログインしているアカウントの情報を更新する。
+  description: Update the information of the currently logged-in account.
   parameters:
     - in: header
       name: Content-Type

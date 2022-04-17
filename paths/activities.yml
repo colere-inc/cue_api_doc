@@ -1,7 +1,7 @@
 get:
   tags:
     - Activity
-  description: 現在ログインしているアカウントのアクティビティを取得する。
+  description: Get activity for the currently logged in account.
   parameters:
     - in: header
       name: Content-Type

@@ -1,7 +1,7 @@
 get:
   tags:
     - Account
-  description: 指定したアカウントを取得する。
+  description: Obtain the specified account.
   parameters:
     - in: header
       name: Content-Type

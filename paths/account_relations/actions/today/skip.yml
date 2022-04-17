@@ -1,7 +1,7 @@
 post:
   tags:
     - Today Action
-  description: 指定の関係性に対する今日のアクションをスキップし新しいアクションを取得する。
+  description: Skip today's action for the specified relationship and get a new action.
   parameters:
     - in: header
       name: Content-Type

@@ -1,7 +1,7 @@
 get:
   tags:
     - Account Relationships
-  description: 現在ログインしているアカウントに関係するつながりをすべて取得する。
+  description: Get all connections related to the currently logged in account.
   parameters:
     - in: header
       name: Content-Type
@@ -45,7 +45,7 @@ get:
 post:
   tags:
     - Account Relationships
-  description: アカウントの関係性情報を作成する。
+  description: Create account relationship information.
   parameters:
     - in: header
       name: Content-Type

@@ -1,7 +1,7 @@
 get:
   tags:
     - Action Tag(Admin)
-  description: アクションタグ一覧を取得する。
+  description: Get a list of action tags.
   parameters:
     - in: header
       name: Content-Type
@@ -45,7 +45,7 @@ get:
 post:
   tags:
     - Action Tag(Admin)
-  description: アクションタグを作成する。
+  description: Create an action tag.
   parameters:
     - in: header
       name: Content-Type

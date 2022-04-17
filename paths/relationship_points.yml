@@ -1,7 +1,7 @@
 get:
   tags:
     - Relationship Point
-  description: 現在ログインしているアカウントに関係する関係性レベルのポイントをすべて取得する。<br>account_relationごとに最新の日付のもののみ取得する。
+  description: Get all relationship level points related to the currently logged in account, only the most recently dated one for each account_relation.
   parameters:
     - in: header
       name: Content-Type

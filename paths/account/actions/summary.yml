@@ -1,7 +1,7 @@
 get:
   tags:
     - Action List Summary
-  description: ログインしているアカウントのアクション振り返りページで使うためのサマリを取得する。
+  description: Get a summary for use in the Action Look Back page for the account you are logged in to.
   parameters:
     - in: header
       name: Content-Type

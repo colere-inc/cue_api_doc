@@ -1,7 +1,7 @@
 post:
   tags:
     - Access token
-  description: アクセストークンを発行する。
+  description: Issue an access token.
   parameters:
     - in: header
       name: Content-Type
