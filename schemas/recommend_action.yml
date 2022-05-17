@@ -1,5 +1,5 @@
 type: object
-description: アクション
+description: action
 properties:
   recommend_action_id:
     type: string
@@ -7,17 +7,17 @@ properties:
     example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
   name:
     type: string
-    description: 名前
-    example: あいさつしよう
+    description: name
+    example: greeting
   level:
     type: string
-    description: どのレベルの関係性のときに候補として出すか(カンマ区切り)
+    description: At what level of the relationship are you a candidate (comma delimited)?(カンマ区切り)
     example: 1,2,3
   type:
     type: string
-    description: タイプ
+    description: type
     example: question
   tag_id:
     type: string
-    description: AI分析用のタグ(カンマ区切り)
+    description: Tags for AI analysis (comma delimited)
     example: 1,3,8

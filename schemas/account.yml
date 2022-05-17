@@ -7,23 +7,23 @@ properties:
     example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
   last_name:
     type: string
-    description: 名
+    description: first name
     example: 太郎
   first_name:
     type: string
-    description: 姓
+    description: last name
     example: 山田
   email:
     type: string
-    description: メールアドレス
+    description: email
     example: example@colere.inc
   icon:
     type: string
-    description: アイコンのURL
+    description: icon url
     example: icon@pmf.com
   gender:
     type: string
-    description: 性
+    description: gender
     example: 男
 required:
   - id

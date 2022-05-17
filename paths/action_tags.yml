@@ -17,14 +17,14 @@ get:
     - in: header
       name: "Authorization: Bearer"
       required: true
-      description: アクセストークン
+      description: access token
       schema:
         type: string
         example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
 
   responses:
     "200":
-      description: 取得成功
+      description: success
       content:
         application/json:
           schema:
@@ -34,13 +34,13 @@ get:
               properties:
               $ref: "../schemas/action_tag.yml"
     "400":
-      description: リクエストに問題あり
+      description: problem with the request
     "401":
-      description: Authorizationヘッダーに問題あり
+      description: problem with the Authorization header
     "403":
-      description: アクセス権がない
+      description: No access rights
     "500":
-      description: サーバーの一時的なエラー
+      description: Temporary server error
 
 post:
   tags:
@@ -61,7 +61,7 @@ post:
     - in: header
       name: "Authorization: Bearer"
       required: true
-      description: アクセストークン
+      description: access token
       schema:
         type: string
         example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
@@ -73,14 +73,14 @@ post:
           properties:
             name:
               type: string
-              description: 名前
-              example: 私生活
+              description: name
+              example: private life
           required:
             - name
 
   responses:
     "200":
-      description: 作成成功
+      description: success
       content:
         application/json:
           schema:
@@ -88,10 +88,10 @@ post:
             properties:
             $ref: '../schemas/action_tag.yml'
     "400":
-      description: リクエストに問題あり
+      description: problem with the request
     "401":
-      description: Authorizationヘッダーに問題あり
+      description: problem with the Authorization header
     "403":
-      description: アクセス権がない
+      description: No access rights
     "500":
-      description: サーバーの一時的なエラー
+      description: Temporary server error

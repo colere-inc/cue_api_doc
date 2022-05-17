@@ -1,5 +1,5 @@
 type: object
-description: アカウント同士の関係性
+description: account relation
 properties:
   account_relation_id:
     type: string
@@ -7,15 +7,15 @@ properties:
     example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
   manager_account_id:
     type: string
-    description: 上司のアカウントID
+    description: manager account ID
     example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
   member_account_id:
     type: string
-    description: 部下のアカウントID
+    description: member account ID
     example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
   activated:
     type: integer
-    description: つながりを許可したか(0=未承認, 1=承認, 2=却下)
+    description: Connection allowed(0=null, 1=approved, 2=rejected)
     example: 0
   manager:
     $ref: "../account.yml"

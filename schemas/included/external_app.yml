@@ -1,5 +1,5 @@
 type: object
-description: ポイント変更通知
+description: point change notification
 properties:
   external_app_id:
     type: string
@@ -7,23 +7,23 @@ properties:
     example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
   account_relation_id:
     type: string
-    description: 対象のアカウント関係ID
+    description: account relationship ID
     example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
   recommend_action_id:
     type: string
-    description: 対象のアクションID
+    description: action ID
     example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
   name:
     type: string
-    description: アプリの名前
+    description: name
     example: Microsoft Teams
   category:
     type: string
-    description: アプリのカテゴリ
+    description: category
     example: Chat
   link:
     type: string
-    description: 外部アプリへの遷移リンク
+    description: link to external application
     example: https://teams.microsoft.com/l/chat/0/0?users=taro@colere.inc,jiro@colere.inc&topicName=Prep%20For%20Meeting%20Tomorrow&message=Hi%20folks%2C%20kicking%20off%20a%20chat%20about%20our%20meeting%20tomorrow
   account_relation:
     $ref: "./account_relation.yml"

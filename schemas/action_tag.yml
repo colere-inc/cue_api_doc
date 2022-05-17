@@ -1,5 +1,5 @@
 type: object
-description: アクションタグ
+description: action tag
 properties:
   action_tag_id:
     type: string
@@ -7,5 +7,5 @@ properties:
     example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
   name:
     type: string
-    description: 名前
-    example: 私生活
+    description: name
+    example: private life

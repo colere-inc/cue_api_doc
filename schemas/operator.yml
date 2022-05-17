@@ -1,19 +1,19 @@
 type: object
-description: オペレーター
+description: operator
 properties:
   last_name:
     type: string
-    description: 名
+    description: first name
     example: 太郎
   first_name:
     type: string
-    description: 姓
+    description: last name
     example: 山田
   email:
     type: string
-    description: メールアドレス
+    description: email
     example: example@colere.inc
   icon:
     type: string
-    description: アイコンのURL
+    description: icon url
     example: icon@pmf.com

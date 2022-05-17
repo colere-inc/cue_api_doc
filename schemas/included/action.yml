@@ -1,5 +1,5 @@
 type: object
-description: アクション
+description: action
 properties:
   action_id:
     type: string
@@ -7,23 +7,23 @@ properties:
     example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
   account_relation_id:
     type: string
-    description: アカウント同士の関係性ID
+    description: account relationship ID
     example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
   recommend_action_id:
     type: string
-    description: アクション候補ID
+    description: action candidate ID
     example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
   view_date:
     type: string
-    description: 表示した日付
+    description: view date
     example: 2022/01/01T05:42:22.000Z
   action_date:
     type: string
-    description: 実行した日付
+    description: action date
     example: 2022/01/02T05:42:22.000Z
   skipped:
     type: boolean
-    description: スキップしたか
+    description: skipped
     example: boolean
   recommend_action:
     $ref: "../recommend_action.yml"

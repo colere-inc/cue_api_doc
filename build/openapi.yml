@@ -24,7 +24,7 @@ paths:
             type: string
       responses:
         '200':
-          description: 発行成功
+          description: success
           content:
             application/json:
               schema:
@@ -32,7 +32,7 @@ paths:
                 properties:
                   access_token:
                     type: string
-                    description: アクセストークン
+                    description: access token
                     example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
   /auth/login/email:
     post:
@@ -54,7 +54,7 @@ paths:
         - in: header
           name: 'Authorization: Bearer'
           required: true
-          description: アクセストークン
+          description: access token
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
@@ -66,18 +66,18 @@ paths:
               properties:
                 email:
                   type: string
-                  description: メールアドレス
+                  description: email
                   example: example@colere.inc
                 password:
                   type: string
-                  description: パスワード
+                  description: password
                   example: password
               required:
                 - email
                 - password
       responses:
         '200':
-          description: ログイン成功
+          description: success
           content:
             application/json:
               schema:
@@ -85,18 +85,18 @@ paths:
                 properties:
                   access_token:
                     type: string
-                    description: ログイン後のアクセストークン
+                    description: access token after login
                     example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
         '400':
-          description: リクエストに問題あり
+          description: problem with the request
         '401':
-          description: Authorizationヘッダーに問題あり
+          description: problem with the Authorization header
         '403':
-          description: アクセス権がない
+          description: No access rights
         '404':
-          description: ログイン失敗
+          description: Login Failure
         '500':
-          description: サーバーの一時的なエラー
+          description: Temporary server error
     delete:
       tags:
         - Authentication
@@ -116,13 +116,13 @@ paths:
         - in: header
           name: 'Authorization: Bearer'
           required: true
-          description: アクセストークン
+          description: access token
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
       responses:
         '200':
-          description: ログアウト成功
+          description: Logout Success
           content:
             application/json:
               schema:
@@ -130,18 +130,18 @@ paths:
                 properties:
                   access_token:
                     type: string
-                    description: ログアウト後のアクセストークン
+                    description: access token after logout
                     example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
         '400':
-          description: リクエストに問題あり
+          description: problem with the request
         '401':
-          description: Authorizationヘッダーに問題あり
+          description: problem with the Authorization header
         '403':
-          description: アクセス権がない
+          description: No access rights
         '404':
-          description: ログイン失敗
+          description: Login Failure
         '500':
-          description: サーバーの一時的なエラー
+          description: Temporary server error
   /account:
     get:
       tags:
@@ -162,13 +162,13 @@ paths:
         - in: header
           name: 'Authorization: Bearer'
           required: true
-          description: アクセストークン
+          description: access token
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
       responses:
         '200':
-          description: 取得成功
+          description: success
           content:
             application/json:
               schema:
@@ -176,13 +176,13 @@ paths:
                 properties: null
                 $ref: '#/components/schemas/Account'
         '400':
-          description: リクエストに問題あり
+          description: problem with the request
         '401':
-          description: Authorizationヘッダーに問題あり
+          description: problem with the Authorization header
         '403':
-          description: アクセス権がない
+          description: No access rights
         '500':
-          description: サーバーの一時的なエラー
+          description: Temporary server error
     post:
       tags:
         - Account
@@ -202,7 +202,7 @@ paths:
         - in: header
           name: 'Authorization: Bearer'
           required: true
-          description: アクセストークン
+          description: access token
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
@@ -214,33 +214,33 @@ paths:
               properties:
                 last_name:
                   type: string
-                  description: 名
+                  description: first name
                   example: 太郎
                 first_name:
                   type: string
-                  description: 姓
+                  description: last name
                   example: 山田
                 email:
                   type: string
-                  description: メールアドレス
+                  description: email
                   example: example@colere.inc
                 password:
                   type: string
-                  description: パスワード
+                  description: password
                   example: password
                 icon:
                   type: string
-                  description: アイコンのURL
+                  description: icon url
                   example: icon@pmf.com
                 gender:
                   type: string
-                  description: 性
+                  description: gender
                   example: 男
               required:
                 - email
       responses:
         '200':
-          description: 作成成功
+          description: success
           content:
             application/json:
               schema:
@@ -248,13 +248,13 @@ paths:
                 properties: null
                 $ref: '#/components/schemas/Account'
         '400':
-          description: リクエストに問題あり
+          description: problem with the request
         '401':
-          description: Authorizationヘッダーに問題あり
+          description: problem with the Authorization header
         '403':
-          description: アクセス権がない
+          description: No access rights
         '500':
-          description: サーバーの一時的なエラー
+          description: Temporary server error
     put:
       tags:
         - Account
@@ -274,7 +274,7 @@ paths:
         - in: header
           name: 'Authorization: Bearer'
           required: true
-          description: アクセストークン
+          description: access token
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
@@ -286,43 +286,43 @@ paths:
               properties:
                 last_name:
                   type: string
-                  description: 名
+                  description: first name
                   example: 太郎
                 first_name:
                   type: string
-                  description: 姓
+                  description: last name
                   example: 山田
                 email:
                   type: string
-                  description: メールアドレス
+                  description: email
                   example: example@colere.inc
                 password:
                   type: string
-                  description: パスワード
+                  description: password
                   example: password
                 icon:
                   type: string
-                  description: アイコンのURL
+                  description: icon url
                   example: icon@pmf.com
                 gender:
                   type: string
-                  description: 性
+                  description: gender
                   example: 男
       responses:
         '200':
-          description: 更新成功
+          description: success
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Account'
         '400':
-          description: リクエストに問題あり
+          description: problem with the request
         '401':
-          description: Authorizationヘッダーに問題あり
+          description: problem with the Authorization header
         '403':
-          description: アクセス権がない
+          description: No access rights
         '500':
-          description: サーバーの一時的なエラー
+          description: Temporary server error
   /account/actions/summary:
     get:
       tags:
@@ -343,13 +343,13 @@ paths:
         - in: header
           name: 'Authorization: Bearer'
           required: true
-          description: アクセストークン
+          description: access token
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
       responses:
         '200':
-          description: 取得成功
+          description: success
           content:
             application/json:
               schema:
@@ -358,7 +358,7 @@ paths:
                   properties:
                     date:
                       type: string
-                      description: 日付
+                      description: date
                       example: 2022/01/01
                     members:
                       type: array
@@ -371,7 +371,7 @@ paths:
                             example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
                           account_relation_id:
                             type: string
-                            description: アカウント同士の関係性ID
+                            description: account relationship ID
                             example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
                           action_id:
                             type: string
@@ -379,20 +379,20 @@ paths:
                             example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
                           icon:
                             type: string
-                            description: アイコンのURL
+                            description: icon url
                             example: icon@pmf.com
                           action_name:
                             type: string
-                            description: 名前
-                            example: あいさつしよう
+                            description: name
+                            example: greeting
         '400':
-          description: リクエストに問題あり
+          description: problem with the request
         '401':
-          description: Authorizationヘッダーに問題あり
+          description: problem with the Authorization header
         '403':
-          description: アクセス権がない
+          description: No access rights
         '500':
-          description: サーバーの一時的なエラー
+          description: Temporary server error
   '/accounts/{accounts_id}':
     get:
       tags:
@@ -413,7 +413,7 @@ paths:
         - in: header
           name: 'Authorization: Bearer'
           required: true
-          description: アクセストークン
+          description: access token
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
@@ -425,7 +425,7 @@ paths:
           description: accountのID
       responses:
         '200':
-          description: 取得成功
+          description: success
           content:
             application/json:
               schema:
@@ -433,13 +433,13 @@ paths:
                 properties: null
                 $ref: '#/components/schemas/Account'
         '400':
-          description: リクエストに問題あり
+          description: problem with the request
         '401':
-          description: Authorizationヘッダーに問題あり
+          description: problem with the Authorization header
         '403':
-          description: アクセス権がない
+          description: No access rights
         '500':
-          description: サーバーの一時的なエラー
+          description: Temporary server error
   '/accounts/{accounts_id}/summary':
     get:
       tags:
@@ -460,7 +460,7 @@ paths:
         - in: header
           name: 'Authorization: Bearer'
           required: true
-          description: アクセストークン
+          description: access token
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
@@ -472,7 +472,7 @@ paths:
           description: accountのID
       responses:
         '200':
-          description: 取得成功
+          description: success
           content:
             application/json:
               schema:
@@ -480,40 +480,40 @@ paths:
                 properties:
                   account_relation_id:
                     type: string
-                    description: アカウント同士の関係性ID
+                    description: account relationship ID
                     example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
                   last_name:
                     type: string
-                    description: 名
+                    description: first name
                     example: 太郎
                   first_name:
                     type: string
-                    description: 姓
+                    description: last name
                     example: 山田
                   icon:
                     type: string
-                    description: アイコンのURL
+                    description: icon url
                     example: icon@pmf.com
                   relation_level:
                     type: integer
-                    description: 関係性レベル
+                    description: relationship level
                     example: 3
                   relation_point:
                     type: integer
-                    description: 関係性ポイント
+                    description: relationship point
                     example: 74
                   relation_point_delta:
                     type: integer
-                    description: 関係性ポイントの変化量
+                    description: delta of relationship point
                     example: -4
         '400':
-          description: リクエストに問題あり
+          description: problem with the request
         '401':
-          description: Authorizationヘッダーに問題あり
+          description: problem with the Authorization header
         '403':
-          description: アクセス権がない
+          description: No access rights
         '500':
-          description: サーバーの一時的なエラー
+          description: Temporary server error
   /accounts/invite:
     post:
       tags:
@@ -534,7 +534,7 @@ paths:
         - in: header
           name: 'Authorization: Bearer'
           required: true
-          description: アクセストークン
+          description: access token
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
@@ -546,19 +546,19 @@ paths:
               properties:
                 last_name:
                   type: string
-                  description: 名
+                  description: first name
                   example: 太郎
                 first_name:
                   type: string
-                  description: 姓
+                  description: last name
                   example: 山田
                 email:
                   type: string
-                  description: メールアドレス
+                  description: email
                   example: example@colere.inc
                 relation_point:
                   type: integer
-                  description: 関係性ポイント
+                  description: relationship point
                   example: 20
                 member:
                   type: boolean
@@ -566,7 +566,7 @@ paths:
                   example: true
       responses:
         '200':
-          description: 作成成功
+          description: success
           content:
             application/json:
               schema:
@@ -578,24 +578,24 @@ paths:
                     example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
                   last_name:
                     type: string
-                    description: 名
+                    description: first name
                     example: 太郎
                   first_name:
                     type: string
-                    description: 姓
+                    description: last name
                     example: 山田
                   email:
                     type: string
-                    description: メールアドレス
+                    description: email
                     example: example@colere.inc
         '400':
-          description: リクエストに問題あり
+          description: problem with the request
         '401':
-          description: Authorizationヘッダーに問題あり
+          description: problem with the Authorization header
         '403':
-          description: アクセス権がない
+          description: No access rights
         '500':
-          description: サーバーの一時的なエラー
+          description: Temporary server error
   '/actions/{actions_id}/action_comments':
     get:
       tags:
@@ -616,7 +616,7 @@ paths:
         - in: header
           name: 'Authorization: Bearer'
           required: true
-          description: アクセストークン
+          description: access token
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
@@ -625,25 +625,25 @@ paths:
           schema:
             type: string
           required: true
-          description: actionのID
+          description: action ID
         - in: query
           name: offset
           schema:
             type: integer
-          description: 何件目から取得するか
+          description: offset
         - in: query
           name: limit
           schema:
             type: integer
-          description: 何件取得するか
+          description: limit
         - in: query
           name: order
           schema:
             type: string
-          description: 昇順(asc) or 降順(desc)
+          description: asc or desc
       responses:
         '200':
-          description: 取得成功
+          description: success
           content:
             application/json:
               schema:
@@ -653,13 +653,13 @@ paths:
                   properties: null
                   $ref: '#/components/schemas/IncludedActionComment'
         '400':
-          description: リクエストに問題あり
+          description: problem with the request
         '401':
-          description: Authorizationヘッダーに問題あり
+          description: problem with the Authorization header
         '403':
-          description: アクセス権がない
+          description: No access rights
         '500':
-          description: サーバーの一時的なエラー
+          description: Temporary server error
     post:
       tags:
         - Action Comment
@@ -679,7 +679,7 @@ paths:
         - in: header
           name: 'Authorization: Bearer'
           required: true
-          description: アクセストークン
+          description: access token
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
@@ -688,7 +688,7 @@ paths:
           schema:
             type: string
           required: true
-          description: actionのID
+          description: action ID
       requestBody:
         content:
           application/json:
@@ -701,11 +701,11 @@ paths:
                   example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
                 account_id:
                   type: string
-                  description: action_commentしたアカウントID
+                  description: account ID
                   example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
                 contents:
                   type: string
-                  description: action_comment内容
+                  description: content
                   example: よかったです。
               required:
                 - parent_action_comment_id
@@ -713,7 +713,7 @@ paths:
                 - contents
       responses:
         '200':
-          description: 作成成功
+          description: success
           content:
             application/json:
               schema:
@@ -721,13 +721,13 @@ paths:
                 properties: null
                 $ref: '#/components/schemas/ActionComment'
         '400':
-          description: リクエストに問題あり
+          description: problem with the request
         '401':
-          description: Authorizationヘッダーに問題あり
+          description: problem with the Authorization header
         '403':
-          description: アクセス権がない
+          description: No access rights
         '500':
-          description: サーバーの一時的なエラー
+          description: Temporary server error
   '/actions/{actions_id}/action_comments/{action_comments_id}':
     put:
       tags:
@@ -748,7 +748,7 @@ paths:
         - in: header
           name: 'Authorization: Bearer'
           required: true
-          description: アクセストークン
+          description: access token
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
@@ -757,7 +757,7 @@ paths:
           schema:
             type: string
           required: true
-          description: actionのID
+          description: action ID
         - in: path
           name: action_comments_id
           schema:
@@ -772,11 +772,11 @@ paths:
               properties:
                 contents:
                   type: string
-                  description: action_comment内容
+                  description: content
                   example: よかったです。
       responses:
         '200':
-          description: 更新成功
+          description: success
           content:
             application/json:
               schema:
@@ -784,13 +784,13 @@ paths:
                 properties: null
                 $ref: '#/components/schemas/ActionComment'
         '400':
-          description: リクエストに問題あり
+          description: problem with the request
         '401':
-          description: Authorizationヘッダーに問題あり
+          description: problem with the Authorization header
         '403':
-          description: アクセス権がない
+          description: No access rights
         '500':
-          description: サーバーの一時的なエラー
+          description: Temporary server error
     delete:
       tags:
         - Action Comment
@@ -810,7 +810,7 @@ paths:
         - in: header
           name: 'Authorization: Bearer'
           required: true
-          description: アクセストークン
+          description: access token
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
@@ -819,7 +819,7 @@ paths:
           schema:
             type: string
           required: true
-          description: actionのID
+          description: action ID
         - in: path
           name: action_comments_id
           schema:
@@ -828,15 +828,15 @@ paths:
           description: action_commentのID
       responses:
         '204':
-          description: 削除成功
+          description: success
         '400':
-          description: リクエストに問題あり
+          description: problem with the request
         '401':
-          description: Authorizationヘッダーに問題あり
+          description: problem with the Authorization header
         '403':
-          description: アクセス権がない
+          description: No access rights
         '500':
-          description: サーバーの一時的なエラー
+          description: Temporary server error
   '/actions/{actions_id}/feedbacks':
     get:
       tags:
@@ -857,7 +857,7 @@ paths:
         - in: header
           name: 'Authorization: Bearer'
           required: true
-          description: アクセストークン
+          description: access token
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
@@ -866,10 +866,10 @@ paths:
           schema:
             type: string
           required: true
-          description: actionのID
+          description: action ID
       responses:
         '200':
-          description: 取得成功
+          description: success
           content:
             application/json:
               schema:
@@ -879,13 +879,13 @@ paths:
                   properties: null
                   $ref: '#/components/schemas/IncludedFeedback'
         '400':
-          description: リクエストに問題あり
+          description: problem with the request
         '401':
-          description: Authorizationヘッダーに問題あり
+          description: problem with the Authorization header
         '403':
-          description: アクセス権がない
+          description: No access rights
         '500':
-          description: サーバーの一時的なエラー
+          description: Temporary server error
     post:
       tags:
         - Feedback
@@ -905,7 +905,7 @@ paths:
         - in: header
           name: 'Authorization: Bearer'
           required: true
-          description: アクセストークン
+          description: access token
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
@@ -914,7 +914,7 @@ paths:
           schema:
             type: string
           required: true
-          description: actionのID
+          description: action ID
       requestBody:
         content:
           application/json:
@@ -923,18 +923,18 @@ paths:
               properties:
                 account_id:
                   type: string
-                  description: action_commentしたアカウントID
+                  description: account ID
                   example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
                 evaluated:
                   type: integer
-                  description: '評価(0=未実施, 1=good, 2=bad)'
+                  description: 'evaluate(0=null, 1=good, 2=bad)'
                   example: 0
               required:
                 - account_id
                 - evaluated
       responses:
         '200':
-          description: 作成成功
+          description: success
           content:
             application/json:
               schema:
@@ -942,13 +942,13 @@ paths:
                 properties: null
                 $ref: '#/components/schemas/Feedback'
         '400':
-          description: リクエストに問題あり
+          description: problem with the request
         '401':
-          description: Authorizationヘッダーに問題あり
+          description: problem with the Authorization header
         '403':
-          description: アクセス権がない
+          description: No access rights
         '500':
-          description: サーバーの一時的なエラー
+          description: Temporary server error
   '/actions/{actions_id}/feedbacks/{feedbacks_id}':
     put:
       tags:
@@ -969,7 +969,7 @@ paths:
         - in: header
           name: 'Authorization: Bearer'
           required: true
-          description: アクセストークン
+          description: access token
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
@@ -978,7 +978,7 @@ paths:
           schema:
             type: string
           required: true
-          description: actionのID
+          description: action ID
         - in: path
           name: feedbacks_id
           schema:
@@ -993,11 +993,11 @@ paths:
               properties:
                 evaluated:
                   type: integer
-                  description: '評価(0=未実施, 1=good, 2=bad)'
+                  description: 'evaluate(0=null, 1=good, 2=bad)'
                   example: 1
       responses:
         '200':
-          description: 更新成功
+          description: success
           content:
             application/json:
               schema:
@@ -1005,13 +1005,13 @@ paths:
                 properties: null
                 $ref: '#/components/schemas/Feedback'
         '400':
-          description: リクエストに問題あり
+          description: problem with the request
         '401':
-          description: Authorizationヘッダーに問題あり
+          description: problem with the Authorization header
         '403':
-          description: アクセス権がない
+          description: No access rights
         '500':
-          description: サーバーの一時的なエラー
+          description: Temporary server error
     delete:
       tags:
         - Feedback
@@ -1031,7 +1031,7 @@ paths:
         - in: header
           name: 'Authorization: Bearer'
           required: true
-          description: アクセストークン
+          description: access token
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
@@ -1040,7 +1040,7 @@ paths:
           schema:
             type: string
           required: true
-          description: actionのID
+          description: action ID
         - in: path
           name: feedbacks_id
           schema:
@@ -1049,15 +1049,15 @@ paths:
           description: feedbackのID
       responses:
         '204':
-          description: 削除成功
+          description: success
         '400':
-          description: リクエストに問題あり
+          description: problem with the request
         '401':
-          description: Authorizationヘッダーに問題あり
+          description: problem with the Authorization header
         '403':
-          description: アクセス権がない
+          description: No access rights
         '500':
-          description: サーバーの一時的なエラー
+          description: Temporary server error
   /feedbacks:
     put:
       tags:
@@ -1078,7 +1078,7 @@ paths:
         - in: header
           name: 'Authorization: Bearer'
           required: true
-          description: アクセストークン
+          description: access token
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
@@ -1096,11 +1096,11 @@ paths:
                     example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
                   evaluated:
                     type: integer
-                    description: '評価(0=未実施, 1=good, 2=bad)'
+                    description: 'evaluate(0=null, 1=good, 2=bad)'
                     example: 0
       responses:
         '200':
-          description: 更新成功
+          description: success
           content:
             application/json:
               schema:
@@ -1114,16 +1114,16 @@ paths:
                       example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
                     evaluated:
                       type: integer
-                      description: '評価(0=未実施, 1=good, 2=bad)'
+                      description: 'evaluate(0=null, 1=good, 2=bad)'
                       example: 0
         '400':
-          description: リクエストに問題あり
+          description: problem with the request
         '401':
-          description: Authorizationヘッダーに問題あり
+          description: problem with the Authorization header
         '403':
-          description: アクセス権がない
+          description: No access rights
         '500':
-          description: サーバーの一時的なエラー
+          description: Temporary server error
   /activities:
     get:
       tags:
@@ -1144,7 +1144,7 @@ paths:
         - in: header
           name: 'Authorization: Bearer'
           required: true
-          description: アクセストークン
+          description: access token
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
@@ -1152,20 +1152,20 @@ paths:
           name: offset
           schema:
             type: integer
-          description: 何件目から取得するか
+          description: offset
         - in: query
           name: limit
           schema:
             type: integer
-          description: 何件取得するか
+          description: limit
         - in: query
           name: order
           schema:
             type: string
-          description: 昇順(asc) or 降順(desc)
+          description: asc or desc
       responses:
         '200':
-          description: 取得成功
+          description: success
           content:
             application/json:
               schema:
@@ -1174,7 +1174,7 @@ paths:
                   properties:
                     date:
                       type: string
-                      description: 日付
+                      description: date
                       example: 2022/01/01
                     members:
                       type: array
@@ -1187,44 +1187,44 @@ paths:
                             example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
                           account_relation_id:
                             type: string
-                            description: アカウント同士の関係性ID
+                            description: account relationship ID
                             example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
                           last_name:
                             type: string
-                            description: 名
+                            description: first name
                             example: 太郎
                           first_name:
                             type: string
-                            description: 姓
+                            description: last name
                             example: 山田
                           icon:
                             type: string
-                            description: アイコンのURL
+                            description: icon url
                             example: icon@pmf.com
                           type:
                             type: string
-                            description: アクティビティタイプ
+                            description: type
                             example: individual_score
                           message:
                             type: string
-                            description: メッセージ
+                            description: message
                             example: 関係性が改善されました
                           color:
                             type: string
-                            description: 背景色
+                            description: background color
                             example: '#0000ff'
                           time:
                             type: string
-                            description: 時刻
+                            description: time
                             example: '15:00'
         '400':
-          description: リクエストに問題あり
+          description: problem with the request
         '401':
-          description: Authorizationヘッダーに問題あり
+          description: problem with the Authorization header
         '403':
-          description: アクセス権がない
+          description: No access rights
         '500':
-          description: サーバーの一時的なエラー
+          description: Temporary server error
   /account_relations:
     get:
       tags:
@@ -1245,13 +1245,13 @@ paths:
         - in: header
           name: 'Authorization: Bearer'
           required: true
-          description: アクセストークン
+          description: access token
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
       responses:
         '200':
-          description: 取得成功
+          description: success
           content:
             application/json:
               schema:
@@ -1261,13 +1261,13 @@ paths:
                   properties: null
                   $ref: '#/components/schemas/IncludedAccountRelation'
         '400':
-          description: リクエストに問題あり
+          description: problem with the request
         '401':
-          description: Authorizationヘッダーに問題あり
+          description: problem with the Authorization header
         '403':
-          description: アクセス権がない
+          description: No access rights
         '500':
-          description: サーバーの一時的なエラー
+          description: Temporary server error
     post:
       tags:
         - Account Relationships
@@ -1287,7 +1287,7 @@ paths:
         - in: header
           name: 'Authorization: Bearer'
           required: true
-          description: アクセストークン
+          description: access token
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
@@ -1299,22 +1299,22 @@ paths:
               properties:
                 manager_account_id:
                   type: string
-                  description: 上司のアカウントID
+                  description: manager account ID
                   example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
                 member_account_id:
                   type: string
-                  description: 部下のアカウントID
+                  description: member account ID
                   example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
                 activated:
                   type: integer
-                  description: 'つながりを許可したか(0=未承認, 1=承認, 2=却下)'
+                  description: 'Connection allowed(0=null, 1=approved, 2=rejected)'
                   example: 0
               required:
                 - manager_account_id
                 - member_account_id
       responses:
         '200':
-          description: 作成成功
+          description: success
           content:
             application/json:
               schema:
@@ -1322,13 +1322,13 @@ paths:
                 properties: null
                 $ref: '#/components/schemas/AccountRelation'
         '400':
-          description: リクエストに問題あり
+          description: problem with the request
         '401':
-          description: Authorizationヘッダーに問題あり
+          description: problem with the Authorization header
         '403':
-          description: アクセス権がない
+          description: No access rights
         '500':
-          description: サーバーの一時的なエラー
+          description: Temporary server error
   '/account_relations/{account_relations_id}':
     get:
       tags:
@@ -1349,7 +1349,7 @@ paths:
         - in: header
           name: 'Authorization: Bearer'
           required: true
-          description: アクセストークン
+          description: access token
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
@@ -1358,10 +1358,10 @@ paths:
           schema:
             type: string
           required: true
-          description: account_relationのID
+          description: account_relation ID
       responses:
         '200':
-          description: 取得成功
+          description: success
           content:
             application/json:
               schema:
@@ -1369,13 +1369,13 @@ paths:
                 properties: null
                 $ref: '#/components/schemas/IncludedAccountRelation'
         '400':
-          description: リクエストに問題あり
+          description: problem with the request
         '401':
-          description: Authorizationヘッダーに問題あり
+          description: problem with the Authorization header
         '403':
-          description: アクセス権がない
+          description: No access rights
         '500':
-          description: サーバーの一時的なエラー
+          description: Temporary server error
     put:
       tags:
         - Account Relationships
@@ -1395,7 +1395,7 @@ paths:
         - in: header
           name: 'Authorization: Bearer'
           required: true
-          description: アクセストークン
+          description: access token
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
@@ -1404,7 +1404,7 @@ paths:
           schema:
             type: string
           required: true
-          description: account_relationのID
+          description: account_relation ID
       requestBody:
         content:
           application/json:
@@ -1413,11 +1413,11 @@ paths:
               properties:
                 activated:
                   type: integer
-                  description: 'つながりを許可したか(0=未承認, 1=承認, 2=却下)'
+                  description: 'Connection allowed(0=null, 1=approved, 2=rejected)'
                   example: 0
       responses:
         '200':
-          description: 更新成功
+          description: success
           content:
             application/json:
               schema:
@@ -1425,13 +1425,13 @@ paths:
                 properties: null
                 $ref: '#/components/schemas/AccountRelation'
         '400':
-          description: リクエストに問題あり
+          description: problem with the request
         '401':
-          description: Authorizationヘッダーに問題あり
+          description: problem with the Authorization header
         '403':
-          description: アクセス権がない
+          description: No access rights
         '500':
-          description: サーバーの一時的なエラー
+          description: Temporary server error
     delete:
       tags:
         - Account Relationships
@@ -1451,7 +1451,7 @@ paths:
         - in: header
           name: 'Authorization: Bearer'
           required: true
-          description: アクセストークン
+          description: access token
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
@@ -1460,18 +1460,18 @@ paths:
           schema:
             type: string
           required: true
-          description: account_relationのID
+          description: account_relation ID
       responses:
         '204':
-          description: 削除成功
+          description: success
         '400':
-          description: リクエストに問題あり
+          description: problem with the request
         '401':
-          description: Authorizationヘッダーに問題あり
+          description: problem with the Authorization header
         '403':
-          description: アクセス権がない
+          description: No access rights
         '500':
-          description: サーバーの一時的なエラー
+          description: Temporary server error
   '/account_relations/{account_relations_id}/actions':
     get:
       tags:
@@ -1492,7 +1492,7 @@ paths:
         - in: header
           name: 'Authorization: Bearer'
           required: true
-          description: アクセストークン
+          description: access token
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
@@ -1501,25 +1501,25 @@ paths:
           schema:
             type: string
           required: true
-          description: account_relationのID
+          description: account_relation ID
         - in: query
           name: offset
           schema:
             type: integer
-          description: 何件目から取得するか
+          description: offset
         - in: query
           name: limit
           schema:
             type: integer
-          description: 何件取得するか
+          description: limit
         - in: query
           name: order
           schema:
             type: string
-          description: 昇順(asc) or 降順(desc)
+          description: asc or desc
       responses:
         '200':
-          description: 取得成功
+          description: success
           content:
             application/json:
               schema:
@@ -1529,13 +1529,13 @@ paths:
                   properties: null
                   $ref: '#/components/schemas/IncludedAction'
         '400':
-          description: リクエストに問題あり
+          description: problem with the request
         '401':
-          description: Authorizationヘッダーに問題あり
+          description: problem with the Authorization header
         '403':
-          description: アクセス権がない
+          description: No access rights
         '500':
-          description: サーバーの一時的なエラー
+          description: Temporary server error
     post:
       tags:
         - Action History
@@ -1555,7 +1555,7 @@ paths:
         - in: header
           name: 'Authorization: Bearer'
           required: true
-          description: アクセストークン
+          description: access token
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
@@ -1564,7 +1564,7 @@ paths:
           schema:
             type: string
           required: true
-          description: account_relationのID
+          description: account_relation ID
       requestBody:
         content:
           application/json:
@@ -1573,26 +1573,26 @@ paths:
               properties:
                 recommend_action_id:
                   type: string
-                  description: アクション候補ID
+                  description: action candidate ID
                   example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
                 view_date:
                   type: string
-                  description: 表示した日付
+                  description: view date
                   example: '2022/01/01T05:42:22.000Z'
                 action_date:
                   type: string
-                  description: 実行した日付
+                  description: action date
                   example: '2022/01/02T05:42:22.000Z'
                 skipped:
                   type: boolean
-                  description: スキップしたか
+                  description: skipped
                   example: boolean
               required:
                 - recommend_action_id
                 - view_date
       responses:
         '200':
-          description: 作成成功
+          description: success
           content:
             application/json:
               schema:
@@ -1600,13 +1600,13 @@ paths:
                 properties: null
                 $ref: '#/components/schemas/Action'
         '400':
-          description: リクエストに問題あり
+          description: problem with the request
         '401':
-          description: Authorizationヘッダーに問題あり
+          description: problem with the Authorization header
         '403':
-          description: アクセス権がない
+          description: No access rights
         '500':
-          description: サーバーの一時的なエラー
+          description: Temporary server error
   '/account_relations/{account_relations_id}/actions/{actions_id}':
     get:
       tags:
@@ -1627,7 +1627,7 @@ paths:
         - in: header
           name: 'Authorization: Bearer'
           required: true
-          description: アクセストークン
+          description: access token
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
@@ -1636,16 +1636,16 @@ paths:
           schema:
             type: string
           required: true
-          description: account_relationのID
+          description: account_relation ID
         - in: path
           name: actions_id
           schema:
             type: string
           required: true
-          description: actionのID
+          description: action ID
       responses:
         '200':
-          description: 取得成功
+          description: success
           content:
             application/json:
               schema:
@@ -1653,13 +1653,13 @@ paths:
                 properties: null
                 $ref: '#/components/schemas/IncludedAction'
         '400':
-          description: リクエストに問題あり
+          description: problem with the request
         '401':
-          description: Authorizationヘッダーに問題あり
+          description: problem with the Authorization header
         '403':
-          description: アクセス権がない
+          description: No access rights
         '500':
-          description: サーバーの一時的なエラー
+          description: Temporary server error
     put:
       tags:
         - Action History
@@ -1679,7 +1679,7 @@ paths:
         - in: header
           name: 'Authorization: Bearer'
           required: true
-          description: アクセストークン
+          description: access token
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
@@ -1688,13 +1688,13 @@ paths:
           schema:
             type: string
           required: true
-          description: account_relationのID
+          description: account_relation ID
         - in: path
           name: actions_id
           schema:
             type: string
           required: true
-          description: actionのID
+          description: action ID
       requestBody:
         content:
           application/json:
@@ -1703,19 +1703,19 @@ paths:
               properties:
                 view_date:
                   type: string
-                  description: 表示した日付
+                  description: view date
                   example: '2022/01/02T05:42:22.000Z'
                 action_date:
                   type: string
-                  description: 実行した日付
+                  description: action date
                   example: '2022/01/02T05:42:22.000Z'
                 skipped:
                   type: boolean
-                  description: スキップしたか
+                  description: skipped
                   example: boolean
       responses:
         '200':
-          description: 更新成功
+          description: success
           content:
             application/json:
               schema:
@@ -1723,13 +1723,13 @@ paths:
                 properties: null
                 $ref: '#/components/schemas/Action'
         '400':
-          description: リクエストに問題あり
+          description: problem with the request
         '401':
-          description: Authorizationヘッダーに問題あり
+          description: problem with the Authorization header
         '403':
-          description: アクセス権がない
+          description: No access rights
         '500':
-          description: サーバーの一時的なエラー
+          description: Temporary server error
   '/account_relations/{account_relations_id}/actions/summary':
     get:
       tags:
@@ -1750,7 +1750,7 @@ paths:
         - in: header
           name: 'Authorization: Bearer'
           required: true
-          description: アクセストークン
+          description: access token
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
@@ -1759,10 +1759,10 @@ paths:
           schema:
             type: string
           required: true
-          description: account_relationのID
+          description: account_relation ID
       responses:
         '200':
-          description: 取得成功
+          description: success
           content:
             application/json:
               schema:
@@ -1776,36 +1776,36 @@ paths:
                       example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
                     recommend_action_id:
                       type: string
-                      description: アクション候補ID
+                      description: action candidate ID
                       example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
                     name:
                       type: string
-                      description: 名前
-                      example: あいさつしよう
+                      description: name
+                      example: greeting
                     view_date:
                       type: string
-                      description: 表示した日付
+                      description: view date
                       example: '2022/01/01T05:42:22.000Z'
                     manager_evaluated:
                       type: integer
-                      description: '評価(0=未実施, 1=good, 2=bad)'
+                      description: 'evaluate(0=null, 1=good, 2=bad)'
                       example: 1
                     member_evaluated:
                       type: integer
-                      description: '評価(1=good, 2=bad)'
+                      description: 'evaluate(1=good, 2=bad)'
                       example: 2
                     comments_count:
                       type: integer
-                      description: コメント数
+                      description: comment count
                       example: 1
         '400':
-          description: リクエストに問題あり
+          description: problem with the request
         '401':
-          description: Authorizationヘッダーに問題あり
+          description: problem with the Authorization header
         '403':
-          description: アクセス権がない
+          description: No access rights
         '500':
-          description: サーバーの一時的なエラー
+          description: Temporary server error
   '/account_relations/{account_relations_id}/actions/today':
     get:
       tags:
@@ -1826,7 +1826,7 @@ paths:
         - in: header
           name: 'Authorization: Bearer'
           required: true
-          description: アクセストークン
+          description: access token
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
@@ -1835,10 +1835,10 @@ paths:
           schema:
             type: string
           required: true
-          description: account_relationのID
+          description: account_relation ID
       responses:
         '200':
-          description: 取得成功
+          description: success
           content:
             application/json:
               schema:
@@ -1850,28 +1850,28 @@ paths:
                     example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
                   name:
                     type: string
-                    description: 名前
-                    example: あいさつしよう
+                    description: name
+                    example: greeting
                   button_title:
                     type: string
-                    description: ボタン表示名
+                    description: button title
                     example: チャットする
                   link:
                     type: string
-                    description: 外部アプリへの遷移リンク
+                    description: link to external application
                     example: 'https://teams.microsoft.com/l/chat/0/0?users=taro@colere.inc,jiro@colere.inc&topicName=Prep%20For%20Meeting%20Tomorrow&message=Hi%20folks%2C%20kicking%20off%20a%20chat%20about%20our%20meeting%20tomorrow'
                   action_date:
                     type: string
-                    description: 実行した日付(空なら未実行)
+                    description: action date(Not executed if empty)
                     example: '2022/01/02T05:42:22.000Z'
         '400':
-          description: リクエストに問題あり
+          description: problem with the request
         '401':
-          description: Authorizationヘッダーに問題あり
+          description: problem with the Authorization header
         '403':
-          description: アクセス権がない
+          description: No access rights
         '500':
-          description: サーバーの一時的なエラー
+          description: Temporary server error
   '/account_relations/{account_relations_id}/actions/today/skip':
     post:
       tags:
@@ -1892,7 +1892,7 @@ paths:
         - in: header
           name: 'Authorization: Bearer'
           required: true
-          description: アクセストークン
+          description: access token
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
@@ -1901,10 +1901,10 @@ paths:
           schema:
             type: string
           required: true
-          description: account_relationのID
+          description: account_relation ID
       responses:
         '200':
-          description: スキップ成功
+          description: success
           content:
             application/json:
               schema:
@@ -1916,28 +1916,28 @@ paths:
                     example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
                   recommend_action_id:
                     type: string
-                    description: アクション候補ID
+                    description: action candidate ID
                     example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
                   name:
                     type: string
-                    description: 名前
-                    example: あいさつしよう
+                    description: name
+                    example: greeting
                   button_title:
                     type: string
-                    description: ボタン表示名
+                    description: button title
                     example: チャットする
                   link:
                     type: string
-                    description: 外部アプリへの遷移リンク
+                    description: link to external application
                     example: 'https://teams.microsoft.com/l/chat/0/0?users=taro@colere.inc,jiro@colere.inc&topicName=Prep%20For%20Meeting%20Tomorrow&message=Hi%20folks%2C%20kicking%20off%20a%20chat%20about%20our%20meeting%20tomorrow'
         '400':
-          description: リクエストに問題あり
+          description: problem with the request
         '401':
-          description: Authorizationヘッダーに問題あり
+          description: problem with the Authorization header
         '403':
-          description: アクセス権がない
+          description: No access rights
         '500':
-          description: サーバーの一時的なエラー
+          description: Temporary server error
   '/account_relations/{account_relations_id}/action_comments/summary':
     get:
       tags:
@@ -1958,7 +1958,7 @@ paths:
         - in: header
           name: 'Authorization: Bearer'
           required: true
-          description: アクセストークン
+          description: access token
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
@@ -1967,10 +1967,10 @@ paths:
           schema:
             type: string
           required: true
-          description: account_relationのID
+          description: account_relation ID
       responses:
         '200':
-          description: 取得成功
+          description: success
           content:
             application/json:
               schema:
@@ -1984,12 +1984,12 @@ paths:
                       example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
                     action_date:
                       type: string
-                      description: 日付
+                      description: date
                       example: 2022/01/01
                     action_name:
                       type: string
-                      description: 名前
-                      example: あいさつしよう
+                      description: name
+                      example: greeting
                     executed:
                       type: boolean
                       description: 実行したかどうか
@@ -2001,20 +2001,20 @@ paths:
                         properties:
                           icon:
                             type: string
-                            description: アイコンのURL
+                            description: icon url
                             example: icon@pmf.com
-                        contents:
-                          type: string
-                          description: action_comment内容
-                          example: よかったです。
+                          contents:
+                            type: string
+                            description: content
+                            example: よかったです。
         '400':
-          description: リクエストに問題あり
+          description: problem with the request
         '401':
-          description: Authorizationヘッダーに問題あり
+          description: problem with the Authorization header
         '403':
-          description: アクセス権がない
+          description: No access rights
         '500':
-          description: サーバーの一時的なエラー
+          description: Temporary server error
   '/account_relations/{account_relations_id}/relationship_points':
     get:
       tags:
@@ -2035,7 +2035,7 @@ paths:
         - in: header
           name: 'Authorization: Bearer'
           required: true
-          description: アクセストークン
+          description: access token
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
@@ -2049,20 +2049,20 @@ paths:
           name: offset
           schema:
             type: integer
-          description: 何件目から取得するか
+          description: offset
         - in: query
           name: limit
           schema:
             type: integer
-          description: 何件取得するか
+          description: limit
         - in: query
           name: order
           schema:
             type: string
-          description: 昇順(asc) or 降順(desc)
+          description: asc or desc
       responses:
         '200':
-          description: 取得成功
+          description: success
           content:
             application/json:
               schema:
@@ -2072,13 +2072,13 @@ paths:
                   properties: null
                   $ref: '#/components/schemas/RelationshipPoint'
         '400':
-          description: リクエストに問題あり
+          description: problem with the request
         '401':
-          description: Authorizationヘッダーに問題あり
+          description: problem with the Authorization header
         '403':
-          description: アクセス権がない
+          description: No access rights
         '500':
-          description: サーバーの一時的なエラー
+          description: Temporary server error
     post:
       tags:
         - Relationship Point
@@ -2098,7 +2098,7 @@ paths:
         - in: header
           name: 'Authorization: Bearer'
           required: true
-          description: アクセストークン
+          description: access token
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
@@ -2116,18 +2116,18 @@ paths:
               properties:
                 point:
                   type: integer
-                  description: ポイント
+                  description: point
                   example: 100
                 date:
                   type: string
-                  description: 作成された日付
+                  description: created date
                   example: '2022/01/01T05:42:22.000Z'
               required:
                 - point
                 - date
       responses:
         '200':
-          description: 作成成功
+          description: success
           content:
             application/json:
               schema:
@@ -2135,13 +2135,13 @@ paths:
                 properties:
                   $ref: '#/components/schemas/RelationshipPoint'
         '400':
-          description: リクエストに問題あり
+          description: problem with the request
         '401':
-          description: Authorizationヘッダーに問題あり
+          description: problem with the Authorization header
         '403':
-          description: アクセス権がない
+          description: No access rights
         '500':
-          description: サーバーの一時的なエラー
+          description: Temporary server error
   '/account_relations/{account_relations_id}/recommend_actions/{recommend_action_id}/external_app':
     get:
       tags:
@@ -2162,7 +2162,7 @@ paths:
         - in: header
           name: 'Authorization: Bearer'
           required: true
-          description: アクセストークン
+          description: access token
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
@@ -2171,16 +2171,16 @@ paths:
           schema:
             type: string
           required: true
-          description: account_relationのID
+          description: account_relation ID
         - in: path
           name: recommend_actions_id
           schema:
             type: string
           required: true
-          description: recommend_actionのID
+          description: recommend_action ID
       responses:
         '200':
-          description: 取得成功
+          description: success
           content:
             application/json:
               schema:
@@ -2188,13 +2188,13 @@ paths:
                 properties: null
                 $ref: '#/components/schemas/IncludedExternalApp'
         '400':
-          description: リクエストに問題あり
+          description: problem with the request
         '401':
-          description: Authorizationヘッダーに問題あり
+          description: problem with the Authorization header
         '403':
-          description: アクセス権がない
+          description: No access rights
         '500':
-          description: サーバーの一時的なエラー
+          description: Temporary server error
     post:
       tags:
         - External Apps
@@ -2214,7 +2214,7 @@ paths:
         - in: header
           name: 'Authorization: Bearer'
           required: true
-          description: アクセストークン
+          description: access token
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
@@ -2223,13 +2223,13 @@ paths:
           schema:
             type: string
           required: true
-          description: account_relationのID
+          description: account_relation ID
         - in: path
           name: recommend_actions_id
           schema:
             type: string
           required: true
-          description: recommend_actionのID
+          description: recommend_action ID
       requestBody:
         content:
           application/json:
@@ -2238,15 +2238,15 @@ paths:
               properties:
                 name:
                   type: string
-                  description: アプリの名前
+                  description: name
                   example: Microsoft Teams
                 category:
                   type: string
-                  description: アプリのカテゴリ
+                  description: category
                   example: Chat
                 link:
                   type: string
-                  description: 外部アプリへの遷移リンク
+                  description: link to external application
                   example: 'https://teams.microsoft.com/l/chat/0/0?users=taro@colere.inc,jiro@colere.inc&topicName=Prep%20For%20Meeting%20Tomorrow&message=Hi%20folks%2C%20kicking%20off%20a%20chat%20about%20our%20meeting%20tomorrow'
               required:
                 - name
@@ -2254,7 +2254,7 @@ paths:
                 - link
       responses:
         '200':
-          description: 作成成功
+          description: success
           content:
             application/json:
               schema:
@@ -2262,13 +2262,13 @@ paths:
                 properties: null
                 $ref: '#/components/schemas/ExternalApp'
         '400':
-          description: リクエストに問題あり
+          description: problem with the request
         '401':
-          description: Authorizationヘッダーに問題あり
+          description: problem with the Authorization header
         '403':
-          description: アクセス権がない
+          description: No access rights
         '500':
-          description: サーバーの一時的なエラー
+          description: Temporary server error
     put:
       tags:
         - External Apps
@@ -2288,7 +2288,7 @@ paths:
         - in: header
           name: 'Authorization: Bearer'
           required: true
-          description: アクセストークン
+          description: access token
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
@@ -2297,13 +2297,13 @@ paths:
           schema:
             type: string
           required: true
-          description: account_relationのID
+          description: account_relation ID
         - in: path
           name: recommend_actions_id
           schema:
             type: string
           required: true
-          description: recommend_actionのID
+          description: recommend_action ID
       requestBody:
         content:
           application/json:
@@ -2312,19 +2312,19 @@ paths:
               properties:
                 name:
                   type: string
-                  description: アプリの名前
+                  description: name
                   example: Microsoft Teams
                 category:
                   type: string
-                  description: アプリのカテゴリ
+                  description: category
                   example: Chat
                 link:
                   type: string
-                  description: 外部アプリへの遷移リンク
+                  description: link to external application
                   example: 'https://teams.microsoft.com/l/chat/0/0?users=taro@colere.inc,jiro@colere.inc&topicName=Prep%20For%20Meeting%20Tomorrow&message=Hi%20folks%2C%20kicking%20off%20a%20chat%20about%20our%20meeting%20tomorrow'
       responses:
         '200':
-          description: 更新成功
+          description: success
           content:
             application/json:
               schema:
@@ -2332,13 +2332,13 @@ paths:
                 properties: null
                 $ref: '#/components/schemas/ExternalApp'
         '400':
-          description: リクエストに問題あり
+          description: problem with the request
         '401':
-          description: Authorizationヘッダーに問題あり
+          description: problem with the Authorization header
         '403':
-          description: アクセス権がない
+          description: No access rights
         '500':
-          description: サーバーの一時的なエラー
+          description: Temporary server error
   /changable_notifications:
     get:
       tags:
@@ -2359,13 +2359,13 @@ paths:
         - in: header
           name: 'Authorization: Bearer'
           required: true
-          description: アクセストークン
+          description: access token
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
       responses:
         '200':
-          description: 取得成功
+          description: success
           content:
             application/json:
               schema:
@@ -2375,13 +2375,13 @@ paths:
                   properties: null
                   $ref: '#/components/schemas/IncludedChangableNotification'
         '400':
-          description: リクエストに問題あり
+          description: problem with the request
         '401':
-          description: Authorizationヘッダーに問題あり
+          description: problem with the Authorization header
         '403':
-          description: アクセス権がない
+          description: No access rights
         '500':
-          description: サーバーの一時的なエラー
+          description: Temporary server error
   '/changable_notifications/{changable_notifications_id}':
     put:
       tags:
@@ -2402,7 +2402,7 @@ paths:
         - in: header
           name: 'Authorization: Bearer'
           required: true
-          description: アクセストークン
+          description: access token
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
@@ -2420,11 +2420,11 @@ paths:
               properties:
                 read:
                   type: boolean
-                  description: 既読したかどうか
+                  description: is read
                   example: true
       responses:
         '200':
-          description: 更新成功
+          description: success
           content:
             application/json:
               schema:
@@ -2432,13 +2432,13 @@ paths:
                 properties: null
                 $ref: '#/components/schemas/ChangableNotification'
         '400':
-          description: リクエストに問題あり
+          description: problem with the request
         '401':
-          description: Authorizationヘッダーに問題あり
+          description: problem with the Authorization header
         '403':
-          description: アクセス権がない
+          description: No access rights
         '500':
-          description: サーバーの一時的なエラー
+          description: Temporary server error
   /external_apps:
     get:
       tags:
@@ -2459,13 +2459,13 @@ paths:
         - in: header
           name: 'Authorization: Bearer'
           required: true
-          description: アクセストークン
+          description: access token
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
       responses:
         '200':
-          description: 取得成功
+          description: success
           content:
             application/json:
               schema:
@@ -2475,13 +2475,13 @@ paths:
                   properties: null
                   $ref: '#/components/schemas/IncludedExternalApp'
         '400':
-          description: リクエストに問題あり
+          description: problem with the request
         '401':
-          description: Authorizationヘッダーに問題あり
+          description: problem with the Authorization header
         '403':
-          description: アクセス権がない
+          description: No access rights
         '500':
-          description: サーバーの一時的なエラー
+          description: Temporary server error
   /relationship_points:
     get:
       tags:
@@ -2502,13 +2502,13 @@ paths:
         - in: header
           name: 'Authorization: Bearer'
           required: true
-          description: アクセストークン
+          description: access token
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
       responses:
         '200':
-          description: 取得成功
+          description: success
           content:
             application/json:
               schema:
@@ -2518,13 +2518,13 @@ paths:
                   properties: null
                   $ref: '#/components/schemas/RelationshipPoint'
         '400':
-          description: リクエストに問題あり
+          description: problem with the request
         '401':
-          description: Authorizationヘッダーに問題あり
+          description: problem with the Authorization header
         '403':
-          description: アクセス権がない
+          description: No access rights
         '500':
-          description: サーバーの一時的なエラー
+          description: Temporary server error
   /accounts:
     get:
       tags:
@@ -2545,13 +2545,13 @@ paths:
         - in: header
           name: 'Authorization: Bearer'
           required: true
-          description: アクセストークン
+          description: access token
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
       responses:
         '200':
-          description: 取得成功
+          description: success
           content:
             application/json:
               schema:
@@ -2561,13 +2561,13 @@ paths:
                   properties: null
                   $ref: '#/components/schemas/Account'
         '400':
-          description: リクエストに問題あり
+          description: problem with the request
         '401':
-          description: Authorizationヘッダーに問題あり
+          description: problem with the Authorization header
         '403':
-          description: アクセス権がない
+          description: No access rights
         '500':
-          description: サーバーの一時的なエラー
+          description: Temporary server error
   '/accounts/{accounts_id}/external_apps':
     get:
       tags:
@@ -2588,7 +2588,7 @@ paths:
         - in: header
           name: 'Authorization: Bearer'
           required: true
-          description: アクセストークン
+          description: access token
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
@@ -2600,7 +2600,7 @@ paths:
           description: accountのID
       responses:
         '200':
-          description: 取得成功
+          description: success
           content:
             application/json:
               schema:
@@ -2610,13 +2610,13 @@ paths:
                   properties: null
                   $ref: '#/components/schemas/IncludedExternalApp'
         '400':
-          description: リクエストに問題あり
+          description: problem with the request
         '401':
-          description: Authorizationヘッダーに問題あり
+          description: problem with the Authorization header
         '403':
-          description: アクセス権がない
+          description: No access rights
         '500':
-          description: サーバーの一時的なエラー
+          description: Temporary server error
   /action_tags:
     get:
       tags:
@@ -2637,13 +2637,13 @@ paths:
         - in: header
           name: 'Authorization: Bearer'
           required: true
-          description: アクセストークン
+          description: access token
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
       responses:
         '200':
-          description: 取得成功
+          description: success
           content:
             application/json:
               schema:
@@ -2653,13 +2653,13 @@ paths:
                   properties: null
                   $ref: '#/components/schemas/ActionTag'
         '400':
-          description: リクエストに問題あり
+          description: problem with the request
         '401':
-          description: Authorizationヘッダーに問題あり
+          description: problem with the Authorization header
         '403':
-          description: アクセス権がない
+          description: No access rights
         '500':
-          description: サーバーの一時的なエラー
+          description: Temporary server error
     post:
       tags:
         - Action Tag(Admin)
@@ -2679,7 +2679,7 @@ paths:
         - in: header
           name: 'Authorization: Bearer'
           required: true
-          description: アクセストークン
+          description: access token
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
@@ -2691,13 +2691,13 @@ paths:
               properties:
                 name:
                   type: string
-                  description: 名前
-                  example: 私生活
+                  description: name
+                  example: private life
               required:
                 - name
       responses:
         '200':
-          description: 作成成功
+          description: success
           content:
             application/json:
               schema:
@@ -2705,13 +2705,13 @@ paths:
                 properties: null
                 $ref: '#/components/schemas/ActionTag'
         '400':
-          description: リクエストに問題あり
+          description: problem with the request
         '401':
-          description: Authorizationヘッダーに問題あり
+          description: problem with the Authorization header
         '403':
-          description: アクセス権がない
+          description: No access rights
         '500':
-          description: サーバーの一時的なエラー
+          description: Temporary server error
   '/action_tags/{action_tags_id}':
     get:
       tags:
@@ -2732,7 +2732,7 @@ paths:
         - in: header
           name: 'Authorization: Bearer'
           required: true
-          description: アクセストークン
+          description: access token
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
@@ -2741,10 +2741,10 @@ paths:
           schema:
             type: string
           required: true
-          description: action_tagのID
+          description: action_tag ID
       responses:
         '200':
-          description: 更新成功
+          description: success
           content:
             application/json:
               schema:
@@ -2752,13 +2752,13 @@ paths:
                 properties: null
                 $ref: '#/components/schemas/ActionTag'
         '400':
-          description: リクエストに問題あり
+          description: problem with the request
         '401':
-          description: Authorizationヘッダーに問題あり
+          description: problem with the Authorization header
         '403':
-          description: アクセス権がない
+          description: No access rights
         '500':
-          description: サーバーの一時的なエラー
+          description: Temporary server error
     put:
       tags:
         - Action Tag(Admin)
@@ -2778,7 +2778,7 @@ paths:
         - in: header
           name: 'Authorization: Bearer'
           required: true
-          description: アクセストークン
+          description: access token
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
@@ -2787,7 +2787,7 @@ paths:
           schema:
             type: string
           required: true
-          description: action_tagのID
+          description: action_tag ID
       requestBody:
         content:
           application/json:
@@ -2796,11 +2796,11 @@ paths:
               properties:
                 name:
                   type: string
-                  description: 名前
-                  example: 私生活
+                  description: name
+                  example: private life
       responses:
         '200':
-          description: 更新成功
+          description: success
           content:
             application/json:
               schema:
@@ -2808,13 +2808,13 @@ paths:
                 properties: null
                 $ref: '#/components/schemas/ActionTag'
         '400':
-          description: リクエストに問題あり
+          description: problem with the request
         '401':
-          description: Authorizationヘッダーに問題あり
+          description: problem with the Authorization header
         '403':
-          description: アクセス権がない
+          description: No access rights
         '500':
-          description: サーバーの一時的なエラー
+          description: Temporary server error
     delete:
       tags:
         - Action Tag(Admin)
@@ -2834,7 +2834,7 @@ paths:
         - in: header
           name: 'Authorization: Bearer'
           required: true
-          description: アクセストークン
+          description: access token
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
@@ -2843,18 +2843,18 @@ paths:
           schema:
             type: string
           required: true
-          description: action_tagのID
+          description: action_tag ID
       responses:
         '204':
-          description: 削除成功
+          description: success
         '400':
-          description: リクエストに問題あり
+          description: problem with the request
         '401':
-          description: Authorizationヘッダーに問題あり
+          description: problem with the Authorization header
         '403':
-          description: アクセス権がない
+          description: No access rights
         '500':
-          description: サーバーの一時的なエラー
+          description: Temporary server error
   /recommend_actions:
     get:
       tags:
@@ -2875,13 +2875,13 @@ paths:
         - in: header
           name: 'Authorization: Bearer'
           required: true
-          description: アクセストークン
+          description: access token
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
       responses:
         '200':
-          description: 取得成功
+          description: success
           content:
             application/json:
               schema:
@@ -2891,13 +2891,13 @@ paths:
                   properties: null
                   $ref: '#/components/schemas/RecommendAction'
         '400':
-          description: リクエストに問題あり
+          description: problem with the request
         '401':
-          description: Authorizationヘッダーに問題あり
+          description: problem with the Authorization header
         '403':
-          description: アクセス権がない
+          description: No access rights
         '500':
-          description: サーバーの一時的なエラー
+          description: Temporary server error
     post:
       tags:
         - Action Candidate(Admin)
@@ -2917,7 +2917,7 @@ paths:
         - in: header
           name: 'Authorization: Bearer'
           required: true
-          description: アクセストークン
+          description: access token
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
@@ -2929,19 +2929,19 @@ paths:
               properties:
                 name:
                   type: string
-                  description: 名前
-                  example: あいさつしよう
+                  description: name
+                  example: greeting
                 level:
                   type: string
-                  description: どのレベルの関係性のときに候補として出すか(カンマ区切り)
+                  description: At what level of the relationship are you a candidate (comma delimited)?(カンマ区切り)
                   example: '1,2,3'
                 type:
                   type: string
-                  description: タイプ
+                  description: type
                   example: question
                 tag_id:
                   type: string
-                  description: AI分析用のタグ(カンマ区切り)
+                  description: Tags for AI analysis (comma delimited)
                   example: '1,3,8'
               required:
                 - name
@@ -2950,7 +2950,7 @@ paths:
                 - tag_id
       responses:
         '200':
-          description: 作成成功
+          description: success
           content:
             application/json:
               schema:
@@ -2958,13 +2958,13 @@ paths:
                 properties: null
                 $ref: '#/components/schemas/RecommendAction'
         '400':
-          description: リクエストに問題あり
+          description: problem with the request
         '401':
-          description: Authorizationヘッダーに問題あり
+          description: problem with the Authorization header
         '403':
-          description: アクセス権がない
+          description: No access rights
         '500':
-          description: サーバーの一時的なエラー
+          description: Temporary server error
   '/recommend_actions/{recommend_actions_id}':
     get:
       tags:
@@ -2985,7 +2985,7 @@ paths:
         - in: header
           name: 'Authorization: Bearer'
           required: true
-          description: アクセストークン
+          description: access token
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
@@ -2994,10 +2994,10 @@ paths:
           schema:
             type: string
           required: true
-          description: recommend_actionのID
+          description: recommend_action ID
       responses:
         '200':
-          description: 更新成功
+          description: success
           content:
             application/json:
               schema:
@@ -3005,13 +3005,13 @@ paths:
                 properties: null
                 $ref: '#/components/schemas/RecommendAction'
         '400':
-          description: リクエストに問題あり
+          description: problem with the request
         '401':
-          description: Authorizationヘッダーに問題あり
+          description: problem with the Authorization header
         '403':
-          description: アクセス権がない
+          description: No access rights
         '500':
-          description: サーバーの一時的なエラー
+          description: Temporary server error
     put:
       tags:
         - Action Candidate(Admin)
@@ -3031,7 +3031,7 @@ paths:
         - in: header
           name: 'Authorization: Bearer'
           required: true
-          description: アクセストークン
+          description: access token
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
@@ -3040,7 +3040,7 @@ paths:
           schema:
             type: string
           required: true
-          description: recommend_actionのID
+          description: recommend_action ID
       requestBody:
         content:
           application/json:
@@ -3049,23 +3049,23 @@ paths:
               properties:
                 name:
                   type: string
-                  description: 名前
-                  example: あいさつしよう
+                  description: name
+                  example: greeting
                 level:
                   type: string
-                  description: どのレベルの関係性のときに候補として出すか(カンマ区切り)
+                  description: At what level of the relationship are you a candidate (comma delimited)?(カンマ区切り)
                   example: '1,2,3'
                 type:
                   type: string
-                  description: タイプ
+                  description: type
                   example: question
                 tag_id:
                   type: string
-                  description: AI分析用のタグ(カンマ区切り)
+                  description: Tags for AI analysis (comma delimited)
                   example: '1,3,8'
       responses:
         '200':
-          description: 更新成功
+          description: success
           content:
             application/json:
               schema:
@@ -3073,13 +3073,13 @@ paths:
                 properties: null
                 $ref: '#/components/schemas/RecommendAction'
         '400':
-          description: リクエストに問題あり
+          description: problem with the request
         '401':
-          description: Authorizationヘッダーに問題あり
+          description: problem with the Authorization header
         '403':
-          description: アクセス権がない
+          description: No access rights
         '500':
-          description: サーバーの一時的なエラー
+          description: Temporary server error
     delete:
       tags:
         - Action Candidate(Admin)
@@ -3099,7 +3099,7 @@ paths:
         - in: header
           name: 'Authorization: Bearer'
           required: true
-          description: アクセストークン
+          description: access token
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
@@ -3108,18 +3108,18 @@ paths:
           schema:
             type: string
           required: true
-          description: recommend_actionのID
+          description: recommend_action ID
       responses:
         '204':
-          description: 削除成功
+          description: success
         '400':
-          description: リクエストに問題あり
+          description: problem with the request
         '401':
-          description: Authorizationヘッダーに問題あり
+          description: problem with the Authorization header
         '403':
-          description: アクセス権がない
+          description: No access rights
         '500':
-          description: サーバーの一時的なエラー
+          description: Temporary server error
   /operators:
     get:
       tags:
@@ -3140,13 +3140,13 @@ paths:
         - in: header
           name: 'Authorization: Bearer'
           required: true
-          description: アクセストークン
+          description: access token
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
       responses:
         '200':
-          description: 取得成功
+          description: success
           content:
             application/json:
               schema:
@@ -3156,13 +3156,13 @@ paths:
                   properties: null
                   $ref: '#/components/schemas/Account'
         '400':
-          description: リクエストに問題あり
+          description: problem with the request
         '401':
-          description: Authorizationヘッダーに問題あり
+          description: problem with the Authorization header
         '403':
-          description: アクセス権がない
+          description: No access rights
         '500':
-          description: サーバーの一時的なエラー
+          description: Temporary server error
     post:
       tags:
         - Operator(Admin)
@@ -3182,7 +3182,7 @@ paths:
         - in: header
           name: 'Authorization: Bearer'
           required: true
-          description: アクセストークン
+          description: access token
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
@@ -3194,19 +3194,19 @@ paths:
               properties:
                 last_name:
                   type: string
-                  description: 名
+                  description: first name
                   example: 太郎
                 first_name:
                   type: string
-                  description: 姓
+                  description: last name
                   example: 山田
                 email:
                   type: string
-                  description: メールアドレス
+                  description: email
                   example: example@colere.inc
                 icon:
                   type: string
-                  description: アイコンのURL
+                  description: icon url
                   example: icon@pmf.com
               required:
                 - last_name
@@ -3214,7 +3214,7 @@ paths:
                 - email
       responses:
         '200':
-          description: 作成成功
+          description: success
           content:
             application/json:
               schema:
@@ -3222,13 +3222,13 @@ paths:
                 properties: null
                 $ref: '#/components/schemas/ActionTag'
         '400':
-          description: リクエストに問題あり
+          description: problem with the request
         '401':
-          description: Authorizationヘッダーに問題あり
+          description: problem with the Authorization header
         '403':
-          description: アクセス権がない
+          description: No access rights
         '500':
-          description: サーバーの一時的なエラー
+          description: Temporary server error
   '/operators/{operators_id}':
     get:
       tags:
@@ -3249,7 +3249,7 @@ paths:
         - in: header
           name: 'Authorization: Bearer'
           required: true
-          description: アクセストークン
+          description: access token
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
@@ -3261,7 +3261,7 @@ paths:
           description: operatorのID
       responses:
         '200':
-          description: 取得成功
+          description: success
           content:
             application/json:
               schema:
@@ -3269,13 +3269,13 @@ paths:
                 properties: null
                 $ref: '#/components/schemas/Operator'
         '400':
-          description: リクエストに問題あり
+          description: problem with the request
         '401':
-          description: Authorizationヘッダーに問題あり
+          description: problem with the Authorization header
         '403':
-          description: アクセス権がない
+          description: No access rights
         '500':
-          description: サーバーの一時的なエラー
+          description: Temporary server error
     put:
       tags:
         - Operator(Admin)
@@ -3295,7 +3295,7 @@ paths:
         - in: header
           name: 'Authorization: Bearer'
           required: true
-          description: アクセストークン
+          description: access token
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
@@ -3313,23 +3313,23 @@ paths:
               properties:
                 last_name:
                   type: string
-                  description: 名
+                  description: first name
                   example: 太郎
                 first_name:
                   type: string
-                  description: 姓
+                  description: last name
                   example: 山田
                 email:
                   type: string
-                  description: メールアドレス
+                  description: email
                   example: example@colere.inc
                 icon:
                   type: string
-                  description: アイコンのURL
+                  description: icon url
                   example: icon@pmf.com
       responses:
         '200':
-          description: 更新成功
+          description: success
           content:
             application/json:
               schema:
@@ -3337,13 +3337,13 @@ paths:
                 properties: null
                 $ref: '#/components/schemas/Operator'
         '400':
-          description: リクエストに問題あり
+          description: problem with the request
         '401':
-          description: Authorizationヘッダーに問題あり
+          description: problem with the Authorization header
         '403':
-          description: アクセス権がない
+          description: No access rights
         '500':
-          description: サーバーの一時的なエラー
+          description: Temporary server error
     delete:
       tags:
         - Operator(Admin)
@@ -3363,7 +3363,7 @@ paths:
         - in: header
           name: 'Authorization: Bearer'
           required: true
-          description: アクセストークン
+          description: access token
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
@@ -3375,20 +3375,20 @@ paths:
           description: operatorのID
       responses:
         '204':
-          description: 削除成功
+          description: success
         '400':
-          description: リクエストに問題あり
+          description: problem with the request
         '401':
-          description: Authorizationヘッダーに問題あり
+          description: problem with the Authorization header
         '403':
-          description: アクセス権がない
+          description: No access rights
         '500':
-          description: サーバーの一時的なエラー
+          description: Temporary server error
 components:
   schemas:
     AccountRelation:
       type: object
-      description: アカウント同士の関係性
+      description: account relation
       properties:
         account_relation_id:
           type: string
@@ -3396,15 +3396,15 @@ components:
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
         manager_account_id:
           type: string
-          description: 上司のアカウントID
+          description: manager account ID
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
         member_account_id:
           type: string
-          description: 部下のアカウントID
+          description: member account ID
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
         activated:
           type: integer
-          description: 'つながりを許可したか(0=未承認, 1=承認, 2=却下)'
+          description: 'Connection allowed(0=null, 1=approved, 2=rejected)'
           example: 0
     Account:
       type: object
@@ -3416,29 +3416,29 @@ components:
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
         last_name:
           type: string
-          description: 名
+          description: first name
           example: 太郎
         first_name:
           type: string
-          description: 姓
+          description: last name
           example: 山田
         email:
           type: string
-          description: メールアドレス
+          description: email
           example: example@colere.inc
         icon:
           type: string
-          description: アイコンのURL
+          description: icon url
           example: icon@pmf.com
         gender:
           type: string
-          description: 性
+          description: gender
           example: 男
       required:
         - id
     ActionComment:
       type: object
-      description: アクションコメント
+      description: action comment
       properties:
         action_comment_id:
           type: string
@@ -3450,19 +3450,19 @@ components:
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
         parent_action_comment_id:
           type: string
-          description: アクションコメント先のaction_commentID。空ならアクションに対する最初のアクションコメント。
+          description: 'The action comment ID of the action to which the action comment is directed, or the first action comment for the action if empty.'
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
         account_id:
           type: string
-          description: action_commentしたアカウントID
+          description: account ID
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
         contents:
           type: string
-          description: action_comment内容
+          description: content
           example: よかったです。
     ActionTag:
       type: object
-      description: アクションタグ
+      description: action tag
       properties:
         action_tag_id:
           type: string
@@ -3470,11 +3470,11 @@ components:
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
         name:
           type: string
-          description: 名前
-          example: 私生活
+          description: name
+          example: private life
     Action:
       type: object
-      description: アクション
+      description: action
       properties:
         action_id:
           type: string
@@ -3482,27 +3482,27 @@ components:
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
         account_relation_id:
           type: string
-          description: アカウント同士の関係性ID
+          description: account relationship ID
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
         recommend_action_id:
           type: string
-          description: アクション候補ID
+          description: action candidate ID
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
         view_date:
           type: string
-          description: 表示した日付
+          description: view date
           example: '2022/01/01T05:42:22.000Z'
         action_date:
           type: string
-          description: 実行した日付
+          description: action date
           example: '2022/01/02T05:42:22.000Z'
         skipped:
           type: boolean
-          description: スキップしたか
+          description: skipped
           example: boolean
     ChangableNotification:
       type: object
-      description: ポイント変更通知
+      description: point change notification
       properties:
         changable_notification_id:
           type: string
@@ -3510,7 +3510,7 @@ components:
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
         account_id:
           type: string
-          description: 対象のアカウントID
+          description: account ID
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
         account_relation_id:
           type: string
@@ -3518,19 +3518,19 @@ components:
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
         point:
           type: integer
-          description: ポイント
+          description: point
           example: 100
         date:
           type: string
-          description: 日付
+          description: date
           example: '2022/01/01T05:42:22.000Z'
         read:
           type: boolean
-          description: 既読したかどうか
+          description: is read
           example: true
     ExternalApp:
       type: object
-      description: ポイント変更通知
+      description: point change notification
       properties:
         external_app_id:
           type: string
@@ -3538,27 +3538,27 @@ components:
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
         account_relation_id:
           type: string
-          description: 対象のアカウント関係ID
+          description: account relationship ID
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
         recommend_action_id:
           type: string
-          description: 対象のアクションID
+          description: action ID
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
         name:
           type: string
-          description: アプリの名前
+          description: name
           example: Microsoft Teams
         category:
           type: string
-          description: アプリのカテゴリ
+          description: category
           example: Chat
         link:
           type: string
-          description: 外部アプリへの遷移リンク
+          description: link to external application
           example: 'https://teams.microsoft.com/l/chat/0/0?users=taro@colere.inc,jiro@colere.inc&topicName=Prep%20For%20Meeting%20Tomorrow&message=Hi%20folks%2C%20kicking%20off%20a%20chat%20about%20our%20meeting%20tomorrow'
     Feedback:
       type: object
-      description: フィードバック
+      description: feedback
       properties:
         feedback_id:
           type: string
@@ -3570,35 +3570,35 @@ components:
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
         account_id:
           type: string
-          description: action_commentしたアカウントID
+          description: account ID
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
         evaluated:
           type: integer
-          description: '評価(0=未実施, 1=good, 2=bad)'
+          description: 'evaluate(0=null, 1=good, 2=bad)'
           example: 0
     Operator:
       type: object
-      description: オペレーター
+      description: operator
       properties:
         last_name:
           type: string
-          description: 名
+          description: first name
           example: 太郎
         first_name:
           type: string
-          description: 姓
+          description: last name
           example: 山田
         email:
           type: string
-          description: メールアドレス
+          description: email
           example: example@colere.inc
         icon:
           type: string
-          description: アイコンのURL
+          description: icon url
           example: icon@pmf.com
     RecommendAction:
       type: object
-      description: アクション
+      description: action
       properties:
         recommend_action_id:
           type: string
@@ -3606,43 +3606,43 @@ components:
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
         name:
           type: string
-          description: 名前
-          example: あいさつしよう
+          description: name
+          example: greeting
         level:
           type: string
-          description: どのレベルの関係性のときに候補として出すか(カンマ区切り)
+          description: At what level of the relationship are you a candidate (comma delimited)?(カンマ区切り)
           example: '1,2,3'
         type:
           type: string
-          description: タイプ
+          description: type
           example: question
         tag_id:
           type: string
-          description: AI分析用のタグ(カンマ区切り)
+          description: Tags for AI analysis (comma delimited)
           example: '1,3,8'
     RelationshipPoint:
       type: object
-      description: アカウント同士の関係性に対するポイント
+      description: Points against the relationship between accounts
       properties:
         account_relation_id:
           type: string
-          description: アカウント同士の関係性ID
+          description: account relationship ID
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
         point:
           type: integer
-          description: ポイント
+          description: point
           example: 51
         level:
           type: integer
-          description: レベル
+          description: level
           example: 3
         date:
           type: string
-          description: 作成された日付
+          description: created date
           example: '2022/01/01T05:42:22.000Z'
     IncludedAccountRelation:
       type: object
-      description: アカウント同士の関係性
+      description: account relation
       properties:
         account_relation_id:
           type: string
@@ -3650,15 +3650,15 @@ components:
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
         manager_account_id:
           type: string
-          description: 上司のアカウントID
+          description: manager account ID
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
         member_account_id:
           type: string
-          description: 部下のアカウントID
+          description: member account ID
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
         activated:
           type: integer
-          description: 'つながりを許可したか(0=未承認, 1=承認, 2=却下)'
+          description: 'Connection allowed(0=null, 1=approved, 2=rejected)'
           example: 0
         manager:
           $ref: '#/components/schemas/Account'
@@ -3666,7 +3666,7 @@ components:
           $ref: '#/components/schemas/Account'
     IncludedAction:
       type: object
-      description: アクション
+      description: action
       properties:
         action_id:
           type: string
@@ -3674,29 +3674,29 @@ components:
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
         account_relation_id:
           type: string
-          description: アカウント同士の関係性ID
+          description: account relationship ID
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
         recommend_action_id:
           type: string
-          description: アクション候補ID
+          description: action candidate ID
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
         view_date:
           type: string
-          description: 表示した日付
+          description: view date
           example: '2022/01/01T05:42:22.000Z'
         action_date:
           type: string
-          description: 実行した日付
+          description: action date
           example: '2022/01/02T05:42:22.000Z'
         skipped:
           type: boolean
-          description: スキップしたか
+          description: skipped
           example: boolean
         recommend_action:
           $ref: '#/components/schemas/RecommendAction'
     IncludedActionComment:
       type: object
-      description: アクションコメント
+      description: action comment
       properties:
         action_comment_id:
           type: string
@@ -3708,21 +3708,21 @@ components:
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
         parent_action_comment_id:
           type: string
-          description: アクションコメント先のaction_commentID。空ならアクションに対する最初のアクションコメント。
+          description: 'The action comment ID of the action to which the action comment is directed, or the first action comment for the action if empty.'
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
         account_id:
           type: string
-          description: action_commentしたアカウントID
+          description: account ID
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
         contents:
           type: string
-          description: action_comment内容
+          description: content
           example: よかったです。
         account:
           $ref: '#/components/schemas/Account'
     IncludedChangableNotification:
       type: object
-      description: ポイント変更通知
+      description: point change notification
       properties:
         changable_notification_id:
           type: string
@@ -3730,7 +3730,7 @@ components:
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
         account_id:
           type: string
-          description: 対象のアカウントID
+          description: account ID
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
         account_relation_id:
           type: string
@@ -3738,21 +3738,21 @@ components:
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
         point:
           type: integer
-          description: ポイント
+          description: point
           example: 100
         date:
           type: string
-          description: 日付
+          description: date
           example: '2022/01/01T05:42:22.000Z'
         read:
           type: boolean
-          description: 既読したかどうか
+          description: is read
           example: true
         account_relation:
           $ref: '#/components/schemas/IncludedAccountRelation'
     IncludedExternalApp:
       type: object
-      description: ポイント変更通知
+      description: point change notification
       properties:
         external_app_id:
           type: string
@@ -3760,23 +3760,23 @@ components:
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
         account_relation_id:
           type: string
-          description: 対象のアカウント関係ID
+          description: account relationship ID
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
         recommend_action_id:
           type: string
-          description: 対象のアクションID
+          description: action ID
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
         name:
           type: string
-          description: アプリの名前
+          description: name
           example: Microsoft Teams
         category:
           type: string
-          description: アプリのカテゴリ
+          description: category
           example: Chat
         link:
           type: string
-          description: 外部アプリへの遷移リンク
+          description: link to external application
           example: 'https://teams.microsoft.com/l/chat/0/0?users=taro@colere.inc,jiro@colere.inc&topicName=Prep%20For%20Meeting%20Tomorrow&message=Hi%20folks%2C%20kicking%20off%20a%20chat%20about%20our%20meeting%20tomorrow'
         account_relation:
           $ref: '#/components/schemas/IncludedAccountRelation'
@@ -3784,7 +3784,7 @@ components:
           $ref: '#/components/schemas/RecommendAction'
     IncludedFeedback:
       type: object
-      description: フィードバック
+      description: feedback
       properties:
         feedback_id:
           type: string
@@ -3796,11 +3796,11 @@ components:
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
         account_id:
           type: string
-          description: action_commentしたアカウントID
+          description: account ID
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
         evaluated:
           type: integer
-          description: '評価(0=未実施, 1=good, 2=bad)'
+          description: 'evaluate(0=null, 1=good, 2=bad)'
           example: 0
         account:
           $ref: '#/components/schemas/Account'
