@@ -74,7 +74,7 @@ get:
                       icon:
                         type: string
                         description: icon url
-                        example: icon@pmf.com
+                        example: https://img.cue.colere.inc/icon
                       type:
                         type: string
                         description: type

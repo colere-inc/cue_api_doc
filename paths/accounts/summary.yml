@@ -51,7 +51,7 @@ get:
               icon:
                 type: string
                 description: icon url
-                example: icon@pmf.com
+                example: https://img.cue.colere.inc/icon
               relation_level:
                 type: integer
                 description: relationship level

@@ -88,7 +88,7 @@ post:
             icon:
               type: string
               description: icon url
-              example: icon@pmf.com
+              example: https://img.cue.colere.inc/icon
             gender:
               type: string
               description: gender
@@ -162,7 +162,7 @@ put:
             icon:
               type: string
               description: icon url
-              example: icon@pmf.com
+              example: https://img.cue.colere.inc/icon
             gender:
               type: string
               description: gender

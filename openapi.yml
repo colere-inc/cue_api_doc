@@ -1,9 +1,9 @@
 openapi: "3.0.0"
 info:
   version: 0.0.1
-  title: PMF API Docment
+  title: CUE API Docment
 servers:
-  - url: http://api.pmf.com
+  - url: https://api.cue.colere.inc
 paths:
   $ref: "./paths/index.yml"
 

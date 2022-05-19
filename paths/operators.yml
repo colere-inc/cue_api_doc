@@ -86,7 +86,7 @@ post:
             icon:
               type: string
               description: icon url
-              example: icon@pmf.com
+              example: https://img.cue.colere.inc/icon
           required:
             - last_name
             - first_name
