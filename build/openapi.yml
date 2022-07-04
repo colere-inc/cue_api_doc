@@ -212,32 +212,17 @@ paths:
             schema:
               type: object
               properties:
-                last_name:
+                tel:
                   type: string
-                  description: first name
-                  example: 太郎
-                first_name:
-                  type: string
-                  description: last name
-                  example: 山田
-                email:
-                  type: string
-                  description: email
-                  example: example@colere.inc
+                  description: tel
+                  example: 9012345678
                 password:
                   type: string
                   description: password
                   example: password
-                icon:
-                  type: string
-                  description: icon url
-                  example: 'https://img.cue.colere.inc/icon'
-                gender:
-                  type: string
-                  description: gender
-                  example: 男
               required:
-                - email
+                - tel
+                - password
       responses:
         '200':
           description: success
@@ -292,18 +277,17 @@ paths:
                   type: string
                   description: last name
                   example: 山田
-                email:
+                tel:
                   type: string
-                  description: email
-                  example: example@colere.inc
+                  description: tel
+                  example: 9012345678
                 password:
                   type: string
                   description: password
                   example: password
                 icon:
-                  type: string
-                  description: icon url
-                  example: 'https://img.cue.colere.inc/icon'
+                  type: file
+                  description: icon
                 gender:
                   type: string
                   description: gender
@@ -3422,10 +3406,10 @@ components:
           type: string
           description: last name
           example: 山田
-        email:
+        tel:
           type: string
-          description: email
-          example: example@colere.inc
+          description: tel
+          example: 9012345678
         icon:
           type: string
           description: icon url
