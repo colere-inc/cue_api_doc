@@ -13,10 +13,10 @@ properties:
     type: string
     description: last name
     example: 山田
-  email:
+  tel:
     type: string
-    description: email
-    example: example@colere.inc
+    description: tel
+    example: 09012345678
   icon:
     type: string
     description: icon url
