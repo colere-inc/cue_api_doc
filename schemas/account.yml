@@ -21,9 +21,5 @@ properties:
     type: string
     description: icon url
     example: https://img.cue.colere.inc/icon
-  gender:
-    type: string
-    description: gender
-    example: 男
 required:
   - id
