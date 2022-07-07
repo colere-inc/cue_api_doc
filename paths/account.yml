@@ -160,6 +160,10 @@ put:
               type: string
               description: icon file
               format: binary
+            frequency:
+              type: integer
+              description: frequency day
+              example: 1
 
   responses:
     "200":
