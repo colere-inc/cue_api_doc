@@ -88,8 +88,20 @@ post:
         application/json:
           schema:
             type: object
+            description: アカウント
             properties:
-            $ref: '../schemas/account.yml'
+              account_id:
+                type: string
+                description: ID
+                example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
+              tel:
+                type: string
+                description: tel
+                example: 09012345678
+              access_token:
+                type: string
+                description: access token after login
+                example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
     "400":
       description: problem with the request
     "401":
