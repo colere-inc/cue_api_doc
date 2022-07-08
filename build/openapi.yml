@@ -461,10 +461,6 @@ paths:
                 type: array
                 items:
                   properties:
-                    date:
-                      type: string
-                      description: date
-                      example: 2022/01/01
                     members:
                       type: array
                       items:
@@ -487,6 +483,10 @@ paths:
                             description: icon url
                             example: 'https://img.cue.colere.inc/icon'
                           action_name:
+                            type: string
+                            description: name
+                            example: greeting
+                          action_detail:
                             type: string
                             description: name
                             example: greeting
@@ -3709,6 +3709,10 @@ components:
           type: string
           description: name
           example: greeting
+        detail:
+          type: string
+          description: detail
+          example: When managers talk about vacations...
         level:
           type: string
           description: At what level of the relationship are you a candidate (comma delimited)?(カンマ区切り)

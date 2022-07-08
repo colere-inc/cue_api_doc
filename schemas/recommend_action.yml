@@ -9,6 +9,10 @@ properties:
     type: string
     description: name
     example: greeting
+  detail:
+    type: string
+    description: detail
+    example: When managers talk about vacations...
   level:
     type: string
     description: At what level of the relationship are you a candidate (comma delimited)?(カンマ区切り)
