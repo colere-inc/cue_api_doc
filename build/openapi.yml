@@ -461,7 +461,7 @@ paths:
                 type: array
                 items:
                   properties:
-                    members:
+                    actions:
                       type: array
                       items:
                         type: object
