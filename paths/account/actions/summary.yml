@@ -66,14 +66,14 @@ get:
                         type: string
                         description: name
                         example: greeting
+                      action_detail:
+                        type: string
+                        description: detail
+                        example: When managers talk about vacations...
                       action_summay:
                         type: string
                         description: summary
                         example: talk about you
-                      action_detail:
-                        type: string
-                        description: detail
-                        example: greeting
 
     "400":
       description: problem with the request

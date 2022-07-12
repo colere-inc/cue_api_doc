@@ -496,14 +496,14 @@ paths:
                             type: string
                             description: name
                             example: greeting
+                          action_detail:
+                            type: string
+                            description: detail
+                            example: When managers talk about vacations...
                           action_summay:
                             type: string
                             description: summary
                             example: talk about you
-                          action_detail:
-                            type: string
-                            description: detail
-                            example: greeting
         '400':
           description: problem with the request
         '401':
@@ -3727,6 +3727,10 @@ components:
           type: string
           description: detail
           example: When managers talk about vacations...
+        summary:
+          type: string
+          description: summary
+          example: talk about you
         level:
           type: string
           description: At what level of the relationship are you a candidate (comma delimited)?(カンマ区切り)
