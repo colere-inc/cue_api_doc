@@ -457,6 +457,11 @@ paths:
           schema:
             type: string
           description: detail or summary
+        - in: query
+          name: done
+          schema:
+            type: boolean
+          description: done ot yet acted
       responses:
         '200':
           description: success
