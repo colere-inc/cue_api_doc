@@ -1,7 +1,7 @@
 post:
   tags:
-    - Today Action
-  description: Skip today's action for the specified relationship and get a new action.
+    - Action
+  description: Skip action for the specified relationship and get a new action.
   parameters:
     - in: header
       name: Content-Type

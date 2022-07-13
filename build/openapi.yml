@@ -1998,11 +1998,11 @@ paths:
           description: No access rights
         '500':
           description: Temporary server error
-  '/account_relations/{account_relations_id}/actions/today/skip':
+  '/account_relations/{account_relations_id}/actions/skip':
     post:
       tags:
-        - Today Action
-      description: Skip today's action for the specified relationship and get a new action.
+        - Action
+      description: Skip action for the specified relationship and get a new action.
       parameters:
         - in: header
           name: Content-Type
