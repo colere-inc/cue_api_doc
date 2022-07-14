@@ -38,6 +38,8 @@
   $ref: "./account_relations/actions/summary.yml"
 /account_relations/{account_relations_id}/actions/today:
   $ref: "./account_relations/actions/today.yml"
+/account_relations/{account_relations_id}/actions/done:
+  $ref: "./account_relations/actions/done.yml"
 /account_relations/{account_relations_id}/actions/skip:
   $ref: "./account_relations/actions/skip.yml"
 /account_relations/{account_relations_id}/action_comments/summary:

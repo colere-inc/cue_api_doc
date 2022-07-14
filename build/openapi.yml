@@ -1998,6 +1998,47 @@ paths:
           description: No access rights
         '500':
           description: Temporary server error
+  '/account_relations/{account_relations_id}/actions/done':
+    post:
+      tags:
+        - Action
+      description: Done action for the specified relationship.
+      parameters:
+        - in: header
+          name: Content-Type
+          required: true
+          schema:
+            type: string
+            example: application/json
+        - in: header
+          name: X-Request-ID
+          required: false
+          schema:
+            type: string
+        - in: header
+          name: 'Authorization: Bearer'
+          required: true
+          description: access token
+          schema:
+            type: string
+            example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
+        - in: path
+          name: account_relations_id
+          schema:
+            type: string
+          required: true
+          description: account_relation ID
+      responses:
+        '204':
+          description: success
+        '400':
+          description: problem with the request
+        '401':
+          description: problem with the Authorization header
+        '403':
+          description: No access rights
+        '500':
+          description: Temporary server error
   '/account_relations/{account_relations_id}/actions/skip':
     post:
       tags:
