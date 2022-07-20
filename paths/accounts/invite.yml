@@ -35,17 +35,13 @@ post:
               type: string
               description: last name
               example: 山田
-            email:
+            tel:
               type: string
-              description: email
-              example: example@colere.inc
-            relation_point:
-              type: integer
-              description: relationship point
-              example: 20
+              description: tel
+              example: 09012345678
             member:
               type: boolean
-              description: 部下を招待=true, 上司を招待=false
+              description: to member=true, to manager=false(now true only)
               example: true
 
   responses:
@@ -68,15 +64,21 @@ post:
                 type: string
                 description: last name
                 example: 山田
-              email:
+              icon:
                 type: string
-                description: email
-                example: example@colere.inc
+                description: icon url
+                example: 'https://img.cue.colere.inc/icon'
+              result:
+                type: integer
+                description: invite result
+                example: 0
     "400":
       description: problem with the request
     "401":
       description: problem with the Authorization header
     "403":
       description: No access rights
+    "404":
+      description: User not found
     "500":
       description: Temporary server error
