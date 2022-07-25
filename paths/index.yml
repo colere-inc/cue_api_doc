@@ -18,6 +18,8 @@
   $ref: "./actions/action_comments.yml"
 /actions/{actions_id}/action_comments/{action_comments_id}:
   $ref: "./actions/action_comments_id.yml"
+/actions/{actions_id}/reviews:
+  $ref: "./actions/reviews.yml"
 /actions/{actions_id}/feedbacks:
   $ref: "./actions/feedbacks.yml"
 /actions/{actions_id}/feedbacks/{feedbacks_id}:

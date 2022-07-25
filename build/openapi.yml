@@ -678,17 +678,13 @@ paths:
                   type: string
                   description: last name
                   example: 山田
-                email:
+                tel:
                   type: string
-                  description: email
-                  example: example@colere.inc
-                relation_point:
-                  type: integer
-                  description: relationship point
-                  example: 20
+                  description: tel
+                  example: 9012345678
                 member:
                   type: boolean
-                  description: '部下を招待=true, 上司を招待=false'
+                  description: 'to member=true, to manager=false(now true only)'
                   example: true
       responses:
         '200':
@@ -710,16 +706,22 @@ paths:
                     type: string
                     description: last name
                     example: 山田
-                  email:
+                  icon:
                     type: string
-                    description: email
-                    example: example@colere.inc
+                    description: icon url
+                    example: 'https://img.cue.colere.inc/icon'
+                  result:
+                    type: integer
+                    description: invite result
+                    example: 0
         '400':
           description: problem with the request
         '401':
           description: problem with the Authorization header
         '403':
           description: No access rights
+        '404':
+          description: User not found
         '500':
           description: Temporary server error
   '/actions/{actions_id}/action_comments':
@@ -955,6 +957,65 @@ paths:
       responses:
         '204':
           description: success
+        '400':
+          description: problem with the request
+        '401':
+          description: problem with the Authorization header
+        '403':
+          description: No access rights
+        '500':
+          description: Temporary server error
+  '/actions/{actions_id}/reviews':
+    post:
+      tags:
+        - Review
+      description: Create review for specific actions.
+      parameters:
+        - in: header
+          name: Content-Type
+          required: true
+          schema:
+            type: string
+            example: application/json
+        - in: header
+          name: X-Request-ID
+          required: false
+          schema:
+            type: string
+        - in: header
+          name: 'Authorization: Bearer'
+          required: true
+          description: access token
+          schema:
+            type: string
+            example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
+        - in: path
+          name: actions_id
+          schema:
+            type: string
+          required: true
+          description: action ID
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                good:
+                  type: boolean
+                  description: good or bad
+                  example: true
+              required:
+                - good
+      responses:
+        '200':
+          description: success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: null
+                description: review
         '400':
           description: problem with the request
         '401':
