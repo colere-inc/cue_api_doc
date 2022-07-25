@@ -54,6 +54,8 @@
   $ref: "./changable_notifications.yml"
 /changable_notifications/{changable_notifications_id}:
   $ref: "./changable_notifications_id.yml"
+/teams:
+  $ref: "./teams.yml"
 /external_apps:
   $ref: "./external_apps.yml"
 /relationship_points:
