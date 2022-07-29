@@ -21,5 +21,9 @@ properties:
     type: string
     description: icon url
     example: https://img.cue.colere.inc/icon
+  frequency:
+    type: integer
+    description: frequency
+    example: 1
 required:
   - id
