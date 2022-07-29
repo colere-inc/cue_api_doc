@@ -1301,7 +1301,7 @@ paths:
                           type: date
                           description: reviewed date
                           example: '2022/01/01T05:42:22.000Z'
-                        relation_point:
+                        point:
                           type: integer
                           description: relationship point
                           example: 74
