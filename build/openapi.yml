@@ -463,54 +463,53 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  properties:
-                    actions:
-                      type: array
-                      items:
-                        type: object
-                        properties:
-                          account_id:
-                            type: string
-                            description: ID
-                            example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
-                          account_relation_id:
-                            type: string
-                            description: account relationship ID
-                            example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
-                          action_id:
-                            type: string
-                            description: ID
-                            example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
-                          view_date:
-                            type: string
-                            description: create action date
-                            example: '2022/01/01T05:42:22.000Z'
-                          action_date:
-                            type: string
-                            description: acted date
-                            example: '2022/01/01T05:42:22.000Z'
-                          review_date:
-                            type: string
-                            description: reviewed date
-                            example: '2022/01/01T05:42:22.000Z'
-                          icon:
-                            type: string
-                            description: icon url
-                            example: 'https://img.cue.colere.inc/icon'
-                          action_name:
-                            type: string
-                            description: name
-                            example: greeting
-                          action_detail:
-                            type: string
-                            description: detail
-                            example: When managers talk about vacations...
-                          action_summay:
-                            type: string
-                            description: summary
-                            example: talk about you
+                type: object
+                properties:
+                  actions:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        account_id:
+                          type: string
+                          description: ID
+                          example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
+                        account_relation_id:
+                          type: string
+                          description: account relationship ID
+                          example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
+                        action_id:
+                          type: string
+                          description: ID
+                          example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
+                        view_date:
+                          type: string
+                          description: create action date
+                          example: '2022/01/01T05:42:22.000Z'
+                        action_date:
+                          type: string
+                          description: acted date
+                          example: '2022/01/01T05:42:22.000Z'
+                        review_date:
+                          type: string
+                          description: reviewed date
+                          example: '2022/01/01T05:42:22.000Z'
+                        icon:
+                          type: string
+                          description: icon url
+                          example: 'https://img.cue.colere.inc/icon'
+                        action_name:
+                          type: string
+                          description: name
+                          example: greeting
+                        action_detail:
+                          type: string
+                          description: detail
+                          example: When managers talk about vacations...
+                        action_summay:
+                          type: string
+                          description: summary
+                          example: talk about you
         '400':
           description: problem with the request
         '401':
