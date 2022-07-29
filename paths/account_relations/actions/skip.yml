@@ -36,10 +36,6 @@ post:
           schema:
             type: object
             properties:
-              account_id:
-                type: string
-                description: ID
-                example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
               account_relation_id:
                 type: string
                 description: account relationship ID
@@ -52,10 +48,10 @@ post:
                 type: string
                 description: create action date
                 example: '2022/01/01T05:42:22.000Z'
-              icon:
-                type: string
-                description: icon url
-                example: https://img.cue.colere.inc/icon
+              action_time:
+                type: integer
+                description: time of action
+                example: 15
               action_name:
                 type: string
                 description: name
@@ -68,6 +64,7 @@ post:
                 type: string
                 description: summary
                 example: talk about you
+
     "400":
       description: problem with the request
     "401":
