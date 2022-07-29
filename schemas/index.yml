@@ -8,6 +8,8 @@ ActionTag:
   $ref: "./action_tag.yml"
 Action:
   $ref: "./action.yml"
+Assessmant:
+  $ref: "./assessment.yml"
 ChangableNotification:
   $ref: "./changable_notification.yml"
 ExternalApp:
