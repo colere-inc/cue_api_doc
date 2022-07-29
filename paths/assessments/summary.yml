@@ -51,7 +51,7 @@ get:
                       description: icon url
                       example: https://img.cue.colere.inc/icon
                     reviewed_date:
-                      type: date
+                      type: string
                       description: reviewed date
                       example: '2022/01/01T05:42:22.000Z'
                     point:

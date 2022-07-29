@@ -60,10 +60,18 @@ get:
                       type: string
                       description: acted date
                       example: '2022/01/01T05:42:22.000Z'
+                    action_time:
+                      type: integer
+                      description: time of action
+                      example: 15
                     review_date:
                       type: string
                       description: reviewed date
                       example: '2022/01/01T05:42:22.000Z'
+                    review_good:
+                      type: boolean
+                      description: review value
+                      example: true
                     icon:
                       type: string
                       description: icon url
