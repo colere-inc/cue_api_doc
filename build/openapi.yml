@@ -52,7 +52,7 @@ paths:
           schema:
             type: string
         - in: header
-          name: 'Authorization'
+          name: Authorization
           required: true
           description: access token
           schema:
@@ -114,7 +114,7 @@ paths:
           schema:
             type: string
         - in: header
-          name: 'Authorization'
+          name: Authorization
           required: true
           description: access token
           schema:
@@ -160,7 +160,7 @@ paths:
           schema:
             type: string
         - in: header
-          name: 'Authorization'
+          name: Authorization
           required: true
           description: access token
           schema:
@@ -222,7 +222,7 @@ paths:
           schema:
             type: string
         - in: header
-          name: 'Authorization'
+          name: Authorization
           required: true
           description: access token
           schema:
@@ -268,7 +268,7 @@ paths:
           schema:
             type: string
         - in: header
-          name: 'Authorization'
+          name: Authorization
           required: true
           description: access token
           schema:
@@ -308,7 +308,7 @@ paths:
           schema:
             type: string
         - in: header
-          name: 'Authorization'
+          name: Authorization
           required: true
           description: access token
           schema:
@@ -377,7 +377,7 @@ paths:
           schema:
             type: string
         - in: header
-          name: 'Authorization'
+          name: Authorization
           required: true
           description: access token
           schema:
@@ -446,7 +446,7 @@ paths:
           schema:
             type: string
         - in: header
-          name: 'Authorization'
+          name: Authorization
           required: true
           description: access token
           schema:
@@ -537,7 +537,7 @@ paths:
           schema:
             type: string
         - in: header
-          name: 'Authorization'
+          name: Authorization
           required: true
           description: access token
           schema:
@@ -584,7 +584,7 @@ paths:
           schema:
             type: string
         - in: header
-          name: 'Authorization'
+          name: Authorization
           required: true
           description: access token
           schema:
@@ -658,7 +658,7 @@ paths:
           schema:
             type: string
         - in: header
-          name: 'Authorization'
+          name: Authorization
           required: true
           description: access token
           schema:
@@ -742,7 +742,7 @@ paths:
           schema:
             type: string
         - in: header
-          name: 'Authorization'
+          name: Authorization
           required: true
           description: access token
           schema:
@@ -805,7 +805,7 @@ paths:
           schema:
             type: string
         - in: header
-          name: 'Authorization'
+          name: Authorization
           required: true
           description: access token
           schema:
@@ -874,7 +874,7 @@ paths:
           schema:
             type: string
         - in: header
-          name: 'Authorization'
+          name: Authorization
           required: true
           description: access token
           schema:
@@ -936,7 +936,7 @@ paths:
           schema:
             type: string
         - in: header
-          name: 'Authorization'
+          name: Authorization
           required: true
           description: access token
           schema:
@@ -983,7 +983,7 @@ paths:
           schema:
             type: string
         - in: header
-          name: 'Authorization'
+          name: Authorization
           required: true
           description: access token
           schema:
@@ -1042,7 +1042,7 @@ paths:
           schema:
             type: string
         - in: header
-          name: 'Authorization'
+          name: Authorization
           required: true
           description: access token
           schema:
@@ -1090,7 +1090,7 @@ paths:
           schema:
             type: string
         - in: header
-          name: 'Authorization'
+          name: Authorization
           required: true
           description: access token
           schema:
@@ -1154,7 +1154,7 @@ paths:
           schema:
             type: string
         - in: header
-          name: 'Authorization'
+          name: Authorization
           required: true
           description: access token
           schema:
@@ -1216,7 +1216,7 @@ paths:
           schema:
             type: string
         - in: header
-          name: 'Authorization'
+          name: Authorization
           required: true
           description: access token
           schema:
@@ -1263,7 +1263,7 @@ paths:
           schema:
             type: string
         - in: header
-          name: 'Authorization'
+          name: Authorization
           required: true
           description: access token
           schema:
@@ -1329,7 +1329,7 @@ paths:
           schema:
             type: string
         - in: header
-          name: 'Authorization'
+          name: Authorization
           required: true
           description: access token
           schema:
@@ -1430,7 +1430,7 @@ paths:
           schema:
             type: string
         - in: header
-          name: 'Authorization'
+          name: Authorization
           required: true
           description: access token
           schema:
@@ -1472,7 +1472,7 @@ paths:
           schema:
             type: string
         - in: header
-          name: 'Authorization'
+          name: Authorization
           required: true
           description: access token
           schema:
@@ -1534,7 +1534,7 @@ paths:
           schema:
             type: string
         - in: header
-          name: 'Authorization'
+          name: Authorization
           required: true
           description: access token
           schema:
@@ -1580,7 +1580,7 @@ paths:
           schema:
             type: string
         - in: header
-          name: 'Authorization'
+          name: Authorization
           required: true
           description: access token
           schema:
@@ -1636,7 +1636,7 @@ paths:
           schema:
             type: string
         - in: header
-          name: 'Authorization'
+          name: Authorization
           required: true
           description: access token
           schema:
@@ -1677,7 +1677,7 @@ paths:
           schema:
             type: string
         - in: header
-          name: 'Authorization'
+          name: Authorization
           required: true
           description: access token
           schema:
@@ -1740,7 +1740,7 @@ paths:
           schema:
             type: string
         - in: header
-          name: 'Authorization'
+          name: Authorization
           required: true
           description: access token
           schema:
@@ -1812,7 +1812,7 @@ paths:
           schema:
             type: string
         - in: header
-          name: 'Authorization'
+          name: Authorization
           required: true
           description: access token
           schema:
@@ -1864,7 +1864,7 @@ paths:
           schema:
             type: string
         - in: header
-          name: 'Authorization'
+          name: Authorization
           required: true
           description: access token
           schema:
@@ -1935,7 +1935,7 @@ paths:
           schema:
             type: string
         - in: header
-          name: 'Authorization'
+          name: Authorization
           required: true
           description: access token
           schema:
@@ -2011,7 +2011,7 @@ paths:
           schema:
             type: string
         - in: header
-          name: 'Authorization'
+          name: Authorization
           required: true
           description: access token
           schema:
@@ -2077,7 +2077,7 @@ paths:
           schema:
             type: string
         - in: header
-          name: 'Authorization'
+          name: Authorization
           required: true
           description: access token
           schema:
@@ -2118,7 +2118,7 @@ paths:
           schema:
             type: string
         - in: header
-          name: 'Authorization'
+          name: Authorization
           required: true
           description: access token
           schema:
@@ -2196,7 +2196,7 @@ paths:
           schema:
             type: string
         - in: header
-          name: 'Authorization'
+          name: Authorization
           required: true
           description: access token
           schema:
@@ -2255,7 +2255,7 @@ paths:
           description: No access rights
         '500':
           description: Temporary server error
-  '/account_relations/{account_relations_id}/assessment':
+  '/account_relations/{account_relations_id}/assessments':
     get:
       tags:
         - Assessment
@@ -2273,7 +2273,7 @@ paths:
           schema:
             type: string
         - in: header
-          name: 'Authorization'
+          name: Authorization
           required: true
           description: access token
           schema:
@@ -2321,7 +2321,7 @@ paths:
           schema:
             type: string
         - in: header
-          name: 'Authorization'
+          name: Authorization
           required: true
           description: access token
           schema:
@@ -2384,7 +2384,7 @@ paths:
           schema:
             type: string
         - in: header
-          name: 'Authorization'
+          name: Authorization
           required: true
           description: access token
           schema:
@@ -2447,7 +2447,7 @@ paths:
           schema:
             type: string
         - in: header
-          name: 'Authorization'
+          name: Authorization
           required: true
           description: access token
           schema:
@@ -2511,7 +2511,7 @@ paths:
           schema:
             type: string
         - in: header
-          name: 'Authorization'
+          name: Authorization
           required: true
           description: access token
           schema:
@@ -2563,7 +2563,7 @@ paths:
           schema:
             type: string
         - in: header
-          name: 'Authorization'
+          name: Authorization
           required: true
           description: access token
           schema:
@@ -2637,7 +2637,7 @@ paths:
           schema:
             type: string
         - in: header
-          name: 'Authorization'
+          name: Authorization
           required: true
           description: access token
           schema:
@@ -2708,7 +2708,7 @@ paths:
           schema:
             type: string
         - in: header
-          name: 'Authorization'
+          name: Authorization
           required: true
           description: access token
           schema:
@@ -2751,7 +2751,7 @@ paths:
           schema:
             type: string
         - in: header
-          name: 'Authorization'
+          name: Authorization
           required: true
           description: access token
           schema:
@@ -2808,7 +2808,7 @@ paths:
           schema:
             type: string
         - in: header
-          name: 'Authorization'
+          name: Authorization
           required: true
           description: access token
           schema:
@@ -2895,7 +2895,7 @@ paths:
           schema:
             type: string
         - in: header
-          name: 'Authorization'
+          name: Authorization
           required: true
           description: access token
           schema:
@@ -2938,7 +2938,7 @@ paths:
           schema:
             type: string
         - in: header
-          name: 'Authorization'
+          name: Authorization
           required: true
           description: access token
           schema:
@@ -2981,7 +2981,7 @@ paths:
           schema:
             type: string
         - in: header
-          name: 'Authorization'
+          name: Authorization
           required: true
           description: access token
           schema:
@@ -3024,7 +3024,7 @@ paths:
           schema:
             type: string
         - in: header
-          name: 'Authorization'
+          name: Authorization
           required: true
           description: access token
           schema:
@@ -3073,7 +3073,7 @@ paths:
           schema:
             type: string
         - in: header
-          name: 'Authorization'
+          name: Authorization
           required: true
           description: access token
           schema:
@@ -3115,7 +3115,7 @@ paths:
           schema:
             type: string
         - in: header
-          name: 'Authorization'
+          name: Authorization
           required: true
           description: access token
           schema:
@@ -3168,7 +3168,7 @@ paths:
           schema:
             type: string
         - in: header
-          name: 'Authorization'
+          name: Authorization
           required: true
           description: access token
           schema:
@@ -3214,7 +3214,7 @@ paths:
           schema:
             type: string
         - in: header
-          name: 'Authorization'
+          name: Authorization
           required: true
           description: access token
           schema:
@@ -3270,7 +3270,7 @@ paths:
           schema:
             type: string
         - in: header
-          name: 'Authorization'
+          name: Authorization
           required: true
           description: access token
           schema:
@@ -3311,7 +3311,7 @@ paths:
           schema:
             type: string
         - in: header
-          name: 'Authorization'
+          name: Authorization
           required: true
           description: access token
           schema:
@@ -3353,7 +3353,7 @@ paths:
           schema:
             type: string
         - in: header
-          name: 'Authorization'
+          name: Authorization
           required: true
           description: access token
           schema:
@@ -3421,7 +3421,7 @@ paths:
           schema:
             type: string
         - in: header
-          name: 'Authorization'
+          name: Authorization
           required: true
           description: access token
           schema:
@@ -3467,7 +3467,7 @@ paths:
           schema:
             type: string
         - in: header
-          name: 'Authorization'
+          name: Authorization
           required: true
           description: access token
           schema:
@@ -3535,7 +3535,7 @@ paths:
           schema:
             type: string
         - in: header
-          name: 'Authorization'
+          name: Authorization
           required: true
           description: access token
           schema:
@@ -3576,7 +3576,7 @@ paths:
           schema:
             type: string
         - in: header
-          name: 'Authorization'
+          name: Authorization
           required: true
           description: access token
           schema:
@@ -3618,7 +3618,7 @@ paths:
           schema:
             type: string
         - in: header
-          name: 'Authorization'
+          name: Authorization
           required: true
           description: access token
           schema:
@@ -3685,7 +3685,7 @@ paths:
           schema:
             type: string
         - in: header
-          name: 'Authorization'
+          name: Authorization
           required: true
           description: access token
           schema:
@@ -3731,7 +3731,7 @@ paths:
           schema:
             type: string
         - in: header
-          name: 'Authorization'
+          name: Authorization
           required: true
           description: access token
           schema:
@@ -3799,7 +3799,7 @@ paths:
           schema:
             type: string
         - in: header
-          name: 'Authorization'
+          name: Authorization
           required: true
           description: access token
           schema:

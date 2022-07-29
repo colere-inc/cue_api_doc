@@ -46,8 +46,8 @@
   $ref: "./account_relations/actions/skip.yml"
 /account_relations/{account_relations_id}/action_comments/summary:
   $ref: "./account_relations/action_comments/summary.yml"
-/account_relations/{account_relations_id}/assessment:
-  $ref: "./account_relations/assessment.yml"
+/account_relations/{account_relations_id}/assessments:
+  $ref: "./account_relations/assessments.yml"
 /account_relations/{account_relations_id}/relationship_points:
   $ref: "./account_relations/relationship_points.yml"
 /account_relations/{account_relations_id}/recommend_actions/{recommend_action_id}/external_app:
