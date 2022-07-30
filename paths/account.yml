@@ -160,6 +160,10 @@ put:
               type: string
               description: icon file
               format: binary
+            language:
+              type: string
+              description: language(ja, en_us, un_uk, fr)
+              example: ja
             frequency:
               type: integer
               description: frequency day

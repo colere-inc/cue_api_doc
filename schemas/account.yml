@@ -21,6 +21,10 @@ properties:
     type: string
     description: icon url
     example: https://img.cue.colere.inc/icon
+  language:
+    type: string
+    description: language(ja, en_us, un_uk, fr)
+    example: ja
   frequency:
     type: integer
     description: frequency
