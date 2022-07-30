@@ -2999,6 +2999,57 @@ paths:
           description: No access rights
         '500':
           description: Temporary server error
+  /verification_codes/verify:
+    post:
+      tags:
+        - Verification Code
+      description: Create an account.
+      parameters:
+        - in: header
+          name: Content-Type
+          required: true
+          schema:
+            type: string
+            example: application/json
+        - in: header
+          name: X-Request-ID
+          required: false
+          schema:
+            type: string
+        - in: header
+          name: Authorization
+          required: true
+          description: access token
+          schema:
+            type: string
+            example: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                type:
+                  type: string
+                  description: code type
+                  example: reset password
+                code:
+                  type: string
+                  description: verification code
+                  example: 348102
+              required:
+                - type
+      responses:
+        '204':
+          description: success
+        '400':
+          description: problem with the request
+        '401':
+          description: problem with the Authorization header
+        '403':
+          description: No access rights
+        '500':
+          description: Temporary server error
   /external_apps:
     get:
       tags:
@@ -4230,6 +4281,26 @@ components:
         date:
           type: string
           description: created date
+          example: '2022/01/01T05:42:22.000Z'
+    VerificationCode:
+      type: object
+      description: verification code
+      properties:
+        account_id:
+          type: string
+          description: ID
+          example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
+        type:
+          type: string
+          description: code type
+          example: reset password
+        code:
+          type: string
+          description: verification code
+          example: 348102
+        expired_at:
+          type: string
+          description: expired date
           example: '2022/01/01T05:42:22.000Z'
     IncludedAccountRelation:
       type: object

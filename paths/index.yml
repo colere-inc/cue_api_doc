@@ -62,6 +62,8 @@
   $ref: "./teams.yml"
 /reset_password:
   $ref: "./reset_password.yml"
+/verification_codes/verify:
+  $ref: "./verification_codes/verify.yml"
 /external_apps:
   $ref: "./external_apps.yml"
 /relationship_points:
