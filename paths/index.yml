@@ -62,6 +62,8 @@
   $ref: "./teams.yml"
 /passwords/forget:
   $ref: "./passwords/forget.yml"
+/passwords/forget/change:
+  $ref: "./passwords/forget/change.yml"
 /verification_codes/verify:
   $ref: "./verification_codes/verify.yml"
 /external_apps:

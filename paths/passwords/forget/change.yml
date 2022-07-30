@@ -1,7 +1,7 @@
-post:
+put:
   tags:
     - Reset Password
-  description: Reset password request.
+  description: Reset password execute.
   parameters:
     - in: header
       name: Content-Type
@@ -27,25 +27,36 @@ post:
         schema:
           type: object
           properties:
-            tel:
+            account_id:
               type: string
-              description: tel
-              example: 09012345678
+              description: account ID
+              example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
+            type:
+              type: string
+              description: code type
+              example: reset password
+            code:
+              type: string
+              description: verification code
+              example: 348102
+            key:
+              type: string
+              description: verification confirm key
+              example: 123456
+            password:
+              type: string
+              description: password
+              example: password
           required:
-            - tel
+            - account_id
+            - type
+            - code
+            - key
+            - password
 
   responses:
-    "200":
+    "204":
       description: success
-      content:
-        application/json:
-          schema:
-            type: object
-            properties:
-              account_id:
-                type: string
-                description: account ID
-                example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
     "400":
       description: problem with the request
     "401":
