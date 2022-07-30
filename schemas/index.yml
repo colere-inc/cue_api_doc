@@ -22,6 +22,8 @@ RecommendAction:
   $ref: "./recommend_action.yml"
 RelationshipPoint:
   $ref: "./relationship_point.yml"
+Review:
+  $ref: "./review.yml"
 VerificationCode:
   $ref: "./verification_code.yml"
 IncludedAccountRelation:

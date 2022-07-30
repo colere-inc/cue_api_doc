@@ -1026,7 +1026,7 @@ paths:
               schema:
                 type: object
                 properties: null
-                description: review
+                $ref: '#/components/schemas/Review'
         '400':
           description: problem with the request
         '401':
@@ -4282,6 +4282,18 @@ components:
           type: string
           description: created date
           example: '2022/01/01T05:42:22.000Z'
+    Review:
+      type: object
+      description: review
+      properties:
+        review_id:
+          type: string
+          description: ID
+          example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
+        good:
+          type: boolean
+          description: good or bad
+          example: true
     VerificationCode:
       type: object
       description: verification code
