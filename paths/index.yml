@@ -60,6 +60,8 @@
   $ref: "./changable_notifications_id.yml"
 /teams:
   $ref: "./teams.yml"
+/reset_password:
+  $ref: "./reset_password.yml"
 /external_apps:
   $ref: "./external_apps.yml"
 /relationship_points:
