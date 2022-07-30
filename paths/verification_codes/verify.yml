@@ -44,8 +44,29 @@ post:
             - code
 
   responses:
-    "204":
+    "200":
       description: success
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              account_id:
+                type: string
+                description: account ID
+                example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
+              type:
+                type: string
+                description: code type
+                example: reset password
+              code:
+                type: string
+                description: verification code
+                example: 348102
+              key:
+                type: string
+                description: verification confirm key
+                example: 123456
     "400":
       description: problem with the request
     "401":
