@@ -66,6 +66,10 @@
   $ref: "./passwords/forget/change.yml"
 /verification_codes/verify:
   $ref: "./verification_codes/verify.yml"
+/scripts/calculate_relationship_point:
+  $ref: "./scripts/calculate_relationship_point.yml"
+/scripts/daily_action:
+  $ref: "./scripts/daily_action.yml"
 /external_apps:
   $ref: "./external_apps.yml"
 /relationship_points:
