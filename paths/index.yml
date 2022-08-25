@@ -18,8 +18,6 @@
   $ref: "./actions/action_comments.yml"
 /actions/{actions_id}/action_comments/{action_comments_id}:
   $ref: "./actions/action_comments_id.yml"
-/actions/{actions_id}/reviews:
-  $ref: "./actions/reviews.yml"
 /actions/{actions_id}/feedbacks:
   $ref: "./actions/feedbacks.yml"
 /actions/{actions_id}/feedbacks/{feedbacks_id}:
@@ -38,6 +36,8 @@
   $ref: "./account_relations/actions.yml"
 /account_relations/{account_relations_id}/actions/{actions_id}:
   $ref: "./account_relations/actions_id.yml"
+/account_relations/{account_relations_id}/actions/{actions_id}/reviews:
+  $ref: "./account_relations/actions/reviews.yml"
 /account_relations/{account_relations_id}/actions/summary:
   $ref: "./account_relations/actions/summary.yml"
 /account_relations/{account_relations_id}/actions/today:
