@@ -324,12 +324,17 @@ paths:
                   type: string
                   description: tel
                   example: 9012345678
+                tel_country:
+                  type: string
+                  description: 'E.164 country code (https://en.wikipedia.org/wiki/List_of_country_calling_codes)'
+                  example: JP
                 password:
                   type: string
                   description: password
                   example: password
               required:
                 - tel
+                - tel_country
                 - password
       responses:
         '200':
@@ -693,6 +698,10 @@ paths:
                   type: string
                   description: tel
                   example: 9012345678
+                tel_country:
+                  type: string
+                  description: 'E.164 country code (https://en.wikipedia.org/wiki/List_of_country_calling_codes)'
+                  example: JP
                 member:
                   type: boolean
                   description: 'to member=true, to manager=false(now true only)'
@@ -968,65 +977,6 @@ paths:
       responses:
         '204':
           description: success
-        '400':
-          description: problem with the request
-        '401':
-          description: problem with the Authorization header
-        '403':
-          description: No access rights
-        '500':
-          description: Temporary server error
-  '/actions/{actions_id}/reviews':
-    post:
-      tags:
-        - Review
-      description: Create review for specific actions.
-      parameters:
-        - in: header
-          name: Content-Type
-          required: true
-          schema:
-            type: string
-            example: application/json
-        - in: header
-          name: X-Request-ID
-          required: false
-          schema:
-            type: string
-        - in: header
-          name: Authorization
-          required: true
-          description: access token
-          schema:
-            type: string
-            example: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
-        - in: path
-          name: actions_id
-          schema:
-            type: string
-          required: true
-          description: action ID
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                good:
-                  type: boolean
-                  description: good or bad
-                  example: true
-              required:
-                - good
-      responses:
-        '200':
-          description: success
-          content:
-            application/json:
-              schema:
-                type: object
-                properties: null
-                $ref: '#/components/schemas/Review'
         '400':
           description: problem with the request
         '401':
@@ -1988,6 +1938,71 @@ paths:
                 type: object
                 properties: null
                 $ref: '#/components/schemas/Action'
+        '400':
+          description: problem with the request
+        '401':
+          description: problem with the Authorization header
+        '403':
+          description: No access rights
+        '500':
+          description: Temporary server error
+  '/account_relations/{account_relations_id}/actions/{actions_id}/reviews':
+    post:
+      tags:
+        - Review
+      description: Create review for specific actions.
+      parameters:
+        - in: header
+          name: Content-Type
+          required: true
+          schema:
+            type: string
+            example: application/json
+        - in: header
+          name: X-Request-ID
+          required: false
+          schema:
+            type: string
+        - in: header
+          name: Authorization
+          required: true
+          description: access token
+          schema:
+            type: string
+            example: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
+        - in: path
+          name: account_relations_id
+          schema:
+            type: string
+          required: true
+          description: account_relation ID
+        - in: path
+          name: actions_id
+          schema:
+            type: string
+          required: true
+          description: action ID
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                good:
+                  type: boolean
+                  description: good or bad
+                  example: true
+              required:
+                - good
+      responses:
+        '200':
+          description: success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: null
+                $ref: '#/components/schemas/Review'
         '400':
           description: problem with the request
         '401':
