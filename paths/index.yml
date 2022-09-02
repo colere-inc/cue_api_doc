@@ -1,63 +1,25 @@
 /auth/token:
   $ref: "./auth/token.yml"
-/auth/login/email:
-  $ref: "./auth/login/email.yml"
 /auth/login/tel:
   $ref: "./auth/login/tel.yml"
 /account:
   $ref: "./account.yml"
 /account/actions/summary:
   $ref: "./account/actions/summary.yml"
-/accounts/{accounts_id}:
-  $ref: "./accounts_id.yml"
 /accounts/{accounts_id}/summary:
   $ref: "./accounts/summary.yml"
 /accounts/invite:
   $ref: "./accounts/invite.yml"
-/actions/{actions_id}/action_comments:
-  $ref: "./actions/action_comments.yml"
-/actions/{actions_id}/action_comments/{action_comments_id}:
-  $ref: "./actions/action_comments_id.yml"
-/actions/{actions_id}/feedbacks:
-  $ref: "./actions/feedbacks.yml"
-/actions/{actions_id}/feedbacks/{feedbacks_id}:
-  $ref: "./actions/feedbacks_id.yml"
 /assessments/summary:
   $ref: "./assessments/summary.yml"
-/feedbacks:
-  $ref: "./feedbacks.yml"
-/activities:
-  $ref: "./activities.yml"
-/account_relations:
-  $ref: "./account_relations.yml"
-/account_relations/{account_relations_id}:
-  $ref: "./account_relations_id.yml"
-/account_relations/{account_relations_id}/actions:
-  $ref: "./account_relations/actions.yml"
-/account_relations/{account_relations_id}/actions/{actions_id}:
-  $ref: "./account_relations/actions_id.yml"
 /account_relations/{account_relations_id}/actions/{actions_id}/reviews:
   $ref: "./account_relations/actions/reviews.yml"
-/account_relations/{account_relations_id}/actions/summary:
-  $ref: "./account_relations/actions/summary.yml"
-/account_relations/{account_relations_id}/actions/today:
-  $ref: "./account_relations/actions/today.yml"
 /account_relations/{account_relations_id}/actions/done:
   $ref: "./account_relations/actions/done.yml"
 /account_relations/{account_relations_id}/actions/skip:
   $ref: "./account_relations/actions/skip.yml"
-/account_relations/{account_relations_id}/action_comments/summary:
-  $ref: "./account_relations/action_comments/summary.yml"
 /account_relations/{account_relations_id}/assessments:
   $ref: "./account_relations/assessments.yml"
-/account_relations/{account_relations_id}/relationship_points:
-  $ref: "./account_relations/relationship_points.yml"
-/account_relations/{account_relations_id}/recommend_actions/{recommend_action_id}/external_app:
-  $ref: "./account_relations/recommend_actions/external_app.yml"
-/changable_notifications:
-  $ref: "./changable_notifications.yml"
-/changable_notifications/{changable_notifications_id}:
-  $ref: "./changable_notifications_id.yml"
 /teams:
   $ref: "./teams.yml"
 /passwords/forget:
@@ -70,14 +32,8 @@
   $ref: "./scripts/calculate_relationship_point.yml"
 /scripts/daily_action:
   $ref: "./scripts/daily_action.yml"
-/external_apps:
-  $ref: "./external_apps.yml"
-/relationship_points:
-  $ref: "./relationship_points.yml"
 /accounts:
   $ref: "./accounts.yml"
-/accounts/{accounts_id}/external_apps:
-  $ref: "./accounts/external_apps.yml"
 /action_tags:
   $ref: "./action_tags.yml"
 /action_tags/{action_tags_id}:
