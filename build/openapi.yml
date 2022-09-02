@@ -1092,7 +1092,7 @@ paths:
         '500':
           description: Temporary server error
   /passwords/forget/change:
-    put:
+    post:
       tags:
         - Reset Password
       description: Reset password execute.
