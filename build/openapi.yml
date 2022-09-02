@@ -324,7 +324,7 @@ paths:
                   type: string
                   description: tel
                   example: 9012345678
-                tel_country:
+                tel_country_code:
                   type: string
                   description: 'E.164 country code (https://en.wikipedia.org/wiki/List_of_country_calling_codes)'
                   example: JP
@@ -334,7 +334,7 @@ paths:
                   example: password
               required:
                 - tel
-                - tel_country
+                - tel_country_code
                 - password
       responses:
         '200':
@@ -698,7 +698,7 @@ paths:
                   type: string
                   description: tel
                   example: 9012345678
-                tel_country:
+                tel_country_code:
                   type: string
                   description: 'E.164 country code (https://en.wikipedia.org/wiki/List_of_country_calling_codes)'
                   example: JP

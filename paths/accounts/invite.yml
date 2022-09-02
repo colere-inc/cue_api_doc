@@ -39,7 +39,7 @@ post:
               type: string
               description: tel
               example: 09012345678
-            tel_country:
+            tel_country_code:
               type: string
               description: E.164 country code (https://en.wikipedia.org/wiki/List_of_country_calling_codes)
               example: "JP"
