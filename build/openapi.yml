@@ -87,6 +87,22 @@ paths:
                     type: string
                     description: access token after login
                     example: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
+                  account_id:
+                    type: string
+                    description: ID
+                    example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
+                  last_name:
+                    type: string
+                    description: first name
+                    example: 太郎
+                  first_name:
+                    type: string
+                    description: last name
+                    example: 山田
+                  icon:
+                    type: string
+                    description: icon url
+                    example: 'https://img.cue.colere.inc/icon'
         '400':
           description: problem with the request
         '401':
