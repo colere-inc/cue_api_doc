@@ -6,7 +6,7 @@ ActionTag:
   $ref: "./action_tag.yml"
 Action:
   $ref: "./action.yml"
-Assessmant:
+Assessment:
   $ref: "./assessment.yml"
 Operator:
   $ref: "./operator.yml"

@@ -970,7 +970,7 @@ paths:
                 items:
                   type: object
                   properties: null
-                $ref: '#/components/schemas/Assessmant'
+                $ref: '#/components/schemas/Assessment'
         '400':
           description: problem with the request
         '401':
@@ -1032,7 +1032,7 @@ paths:
               schema:
                 type: object
                 properties: null
-                $ref: '#/components/schemas/Assessmant'
+                $ref: '#/components/schemas/Assessment'
         '400':
           description: problem with the request
         '401':
@@ -2276,7 +2276,7 @@ components:
           type: boolean
           description: skipped
           example: boolean
-    Assessmant:
+    Assessment:
       type: object
       description: assessment
       properties:
