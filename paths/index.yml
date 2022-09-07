@@ -36,15 +36,3 @@
   $ref: "./scripts/daily_action.yml"
 /accounts:
   $ref: "./accounts.yml"
-/action_tags:
-  $ref: "./action_tags.yml"
-/action_tags/{action_tags_id}:
-  $ref: "./action_tags_id.yml"
-/recommend_actions:
-  $ref: "./recommend_actions.yml"
-/recommend_actions/{recommend_actions_id}:
-  $ref: "./recommend_actions_id.yml"
-/operators:
-  $ref: "./operators.yml"
-/operators/{operators_id}:
-  $ref: "./operators_id.yml"
