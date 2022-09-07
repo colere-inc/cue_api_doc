@@ -80,6 +80,10 @@ post:
                 type: integer
                 description: invite result(0=not found member in cue and send sms. 1=found member in cue and not send sms. 2=already same team.)
                 example: 0
+              message:
+                type: string
+                description: message
+                example: "invite sms is send."
     "400":
       description: problem with the request
     "401":
