@@ -67,7 +67,7 @@ get:
                       description: icon url
                       example: https://img.cue.colere.inc/icon
                     point:
-                      type: int
+                      type: integer
                       description: relationship point
                       example: 30
                     message:
