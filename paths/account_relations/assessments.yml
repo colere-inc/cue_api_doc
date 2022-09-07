@@ -38,7 +38,7 @@ get:
             items:
               type: object
               properties:
-            $ref: '../../schemas/assessment.yml'
+              $ref: '../../schemas/assessment.yml'
     "400":
       description: problem with the request
     "401":

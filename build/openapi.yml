@@ -970,7 +970,7 @@ paths:
                 items:
                   type: object
                   properties: null
-                $ref: '#/components/schemas/Assessment'
+                  $ref: '#/components/schemas/Assessment'
         '400':
           description: problem with the request
         '401':
