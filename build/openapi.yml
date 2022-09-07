@@ -1086,6 +1086,7 @@ paths:
           content:
             application/json:
               schema:
+                type: object
                 properties:
                   members:
                     type: array
