@@ -1,5 +1,3 @@
-/auth/token:
-  $ref: "./auth/token.yml"
 /auth/login/tel:
   $ref: "./auth/login/tel.yml"
 /account:
