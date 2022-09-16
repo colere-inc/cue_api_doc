@@ -1,0 +1,71 @@
+put:
+  tags:
+    - Review
+  description: Update review for specific actions.
+  parameters:
+    - in: header
+      name: Content-Type
+      required: true
+      schema:
+        type: string
+        example: application/json
+    - in: header
+      name: X-Request-ID
+      required: false
+      schema:
+        type: string
+    - in: header
+      name: "Authorization"
+      required: true
+      description: access token
+      schema:
+        type: string
+        example: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
+    - in: path
+      name: account_relations_id
+      schema:
+        type: string
+      required: true
+      description: account_relation ID
+    - in: path
+      name: actions_id
+      schema:
+        type: string
+      required: true
+      description: action ID
+    - in: path
+      name: reviews_id
+      schema:
+        type: string
+      required: true
+      description: review ID
+  requestBody:
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            good:
+              type: boolean
+              description: good or bad
+              example: true
+          required:
+            - good
+
+  responses:
+    "200":
+      description: success
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+            $ref: '../../../schemas/review.yml'
+    "400":
+      description: problem with the request
+    "401":
+      description: problem with the Authorization header
+    "403":
+      description: No access rights
+    "500":
+      description: Temporary server error

@@ -14,6 +14,8 @@
   $ref: "./assessments/summary.yml"
 /account_relations/{account_relations_id}/actions/{actions_id}/reviews:
   $ref: "./account_relations/actions/reviews.yml"
+/account_relations/{account_relations_id}/actions/{actions_id}/reviews/{reviews_id}:
+  $ref: "./account_relations/actions/reviews_id.yml"
 /account_relations/{account_relations_id}/actions/done:
   $ref: "./account_relations/actions/done.yml"
 /account_relations/{account_relations_id}/actions/skip:
