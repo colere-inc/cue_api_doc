@@ -29,8 +29,17 @@ post:
       description: account_relation ID
 
   responses:
-    "204":
+    "200":
       description: success
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              message:
+                type: string
+                description: message
+                example: Done action.
     "400":
       description: problem with the request
     "401":
