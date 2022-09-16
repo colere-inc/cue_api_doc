@@ -30,7 +30,7 @@
   $ref: "./verification_codes/verify.yml"
 /scripts/calculate_relationship_point:
   $ref: "./scripts/calculate_relationship_point.yml"
-/scripts/daily_action:
-  $ref: "./scripts/daily_action.yml"
+/scripts/create_daily_action:
+  $ref: "./scripts/create_daily_action.yml"
 /accounts:
   $ref: "./accounts.yml"

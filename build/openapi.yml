@@ -1314,7 +1314,7 @@ paths:
           description: No access rights
         '500':
           description: Temporary server error
-  /scripts/daily_action:
+  /scripts/create_daily_action:
     post:
       tags:
         - Scripts
