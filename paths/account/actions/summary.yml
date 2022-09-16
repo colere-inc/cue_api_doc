@@ -68,10 +68,6 @@ get:
                       type: string
                       description: reviewed date
                       example: '2022/01/01T05:42:22.000Z'
-                    review_good:
-                      type: boolean
-                      description: review value
-                      example: true
                     icon:
                       type: string
                       description: icon url
@@ -88,6 +84,14 @@ get:
                       type: string
                       description: summary
                       example: talk about you
+                    review_id:
+                      type: string
+                      description: review ID
+                      example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
+                    review_rating:
+                      type: bool
+                      description: action rating
+                      example: true
 
     "400":
       description: problem with the request
