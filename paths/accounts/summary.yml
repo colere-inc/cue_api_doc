@@ -52,10 +52,6 @@ get:
                 type: string
                 description: icon url
                 example: https://img.cue.colere.inc/icon
-              relation_level:
-                type: integer
-                description: relationship level
-                example: 3
               relation_point:
                 type: integer
                 description: relationship point
@@ -76,6 +72,10 @@ get:
                 type: string
                 description: create action date
                 example: '2022/01/01T05:42:22.000Z'
+              expected_date:
+                type: string
+                description: expected action date
+                example: '2022/01/01T05:42:22.000Z'
               action_time:
                 type: integer
                 description: time of action
@@ -92,6 +92,29 @@ get:
                 type: string
                 description: summary
                 example: talk about you
+              relationship_status:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: relation ship status
+                    example: current
+                  relation_level:
+                    type: integer
+                    description: relationship level
+                    example: 3
+                  title:
+                    type: string
+                    description: relation ship status title
+                    example: Small Talk
+                  description:
+                    type: string
+                    description: relation ship status description
+                    example: Although they engage in minimal interactions for business purposes, they are still reserved in their daily conversations and interactions.
+                  goal:
+                    type: string
+                    description: relation ship status goal
+                    example: Be interested in and try to understand the other person's values and way of thinking.Express your opinions on a variety of topics, but be willing to share your values and perspectives.
     "400":
       description: problem with the request
     "401":
