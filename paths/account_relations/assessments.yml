@@ -38,7 +38,29 @@ get:
             items:
               type: object
               properties:
-              $ref: '../../schemas/assessment.yml'
+                assessment:
+                  type: object
+                  properties:
+                    key:
+                      type: integer
+                      description: key
+                      example: 1
+                    title:
+                      type: string
+                      description: assessment title
+                      example: Small Talk
+                    description:
+                      type: string
+                      description: assessment description
+                      example: Although they engage in minimal interactions for business purposes, they are still reserved in their daily conversations and interactions.
+                selected_date:
+                  type: string
+                  description: selected date
+                  example: "2022/01/01T05:42:22.000Z"
+                evolve:
+                  type: integer
+                  description: (1=worse, 2=stable, 3=improve)
+                  example: 1
     "400":
       description: problem with the request
     "401":
