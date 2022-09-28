@@ -12,6 +12,8 @@
   $ref: "./accounts/invite.yml"
 /assessments/summary:
   $ref: "./assessments/summary.yml"
+/account_relations/{account_relations_id}:
+  $ref: "./account_relations_id.yml"
 /account_relations/{account_relations_id}/actions/{actions_id}/reviews:
   $ref: "./account_relations/actions/reviews.yml"
 /account_relations/{account_relations_id}/actions/{actions_id}/reviews/{reviews_id}:
