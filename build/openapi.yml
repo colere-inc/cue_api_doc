@@ -36,6 +36,10 @@ paths:
                   type: string
                   description: password
                   example: password
+                fcm_token:
+                  type: string
+                  description: token
+                  example: FcmTokenOfYourDevice
               required:
                 - email
                 - password

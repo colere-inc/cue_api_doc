@@ -1,0 +1,11 @@
+type: object
+description: firebase cloud message token
+properties:
+  account_id:
+    type: string
+    description: account ID
+    example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
+  token:
+    type: string
+    description: token
+    example: FcmTokenOfYourDevice
