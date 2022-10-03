@@ -28,6 +28,10 @@
   $ref: "./account_relations/assessments_id.yml"
 /teams:
   $ref: "./teams.yml"
+/notifications:
+  $ref: "./notifications.yml"
+/notifications/{notifications_id}:
+  $ref: "./notifications_id.yml"
 /passwords/forget:
   $ref: "./passwords/forget.yml"
 /passwords/forget/change:
