@@ -82,6 +82,10 @@ post:
               type: integer
               description: answer id
               example: 1
+            text:
+              type: string
+              description: other text
+              example: free text.
           required:
             - answer_id
 
