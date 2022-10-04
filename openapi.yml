@@ -3,7 +3,7 @@ info:
   version: 0.0.1
   title: CUE API Docment
 servers:
-  - url: https://api.cue.colere.inc
+  - url: https://dev.api.cue.colere.inc
 paths:
   $ref: "./paths/index.yml"
 
