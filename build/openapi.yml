@@ -347,7 +347,7 @@ paths:
                   message:
                     type: string
                     description: message
-                    example: success delete.
+                    example: Delete account.
         '400':
           description: problem with the request
         '401':
