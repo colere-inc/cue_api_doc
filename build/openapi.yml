@@ -1561,6 +1561,10 @@ paths:
                       type: string
                       description: icon url
                       example: 'https://img.cue.colere.inc/icon'
+                    screen_name:
+                      type: string
+                      description: screen_name
+                      example: TeamTab
                     message:
                       type: string
                       description: message
