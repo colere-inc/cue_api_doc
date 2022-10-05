@@ -49,7 +49,7 @@ put:
               message:
                 type: string
                 description: message
-                example: success update.
+                example: Update notification.
     "400":
       description: problem with the request
     "401":

@@ -100,7 +100,7 @@ post:
               message:
                 type: string
                 description: message
-                example: success answer.
+                example: Answered delete account.
     "400":
       description: problem with the request
     "401":
