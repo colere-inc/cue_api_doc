@@ -44,5 +44,9 @@
   $ref: "./scripts/calculate_relationship_point.yml"
 /scripts/create_daily_action:
   $ref: "./scripts/create_daily_action.yml"
+/scripts/notify_expired_action:
+  $ref: "./scripts/notify_expired_action.yml"
+/scripts/notify_invitation:
+  $ref: "./scripts/notify_invitation.yml"
 /accounts:
   $ref: "./accounts.yml"

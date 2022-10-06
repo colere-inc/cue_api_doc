@@ -1887,6 +1887,62 @@ paths:
           description: No access rights
         '500':
           description: Temporary server error
+  /scripts/notify_expired_action:
+    post:
+      tags:
+        - Scripts
+      description: Notify expired action.
+      parameters:
+        - in: header
+          name: Content-Type
+          required: true
+          schema:
+            type: string
+            example: application/json
+        - in: header
+          name: X-Request-ID
+          required: false
+          schema:
+            type: string
+      responses:
+        '204':
+          description: success
+        '400':
+          description: problem with the request
+        '401':
+          description: problem with the Authorization header
+        '403':
+          description: No access rights
+        '500':
+          description: Temporary server error
+  /scripts/notify_invitation:
+    post:
+      tags:
+        - Scripts
+      description: Notify invitation not accepted.
+      parameters:
+        - in: header
+          name: Content-Type
+          required: true
+          schema:
+            type: string
+            example: application/json
+        - in: header
+          name: X-Request-ID
+          required: false
+          schema:
+            type: string
+      responses:
+        '204':
+          description: success
+        '400':
+          description: problem with the request
+        '401':
+          description: problem with the Authorization header
+        '403':
+          description: No access rights
+        '500':
+          description: Temporary server error
   /accounts:
     get:
       tags:
