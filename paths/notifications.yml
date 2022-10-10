@@ -56,6 +56,10 @@ get:
                   type: string
                   description: message
                   example: notification message.
+                time:
+                  type: string
+                  description: time
+                  example: 9h
                 read:
                   type: boolean
                   description: read
