@@ -731,6 +731,73 @@ paths:
           description: User not found
         '500':
           description: Temporary server error
+  '/accounts/invite/identifier/{identifier}':
+    get:
+      tags:
+        - Account Invite
+      description: Get a summary for use on the approve invite page.
+      parameters:
+        - in: header
+          name: Content-Type
+          required: true
+          schema:
+            type: string
+            example: application/json
+        - in: header
+          name: X-Request-ID
+          required: false
+          schema:
+            type: string
+        - in: path
+          name: identifier
+          schema:
+            type: string
+          required: true
+          description: identifier
+      responses:
+        '200':
+          description: success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  access_token:
+                    type: string
+                    description: access token after login
+                    example: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
+                  remaining_time:
+                    type: string
+                    description: remaining time
+                    example: 7 days
+                  manager_account_id:
+                    type: string
+                    description: account ID
+                    example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
+                  manager_name:
+                    type: string
+                    description: manager name
+                    example: 太郎
+                  manager_icon:
+                    type: string
+                    description: icon url
+                    example: 'https://img.cue.colere.inc/icon'
+                  message:
+                    type: string
+                    description: message
+                    example: hello
+                  member_account_id:
+                    type: string
+                    description: account ID
+                    example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
+        '400':
+          description: problem with the request
+        '401':
+          description: problem with the Authorization header
+        '403':
+          description: No access rights
+        '500':
+          description: Temporary server error
   /account_delete_questions:
     get:
       tags:
@@ -1423,76 +1490,6 @@ paths:
                 type: object
                 properties: null
                 $ref: '#/components/schemas/Assessment'
-        '400':
-          description: problem with the request
-        '401':
-          description: problem with the Authorization header
-        '403':
-          description: No access rights
-        '500':
-          description: Temporary server error
-  '/account_relations/{account_relations_id}/invite/summary':
-    get:
-      tags:
-        - Account Invite
-      description: Get a summary for use on the approve invite page.
-      parameters:
-        - in: header
-          name: Content-Type
-          required: true
-          schema:
-            type: string
-            example: application/json
-        - in: header
-          name: X-Request-ID
-          required: false
-          schema:
-            type: string
-        - in: header
-          name: Authorization
-          required: true
-          description: access token
-          schema:
-            type: string
-            example: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50X2lkIjoiNzExNzE1OTgtOGE1NS00MzkwLTk1OGYtNTI1YTUwNWVlMDExIiwiaWF0IjoxNjQyNTczODkyLCJleHAiOjE2NDUxNjU4OTJ9._BIe5qWyiFWqzEIBShdut_MQkQocLbVklHCbogL942c
-        - in: path
-          name: account_relations_id
-          schema:
-            type: string
-          required: true
-          description: account_relation ID
-      responses:
-        '200':
-          description: success
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  remaining_time:
-                    type: string
-                    description: remaining time
-                    example: 7 days
-                  manager_account_id:
-                    type: string
-                    description: account ID
-                    example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
-                  manager_name:
-                    type: string
-                    description: manager name
-                    example: 太郎
-                  manager_icon:
-                    type: string
-                    description: icon url
-                    example: 'https://img.cue.colere.inc/icon'
-                  message:
-                    type: string
-                    description: message
-                    example: hello
-                  member_account_id:
-                    type: string
-                    description: account ID
-                    example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
         '400':
           description: problem with the request
         '401':

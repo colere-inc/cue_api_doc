@@ -10,6 +10,8 @@
   $ref: "./accounts/invite_id.yml"
 /accounts/invite:
   $ref: "./accounts/invite.yml"
+/accounts/invite/identifier/{identifier}:
+  $ref: "./accounts/invite/identifier.yml"
 /account_delete_questions:
   $ref: "./account_delete_questions.yml"
 /assessments/summary:
@@ -28,8 +30,6 @@
   $ref: "./account_relations/assessments.yml"
 /account_relations/{account_relations_id}/assessments/{assessments_id}:
   $ref: "./account_relations/assessments_id.yml"
-/account_relations/{account_relations_id}/invite/summary:
-  $ref: "./account_relations/invite/summary.yml"
 /teams:
   $ref: "./teams.yml"
 /notifications:
