@@ -60,8 +60,8 @@ get:
 
     "400":
       description: problem with the request
-    "401":
-      description: problem with the Authorization header
+    "404":
+      description: Identifier not found
     "403":
       description: No access rights
     "500":

@@ -792,10 +792,10 @@ paths:
                     example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
         '400':
           description: problem with the request
-        '401':
-          description: problem with the Authorization header
         '403':
           description: No access rights
+        '404':
+          description: Identifier not found
         '500':
           description: Temporary server error
   /account_delete_questions:
