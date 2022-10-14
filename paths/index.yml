@@ -16,6 +16,8 @@
   $ref: "./account_delete_questions.yml"
 /assessments/summary:
   $ref: "./assessments/summary.yml"
+/assessments/identifier/{identifier}:
+  $ref: "./assessments/identifier.yml"
 /account_relations/{account_relations_id}:
   $ref: "./account_relations_id.yml"
 /account_relations/{account_relations_id}/actions/{actions_id}/reviews:
