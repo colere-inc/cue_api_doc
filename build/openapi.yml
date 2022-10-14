@@ -1341,6 +1341,10 @@ paths:
                   type: integer
                   description: evolve
                   example: 1
+                account_id:
+                  type: string
+                  description: ID
+                  example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
               required:
                 - assessment_key
       responses:
@@ -2091,6 +2095,10 @@ components:
       description: assessment
       properties:
         account_relation_id:
+          type: string
+          description: ID
+          example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
+        account_id:
           type: string
           description: ID
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
