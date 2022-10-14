@@ -1227,7 +1227,7 @@ paths:
     get:
       tags:
         - Assessment
-      description: Get a list of assessments for the specified relationship.
+      description: 'Get a list of assessments for the specified relationship.(if login is manager, not login is member)'
       parameters:
         - in: header
           name: Content-Type
@@ -1301,7 +1301,7 @@ paths:
     post:
       tags:
         - Assessment
-      description: Create an assessment for the specified relationship.
+      description: Create an assessment for the specified relationship.(if request have not account_id is login account ID.
       parameters:
         - in: header
           name: Content-Type
