@@ -1,0 +1,34 @@
+get:
+  tags:
+    - Stats
+  description: get all account relation ids.
+  parameters:
+    - in: header
+      name: Content-Type
+      required: true
+      schema:
+        type: string
+        example: application/json
+    - in: header
+      name: X-Request-ID
+      required: false
+      schema:
+        type: string
+
+  responses:
+    "200":
+      description: success
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              type: string
+              description: account relationship ID
+              example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
+    "400":
+      description: problem with the request
+    "403":
+      description: No access rights
+    "500":
+      description: Temporary server error
