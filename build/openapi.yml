@@ -2204,6 +2204,10 @@ paths:
                       type: string
                       description: summary
                       example: talk about you
+                    action_skipped:
+                      type: boolean
+                      description: skipped
+                      example: boolean
                     relationship_status:
                       type: object
                       properties:
