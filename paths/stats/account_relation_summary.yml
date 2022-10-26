@@ -51,10 +51,6 @@ get:
                   type: integer
                   description: delta of relationship point
                   example: -4
-                weekly_action_count:
-                  type: integer
-                  description: Number of actions performed in a week
-                  example: 4
                 action_id:
                   type: string
                   description: ID
@@ -62,6 +58,10 @@ get:
                 view_date:
                   type: string
                   description: create action date
+                  example: '2022/01/01T05:42:22.000Z'
+                action_date:
+                  type: string
+                  description: acted date
                   example: '2022/01/01T05:42:22.000Z'
                 expected_date:
                   type: string
