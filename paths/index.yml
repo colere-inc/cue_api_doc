@@ -54,7 +54,7 @@
   $ref: "./scripts/notify_invitation.yml"
 /stats/account_relation_ids:
   $ref: "./stats/account_relation_ids.yml"
-/stats/account_relation_summary/{account_relations_id}?start_date=&end_date=:
+/stats/account_relation_summary/{account_relations_id}:
   $ref: "./stats/account_relation_summary.yml"
 /accounts:
   $ref: "./accounts.yml"
