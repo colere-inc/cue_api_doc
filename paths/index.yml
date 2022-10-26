@@ -52,8 +52,8 @@
   $ref: "./scripts/notify_expired_action.yml"
 /scripts/notify_invitation:
   $ref: "./scripts/notify_invitation.yml"
-/stats/account_relations:
-  $ref: "./stats/account_relations.yml"
+/stats/account_relation_ids:
+  $ref: "./stats/account_relation_ids.yml"
 /stats/account_relation_summary/{account_relations_id}?start_date=&end_date=:
   $ref: "./stats/account_relation_summary.yml"
 /accounts:

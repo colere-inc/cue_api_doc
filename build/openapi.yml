@@ -2073,7 +2073,7 @@ paths:
           description: No access rights
         '500':
           description: Temporary server error
-  /stats/account_relations:
+  /stats/account_relation_ids:
     get:
       tags:
         - Stats
