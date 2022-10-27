@@ -56,7 +56,7 @@ get:
                 selected_date:
                   type: string
                   description: selected date
-                  example: "2022/01/01T05:42:22.000Z"
+                  example: "2022-01-01T05:42:22.000Z"
                 selected_assessments_id:
                   type: string
                   description: selected assessment ID

@@ -16,11 +16,11 @@ properties:
   view_date:
     type: string
     description: view date
-    example: 2022/01/01T05:42:22.000Z
+    example: 2022-01-01T05:42:22.000Z
   action_date:
     type: string
     description: action date
-    example: 2022/01/02T05:42:22.000Z
+    example: 2022-01-02T05:42:22.000Z
   skipped:
     type: boolean
     description: skipped

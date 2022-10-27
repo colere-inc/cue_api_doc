@@ -71,11 +71,11 @@ get:
               view_date:
                 type: string
                 description: create action date
-                example: '2022/01/01T05:42:22.000Z'
+                example: '2022-01-01T05:42:22.000Z'
               expected_date:
                 type: string
                 description: expected action date
-                example: '2022/01/01T05:42:22.000Z'
+                example: '2022-01-01T05:42:22.000Z'
               action_time:
                 type: integer
                 description: time of action

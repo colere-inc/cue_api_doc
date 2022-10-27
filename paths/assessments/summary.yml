@@ -53,7 +53,7 @@ get:
                     reviewed_date:
                       type: string
                       description: reviewed date
-                      example: '2022/01/01T05:42:22.000Z'
+                      example: '2022-01-01T05:42:22.000Z'
                     point:
                       type: integer
                       description: relationship point
