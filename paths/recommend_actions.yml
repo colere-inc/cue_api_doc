@@ -1,0 +1,97 @@
+get:
+  tags:
+    - Recommend Action
+  description: Get all recommend action detail.
+  parameters:
+    - in: header
+      name: Content-Type
+      required: true
+      schema:
+        type: string
+        example: application/json
+    - in: header
+      name: X-Request-ID
+      required: false
+      schema:
+        type: string
+
+  responses:
+    "200":
+      description: success
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                action_key:
+                  type: string
+                  description: action key
+                  example: G0001
+                title:
+                  type: object
+                  properties:
+                    ja:
+                      type: string
+                      description: action title ja
+                      example: 「お疲れ様」を言う
+                    en_us:
+                      type: string
+                      description: action title en us
+                      example: Say, 'Good job.'
+                    en_uk:
+                      type: string
+                      description: action title en uk
+                      example: Say, 'Good job.'
+                summary:
+                  type: object
+                  properties:
+                    ja:
+                      type: string
+                      description: action summary ja
+                      example: 一日の業務終わりに、メンバーに「お疲れ様」と声をかける
+                    en_us:
+                      type: string
+                      description: action summary en us
+                      example: At the end of the day's work, say 'thank you' to members of the team
+                    en_uk:
+                      type: string
+                      description: action summary en uk
+                      example: At the end of the day's work, say 'thank you' to members of the team
+                detail:
+                  type: object
+                  properties:
+                    ja:
+                      type: string
+                      description: action detail ja
+                      example: 一日の終わりに労うことで、メンバーが「明日も頑張ろう」という気持ちを醸成することに役立ちます
+                    en_us:
+                      type: string
+                      description: action detail en us
+                      example: Laboring at the end of the day helps foster a member's desire to work hard tomorrow!
+                    en_uk:
+                      type: string
+                      description: action detail en uk
+                      example: Laboring at the end of the day helps foster a member's desire to work hard tomorrow!
+                level:
+                  type: string
+                  description: At what level of the relationship are you a candidate (comma delimited)?(カンマ区切り)
+                  example: 1,2,3
+                type:
+                  type: string
+                  description: type
+                  example: question
+                time:
+                  type: integer
+                  description: action time
+                  example: 10
+
+    "400":
+      description: problem with the request
+    "401":
+      description: problem with the Authorization header
+    "403":
+      description: No access rights
+    "500":
+      description: Temporary server error

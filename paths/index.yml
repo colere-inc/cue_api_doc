@@ -44,6 +44,8 @@
   $ref: "./passwords/forget/change.yml"
 /verification_codes/verify:
   $ref: "./verification_codes/verify.yml"
+/recommend_actions:
+  $ref: "./recommend_actions.yml"
 /scripts/calculate_relationship_point:
   $ref: "./scripts/calculate_relationship_point.yml"
 /scripts/create_daily_action:
