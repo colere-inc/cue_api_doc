@@ -92,6 +92,14 @@ get:
                       type: bool
                       description: action rating
                       example: true
+                    point:
+                      type: integer
+                      description: relationship point
+                      example: 74
+                    color:
+                      type: string
+                      description: circle color
+                      example: "#0000ff"
 
     "400":
       description: problem with the request
