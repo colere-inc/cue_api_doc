@@ -64,6 +64,10 @@ get:
                 type: integer
                 description: Number of actions performed in a week
                 example: 4
+              trend:
+                type: string
+                description: trend
+                example: Improving
               action_id:
                 type: string
                 description: ID
