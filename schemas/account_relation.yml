@@ -17,3 +17,7 @@ properties:
     type: integer
     description: Connection allowed(0=null, 1=approved, 2=rejected)
     example: 0
+  invite_message:
+    type: string
+    description: invite message
+    example: wlcome cue

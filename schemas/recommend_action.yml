@@ -5,7 +5,7 @@ properties:
     type: string
     description: ID
     example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
-  key:
+  action_key:
     type: string
     description: action key
     example: G0001
@@ -17,7 +17,7 @@ properties:
     type: string
     description: type
     example: question
-  tag_id:
-    type: string
-    description: Tags for AI analysis (comma delimited)
-    example: 1,3,8
+  time:
+    type: integer
+    description: action time
+    example: 10

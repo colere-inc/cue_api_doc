@@ -9,10 +9,6 @@ properties:
     type: integer
     description: point
     example: 51
-  level:
-    type: integer
-    description: level
-    example: 3
   date:
     type: string
     description: created date

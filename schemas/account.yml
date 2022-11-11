@@ -1,9 +1,9 @@
 type: object
-description: アカウント
+description: account
 properties:
   account_id:
     type: string
-    description: ID
+    description: account ID
     example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
   last_name:
     type: string
@@ -21,13 +21,17 @@ properties:
     type: string
     description: icon url
     example: https://img.cue.colere.inc/icon
-  language:
-    type: string
-    description: language(ja, en_us, un_uk, fr)
-    example: ja
   frequency:
     type: integer
     description: frequency
     example: 1
+  language:
+    type: string
+    description: language(ja, en_us, un_uk, fr)
+    example: ja
+  tel_country_code:
+    type: string
+    description: E.164 country code (https://en.wikipedia.org/wiki/List_of_country_calling_codes)
+    example: "JP"
 required:
   - id

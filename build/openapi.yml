@@ -2358,6 +2358,22 @@ paths:
           description: Temporary server error
 components:
   schemas:
+    AccountDeteleQuestion:
+      type: object
+      description: Account Delete Question
+      properties:
+        account_id:
+          type: string
+          description: account ID
+          example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
+        answer_id:
+          type: integer
+          description: answer id
+          example: 1
+        text:
+          type: string
+          description: other text
+          example: free text.
     AccountRelation:
       type: object
       description: account relation
@@ -2378,13 +2394,17 @@ components:
           type: integer
           description: 'Connection allowed(0=null, 1=approved, 2=rejected)'
           example: 0
+        invite_message:
+          type: string
+          description: invite message
+          example: wlcome cue
     Account:
       type: object
-      description: アカウント
+      description: account
       properties:
         account_id:
           type: string
-          description: ID
+          description: account ID
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
         last_name:
           type: string
@@ -2402,35 +2422,27 @@ components:
           type: string
           description: icon url
           example: 'https://img.cue.colere.inc/icon'
-        language:
-          type: string
-          description: 'language(ja, en_us, un_uk, fr)'
-          example: ja
         frequency:
           type: integer
           description: frequency
           example: 1
+        language:
+          type: string
+          description: 'language(ja, en_us, un_uk, fr)'
+          example: ja
+        tel_country_code:
+          type: string
+          description: 'E.164 country code (https://en.wikipedia.org/wiki/List_of_country_calling_codes)'
+          example: JP
       required:
         - id
-    ActionTag:
-      type: object
-      description: action tag
-      properties:
-        action_tag_id:
-          type: string
-          description: ID
-          example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
-        name:
-          type: string
-          description: name
-          example: private life
     Action:
       type: object
       description: action
       properties:
         action_id:
           type: string
-          description: ID
+          description: action ID
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
         account_relation_id:
           type: string
@@ -2452,17 +2464,25 @@ components:
           type: boolean
           description: skipped
           example: boolean
+        calculated:
+          type: boolean
+          description: calculated point
+          example: boolean
     Assessment:
       type: object
       description: assessment
       properties:
+        assessment_id:
+          type: string
+          description: assessment ID
+          example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
         account_relation_id:
           type: string
-          description: ID
+          description: account relation ID
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
         account_id:
           type: string
-          description: ID
+          description: account ID
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
         assessment_key:
           type: integer
@@ -2475,26 +2495,65 @@ components:
       required:
         - account_relation_id
         - assessment_key
-    Operator:
+    FcmMessage:
       type: object
-      description: operator
+      description: firebase cloud message
       properties:
-        last_name:
+        fcm_message_id:
           type: string
-          description: first name
-          example: 太郎
-        first_name:
+          description: fcm message ID
+          example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
+        account_id:
           type: string
-          description: last name
-          example: 山田
-        email:
+          description: account ID
+          example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
+        account_relation_id:
           type: string
-          description: email
-          example: example@colere.inc
-        icon:
+          description: account relation ID
+          example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
+        screen_name:
           type: string
-          description: icon url
-          example: 'https://img.cue.colere.inc/icon'
+          description: screen_name
+          example: TeamTab
+        message:
+          type: string
+          description: message
+          example: notification message.
+        params:
+          type: string
+          description: extra param
+        read:
+          type: boolean
+          description: read
+          example: false
+    FcmToken:
+      type: object
+      description: firebase cloud message token
+      properties:
+        account_id:
+          type: string
+          description: account ID
+          example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
+        token:
+          type: string
+          description: token
+          example: FcmTokenOfYourDevice
+    OneTimeIdentifier:
+      type: object
+      description: fireone time identifier
+      properties:
+        one_time_identifier_id:
+          type: string
+          description: one time identifier ID
+          example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
+        account_relation_id:
+          type: string
+          description: account relation ID
+          example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
+        account_id:
+          type: string
+          description: account ID
+          example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
     RecommendAction:
       type: object
       description: action
@@ -2503,7 +2562,7 @@ components:
           type: string
           description: ID
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
-        key:
+        action_key:
           type: string
           description: action key
           example: G0001
@@ -2515,10 +2574,10 @@ components:
           type: string
           description: type
           example: question
-        tag_id:
-          type: string
-          description: Tags for AI analysis (comma delimited)
-          example: '1,3,8'
+        time:
+          type: integer
+          description: action time
+          example: 10
     RelationshipPoint:
       type: object
       description: Points against the relationship between accounts
@@ -2531,10 +2590,6 @@ components:
           type: integer
           description: point
           example: 51
-        level:
-          type: integer
-          description: level
-          example: 3
         date:
           type: string
           description: created date
@@ -2545,7 +2600,11 @@ components:
       properties:
         review_id:
           type: string
-          description: ID
+          description: review ID
+          example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
+        action_id:
+          type: string
+          description: action ID
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
         good:
           type: boolean
@@ -2557,7 +2616,7 @@ components:
       properties:
         account_id:
           type: string
-          description: ID
+          description: account ID
           example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
         type:
           type: string
@@ -2567,61 +2626,15 @@ components:
           type: string
           description: verification code
           example: 348102
+        key:
+          type: string
+          description: verification key
+          example: 238103
         expired_at:
           type: string
           description: expired date
           example: 2022-01-01T05:42:22.000Z
-    IncludedAccountRelation:
-      type: object
-      description: account relation
-      properties:
-        account_relation_id:
-          type: string
-          description: ID
-          example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
-        manager_account_id:
-          type: string
-          description: manager account ID
-          example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
-        member_account_id:
-          type: string
-          description: member account ID
-          example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
-        activated:
-          type: integer
-          description: 'Connection allowed(0=null, 1=approved, 2=rejected)'
-          example: 0
-        manager:
-          $ref: '#/components/schemas/Account'
-        member:
-          $ref: '#/components/schemas/Account'
-    IncludedAction:
-      type: object
-      description: action
-      properties:
-        action_id:
-          type: string
-          description: ID
-          example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
-        account_relation_id:
-          type: string
-          description: account relationship ID
-          example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
-        recommend_action_id:
-          type: string
-          description: action candidate ID
-          example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
-        view_date:
-          type: string
-          description: view date
-          example: 2022-01-01T05:42:22.000Z
-        action_date:
-          type: string
-          description: action date
-          example: 2022-01-02T05:42:22.000Z
-        skipped:
+        used:
           type: boolean
-          description: skipped
-          example: boolean
-        recommend_action:
-          $ref: '#/components/schemas/RecommendAction'
+          description: used key
+          example: true

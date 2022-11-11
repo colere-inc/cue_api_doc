@@ -1,9 +1,9 @@
 type: object
-description: assessment
+description: fireone time identifier
 properties:
-  assessment_id:
+  one_time_identifier_id:
     type: string
-    description: assessment ID
+    description: one time identifier ID
     example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
   account_relation_id:
     type: string
@@ -13,14 +13,3 @@ properties:
     type: string
     description: account ID
     example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
-  assessment_key:
-    type: integer
-    description: key
-    example: 1
-  evolve:
-    type: integer
-    description: (1=worse, 2=stable, 3=improve)
-    example: 1
-required:
-  - account_relation_id
-  - assessment_key

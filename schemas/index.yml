@@ -1,15 +1,19 @@
+AccountDeteleQuestion:
+  $ref: "./account_delete_question.yml"
 AccountRelation:
   $ref: "./account_relation.yml"
 Account:
   $ref: "./account.yml"
-ActionTag:
-  $ref: "./action_tag.yml"
 Action:
   $ref: "./action.yml"
 Assessment:
   $ref: "./assessment.yml"
-Operator:
-  $ref: "./operator.yml"
+FcmMessage:
+  $ref: "./fcm_message.yml"
+FcmToken:
+  $ref: "./fcm_token.yml"
+OneTimeIdentifier:
+  $ref: "./one_time_identifier.yml"
 RecommendAction:
   $ref: "./recommend_action.yml"
 RelationshipPoint:
@@ -18,7 +22,3 @@ Review:
   $ref: "./review.yml"
 VerificationCode:
   $ref: "./verification_code.yml"
-IncludedAccountRelation:
-  $ref: "./included/account_relation.yml"
-IncludedAction:
-  $ref: "./included/action.yml"
