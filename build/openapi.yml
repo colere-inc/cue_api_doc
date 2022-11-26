@@ -458,6 +458,10 @@ paths:
                           type: string
                           description: circle color
                           example: '#0000ff'
+                  message:
+                    type: string
+                    description: message(not exists completed action is "action does not exist")
+                    example: action does not exist.
         '400':
           description: problem with the request
         '401':
