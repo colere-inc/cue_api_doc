@@ -81,6 +81,14 @@ post:
               type: string
               description: password
               example: password
+            privacy_date:
+              type: string
+              description: accept privacy date
+              example: '2022-01-01'
+            term_date:
+              type: string
+              description: accept term date
+              example: '2022-01-01'
           required:
             - tel
             - tel_country_code
