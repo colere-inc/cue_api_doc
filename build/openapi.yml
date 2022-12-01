@@ -741,6 +741,10 @@ paths:
                     type: string
                     description: message
                     example: (Invite sms is send.) or (Account already exists.) or (Account on the team in the past.)
+                  past_account_relation_id:
+                    type: string
+                    description: past account relationship ID(if Account on the team in the past.)
+                    example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
         '400':
           description: problem with the request
         '401':
