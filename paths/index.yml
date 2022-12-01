@@ -20,6 +20,8 @@
   $ref: "./assessments/identifier.yml"
 /account_relations/{account_relations_id}:
   $ref: "./account_relations_id.yml"
+/account_relations/{account_relations_id}/restore:
+  $ref: "./account_relations/restore.yml"
 /account_relations/{account_relations_id}/actions/{actions_id}/reviews:
   $ref: "./account_relations/actions/reviews.yml"
 /account_relations/{account_relations_id}/actions/{actions_id}/reviews/{reviews_id}:
