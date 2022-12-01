@@ -1119,7 +1119,7 @@ paths:
           description: Temporary server error
     delete:
       tags:
-        - Account
+        - Account Relation
       description: delete account_relations.
       parameters:
         - in: header
