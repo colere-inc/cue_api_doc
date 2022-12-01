@@ -47,10 +47,6 @@ post:
               type: string
               description: sms message
               example: "Hello."
-            member:
-              type: boolean
-              description: to member=true, to manager=false(now true only)
-              example: true
 
   responses:
     "200":
@@ -83,7 +79,7 @@ post:
               message:
                 type: string
                 description: message
-                example: "invite sms is send."
+                example: (Invite sms is send.) or (Account already exists.) or (Account on the team in the past.)
     "400":
       description: problem with the request
     "401":
