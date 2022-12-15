@@ -69,6 +69,10 @@ post:
         schema:
           type: object
           properties:
+            account_id:
+              type: string
+              description: ID
+              example: eb6b8030-3b57-11e1-9c04-c9b9178cf34e
             tel:
               type: string
               description: tel
@@ -89,10 +93,21 @@ post:
               type: string
               description: accept term date
               example: '2022-01-01'
+            code:
+              type: string
+              description: verification code
+              example: 348102
+            key:
+              type: string
+              description: verification confirm key
+              example: 123456
           required:
+            - account_id
             - tel
             - tel_country_code
             - password
+            - code
+            - key
 
   responses:
     "200":

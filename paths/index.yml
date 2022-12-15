@@ -4,6 +4,8 @@
   $ref: "./account.yml"
 /account/actions/summary:
   $ref: "./account/actions/summary.yml"
+/account/register/verification_codes:
+  $ref: "./account/register/verification_codes.yml"
 /accounts/{accounts_id}/summary:
   $ref: "./accounts/summary.yml"
 /accounts/{accounts_id}/invite:

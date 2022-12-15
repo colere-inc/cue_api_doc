@@ -34,7 +34,7 @@ post:
             type:
               type: string
               description: code type
-              example: reset password
+              example: (reset password) or (account register)
             code:
               type: string
               description: verification code
