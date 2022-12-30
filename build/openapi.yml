@@ -313,6 +313,14 @@ paths:
                   type: string
                   description: password
                   example: password
+                privacy_date:
+                  type: string
+                  description: accept privacy date
+                  example: '2022-01-01'
+                term_date:
+                  type: string
+                  description: accept term date
+                  example: '2022-01-01'
                 icon:
                   type: string
                   description: icon file
